@@ -1,17 +1,23 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
-public class Player : PlayerController
+public class Character : CharacterController
 {
-    PlayerInformation_SO playerInfo;
+    protected CharacterInformation_SO characterInfo;
+    protected Stat stat;
 
     protected Rigidbody2D rigid;
     protected Animator animator;
     protected Collider2D col;
 
+    private int health;
+
     protected override void Awake()
     {
         base.Awake();
+
+        character = this;
 
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -29,14 +35,19 @@ public class Player : PlayerController
     {
         base.Start();
 
-        Init();
+        //Init();
     }
     private void Init()
     {
-        //stat
+        stat = characterInfo.stat;
+        health = stat.maxHealth;
     }
-    protected void PlayerMove(Vector3 direction)
+    protected void CharacterMove(Vector3 direction)
     {
-        //need stat.moveSpeed
+        transform.position += direction * 1 * Time.deltaTime;
+    }
+    protected override void OnLeftStick(InputValue context)
+    {
+        CharacterMove(context.Get<Vector2>());
     }
 }
