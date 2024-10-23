@@ -1,8 +1,9 @@
+using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
-public class Character : CharacterController
+public class Character : CharacterController/*, IDamagable, IDamage*/
 {
     protected CharacterInformation_SO characterInfo;
     protected Stat stat;
@@ -10,6 +11,8 @@ public class Character : CharacterController
     protected Rigidbody2D rigid;
     protected Animator animator;
     protected Collider2D col;
+
+    private Coroutine coroutine = null;
 
     private int health;
 
@@ -42,12 +45,36 @@ public class Character : CharacterController
         stat = characterInfo.stat;
         health = stat.maxHealth;
     }
-    protected void CharacterMove(Vector3 direction)
+    private void CharacterMove(Vector3 vec)
     {
-        transform.position += direction * 1 * Time.deltaTime;
+        int direction = vec.x > 0 ? 1 : -1;
+
+        transform.position += new Vector3(direction, 0) * 4 * Time.deltaTime;
     }
-    protected override void OnLeftStick(InputValue context)
+    protected override void LeftStick(InputAction.CallbackContext value)
     {
-        CharacterMove(context.Get<Vector2>());
+        if(coroutine == null)
+        {
+            coroutine = StartCoroutine(LeftStick());
+        }
+        else
+        {
+            StopCoroutine(coroutine);
+
+            coroutine = null;
+        }
+    }
+    protected override void OnButtonA(InputValue value)
+    {
+        //Debug.Log("a");
+    }
+    private IEnumerator LeftStick()
+    {
+        while(true)
+        {
+            CharacterMove(leftStick.ReadValue<Vector2>());
+
+            yield return null;
+        }
     }
 }
