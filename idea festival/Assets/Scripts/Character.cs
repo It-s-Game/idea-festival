@@ -3,7 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
-public class Character : CharacterController/*, IDamagable, IDamage*/
+public class Character : CharacterController, IDamagable
 {
     protected CharacterInformation_SO characterInfo;
     protected Stat stat;
@@ -12,15 +12,24 @@ public class Character : CharacterController/*, IDamagable, IDamage*/
     protected Animator animator;
     protected Collider2D col;
 
-    private Coroutine coroutine = null;
+    private Coroutine leftStickCoroutine = null;
+
+    //private const float 
 
     private int health;
 
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+
+        if(health <= 0)
+        {
+            //die
+        }
+    }
     protected override void Awake()
     {
         base.Awake();
-
-        character = this;
 
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
@@ -51,22 +60,22 @@ public class Character : CharacterController/*, IDamagable, IDamage*/
 
         transform.position += new Vector3(direction, 0) * 4 * Time.deltaTime;
     }
+    protected void Set()
+    {
+        character = this;
+    }
     protected override void LeftStick(InputAction.CallbackContext value)
     {
-        if(coroutine == null)
+        if(leftStickCoroutine == null)
         {
-            coroutine = StartCoroutine(LeftStick());
+            leftStickCoroutine = StartCoroutine(LeftStick());
         }
         else
         {
-            StopCoroutine(coroutine);
+            StopCoroutine(leftStickCoroutine);
 
-            coroutine = null;
+            leftStickCoroutine = null;
         }
-    }
-    protected override void OnButtonA(InputValue value)
-    {
-        //Debug.Log("a");
     }
     private IEnumerator LeftStick()
     {

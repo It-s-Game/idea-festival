@@ -57,7 +57,7 @@ public class CharacterController : MonoBehaviour
         playerIndex = playerInput.playerIndex;
     }
     protected virtual void LeftStick(InputAction.CallbackContext value) { character.LeftStick(value); }
-    protected virtual void RightStick(InputAction.CallbackContext value) { character.RightStick(value); }
+    protected virtual void RightStick(InputAction.CallbackContext value) { }
     protected virtual void OnLeftStick(InputValue value) { }
     protected virtual void OnButtonB(InputValue value) { }
     protected virtual void OnButtonY(InputValue value) { }
