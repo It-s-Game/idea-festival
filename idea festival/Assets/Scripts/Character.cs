@@ -5,7 +5,9 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
 public class Character : CharacterController, IDamagable
 {
+    [SerializeField]
     protected CharacterInformation_SO characterInfo;
+    
     protected Stat stat;
 
     protected Rigidbody2D rigid;
