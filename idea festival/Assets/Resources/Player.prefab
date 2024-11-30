@@ -10,10 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1968221176728829967}
   - component: {fileID: 4952120893101607396}
-  - component: {fileID: 3509248174642801387}
-  - component: {fileID: -7379983953051448403}
-  - component: {fileID: -3116066632003746599}
-  - component: {fileID: -8665712706958420761}
+  - component: {fileID: 840518188804552478}
+  - component: {fileID: -4366541324559009960}
+  - component: {fileID: -8608932965618016918}
+  - component: {fileID: 6992001816029076039}
+  - component: {fileID: -1096212706015703459}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -88,7 +89,42 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!50 &3509248174642801387
+--- !u!70 &840518188804552478
+CapsuleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5160486943751051708}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 1, y: 1}
+  m_Direction: 0
+--- !u!50 &-4366541324559009960
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 0
@@ -103,7 +139,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -115,7 +151,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!95 &-7379983953051448403
+--- !u!95 &-8608932965618016918
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -136,7 +172,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &-3116066632003746599
+--- !u!114 &6992001816029076039
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -166,7 +202,7 @@ MonoBehaviour:
   m_DefaultActionMap: Character
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &-8665712706958420761
+--- !u!114 &-1096212706015703459
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,3 +214,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb78ff4c73d659445a82e7fabc8c83fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  characterInfo: {fileID: 0}

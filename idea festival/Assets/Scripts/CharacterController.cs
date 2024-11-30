@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInput))]
-public class CharacterController : MonoBehaviour
+public class CharacterController : Character
 {
     protected Character character;
 
@@ -10,16 +10,15 @@ public class CharacterController : MonoBehaviour
 
     private PlayerInput playerInput;
 
-    private int playerIndex;
-
-    public int PlayerIndex { get { return playerIndex; } }
-    protected virtual void Awake()
+    protected override void Awake()
     {
+        base.Awake();
+
         playerInput = GetComponent<PlayerInput>();
 
         if (playerInput.actions == null)
         {
-            playerInput.actions = Resources.Load<InputActionAsset>("CharacterController");
+            playerInput.actions = Resources.Load<InputActionAsset>("CharacterControll");
         }
 
         playerInput.actions.Enable();
@@ -28,7 +27,6 @@ public class CharacterController : MonoBehaviour
     }
     private void Set()
     {
-        //Left Stick Started and Canceled
         leftStick = playerInput.actions["LeftStick"];
 
         leftStick.started += (ctx =>
@@ -40,7 +38,6 @@ public class CharacterController : MonoBehaviour
             LeftStick(ctx);
         });
 
-        //Right Stick Started and Canceled
         rightStick = playerInput.actions["RightStick"];
 
         rightStick.started += (ctx =>
@@ -51,22 +48,24 @@ public class CharacterController : MonoBehaviour
         {
             RightStick(ctx);
         });
+
+        /*
+         
+        direction = vec.x > 0 ? 1 : -1;
+
+         */
     }
-    protected virtual void Start()
-    {
-        playerIndex = playerInput.playerIndex;
-    }
-    protected virtual void LeftStick(InputAction.CallbackContext value) { character.LeftStick(value); }
-    protected virtual void RightStick(InputAction.CallbackContext value) { character.RightStick(value); }
-    protected virtual void OnLeftStick(InputValue value) { character.OnLeftStick(value); }
-    protected virtual void OnButtonB(InputValue value) { character.OnButtonB(value); }
-    protected virtual void OnButtonY(InputValue value) { character.OnButtonY(value); }
-    protected virtual void OnButtonA(InputValue value) { character.OnButtonA(value); }
-    protected virtual void OnButtonX(InputValue value) { character.OnButtonX(value); }
-    protected virtual void OnLeftBumper(InputValue value) { character.OnLeftBumper(value); }
-    protected virtual void OnRightBumper(InputValue value) { character.OnRightBumper(value); }
-    protected virtual void OnLeftTrigger(InputValue value) { character.OnLeftTrigger(value); }
-    protected virtual void OnRightTrigger(InputValue value) { character.OnRightTrigger(value); }
-    protected virtual void OnLeftStickPress(InputValue value) { character.OnLeftStickPress(value); }
-    protected virtual void OnRightStickPress(InputValue value) { character.OnRightStickPress(value); }
+    protected virtual void LeftStick(InputAction.CallbackContext value) { LeftStick(value); }
+    protected virtual void RightStick(InputAction.CallbackContext value) { }
+    protected virtual void OnLeftStick(InputValue value) { }
+    protected virtual void OnButtonB(InputValue value) { }
+    protected virtual void OnButtonY(InputValue value) { }
+    protected virtual void OnButtonA(InputValue value) { }
+    protected virtual void OnButtonX(InputValue value) { }
+    protected virtual void OnLeftBumper(InputValue value) { }
+    protected virtual void OnRightBumper(InputValue value) { }
+    protected virtual void OnLeftTrigger(InputValue value) { }
+    protected virtual void OnRightTrigger(InputValue value) { }
+    protected virtual void OnLeftStickPress(InputValue value) { }
+    protected virtual void OnRightStickPress(InputValue value) { }
 }

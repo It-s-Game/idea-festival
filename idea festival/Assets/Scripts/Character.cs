@@ -3,7 +3,7 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
-public class Character : CharacterController, IDamagable
+public class Character : MonoBehaviour, IDamagable
 {
     [SerializeField]
     protected CharacterInformation_SO characterInfo;
@@ -14,25 +14,16 @@ public class Character : CharacterController, IDamagable
     protected Animator animator;
     protected Collider2D col;
 
+    protected int playerIndex;
+
     private Coroutine leftStickCoroutine = null;
 
-    //private const float 
-
     private int health;
+    private int direction;
 
-    public void TakeDamage(int damage)
+    public int PlayerIndex { get { return playerIndex; } }
+    protected virtual void Awake()
     {
-        health -= damage;
-
-        if(health <= 0)
-        {
-            //die
-        }
-    }
-    protected override void Awake()
-    {
-        base.Awake();
-
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
 
@@ -45,10 +36,8 @@ public class Character : CharacterController, IDamagable
             this.col = transform.AddComponent<CapsuleCollider2D>();
         }
     }
-    protected override void Start()
+    protected virtual void Start()
     {
-        base.Start();
-
         //Init();
     }
     private void Init()
@@ -56,17 +45,20 @@ public class Character : CharacterController, IDamagable
         stat = characterInfo.stat;
         health = stat.maxHealth;
     }
-    private void CharacterMove(Vector3 vec)
+    private void CharacterMove()
     {
-        int direction = vec.x > 0 ? 1 : -1;
-
         transform.position += new Vector3(direction, 0) * 4 * Time.deltaTime;
     }
-    protected void Set()
+    public void TakeDamage(int damage)
     {
-        character = this;
+        health -= damage;
+
+        if (health <= 0)
+        {
+            //die
+        }
     }
-    protected override void LeftStick(InputAction.CallbackContext value)
+    protected virtual void LeftStick(InputAction.CallbackContext value)
     {
         if(leftStickCoroutine == null)
         {
@@ -79,11 +71,11 @@ public class Character : CharacterController, IDamagable
             leftStickCoroutine = null;
         }
     }
-    private IEnumerator LeftStick()
+    protected IEnumerator LeftStick()
     {
         while(true)
         {
-            CharacterMove(leftStick.ReadValue<Vector2>());
+            CharacterMove();
 
             yield return null;
         }

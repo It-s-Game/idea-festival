@@ -1,5 +1,5 @@
 using UnityEngine.InputSystem;
-public class ArcherHero : Character
+public class Archer_Hero : CharacterController
 {
     protected override void Start()
     {
