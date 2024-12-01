@@ -17,6 +17,9 @@ public class Character : MonoBehaviour, IDamagable
     protected int playerIndex;
 
     private Coroutine leftStickCoroutine = null;
+    private InputAction leftStick = null;
+    private InputAction rightStick = null;
+    private PlayerInput playerInput;
 
     private int health;
     private int direction;
@@ -35,10 +38,19 @@ public class Character : MonoBehaviour, IDamagable
         {
             this.col = transform.AddComponent<CapsuleCollider2D>();
         }
+
+        playerInput.actions.Enable();
     }
     protected virtual void Start()
     {
         //Init();
+
+        leftStick = playerInput.actions["LeftStick"];
+
+        leftStick.started += (ctx =>
+        {
+            LeftStick(ctx);
+        });
     }
     private void Init()
     {
