@@ -12,6 +12,7 @@ public class Character : MonoBehaviour, IDamagable
     protected Animator animator;
     protected Collider2D col;
 
+    protected Vector3 jumpHeight;
     protected int jumpCount = maxJumpCount;
     protected int playerIndex;
 
@@ -36,12 +37,14 @@ public class Character : MonoBehaviour, IDamagable
     }
     protected virtual void Start()
     {
-        //Init();
+        Init();
     }
     private void Init()
     {
         stat = characterInfo.stat;
         health = stat.maxHealth;
+
+        jumpHeight = new Vector3(0, stat.jumpHeight);
     }
     public void TakeDamage(int damage)
     {
@@ -58,5 +61,15 @@ public class Character : MonoBehaviour, IDamagable
         {
             animator.Play("wallslide");
         }
+        else if(collision.gameObject.CompareTag("floor"))
+        {
+            jumpCount = maxJumpCount;
+
+            animator.Play("player_idle");
+        }
+    }
+    protected virtual void OnCollisionExit2D(Collision2D collision)
+    {
+
     }
 }

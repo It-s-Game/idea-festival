@@ -9,7 +9,6 @@ public class CharacterController : Character
     private InputAction rightStick = null;
 
     private PlayerInput playerInput;
-
     private Vector3 directionVec = new();
     private int direction;
 
@@ -39,17 +38,17 @@ public class CharacterController : Character
     private void CharacterMove()
     {
         direction = leftStick.ReadValue<Vector2>().x > 0 ? 1 : -1;
-        directionVec = new Vector3(direction, 0, 0);
+        directionVec = new Vector3(direction, rigid.velocity.y);
 
-        transform.position += directionVec * 4 * Time.deltaTime;
+        rigid.velocity = directionVec * stat.moveSpeed;
 
-        if(direction == 1)
+        if (direction == 1)
         {
-            directionVec = new Vector3(0, 0, 0);
+            directionVec = new Vector3(0, 0);
         }
         else
         {
-            directionVec = new Vector3(0, 180, 0);
+            directionVec = new Vector3(0, 180);
         }
 
         transform.rotation = Quaternion.Euler(directionVec);
@@ -75,9 +74,18 @@ public class CharacterController : Character
     {
         if(jumpCount > 0)
         {
-            jumpCount--;
+            if(jumpCount == 2)
+            {
+                animator.Play("jump");
+            }
+            else if(jumpCount == 1)
+            {
+                animator.Play("double jump");
+            }
 
-            //play animation;
+            rigid.AddForce(jumpHeight, ForceMode2D.Impulse);
+
+            jumpCount--;
         }
     }
     protected IEnumerator LeftStick()

@@ -7,6 +7,7 @@ public class Stat
     public int damage;
     public int attackSpeed;
     public int moveSpeed;
+    public int jumpHeight = 5;
 }
 [CreateAssetMenu(fileName = "Player Information", menuName = "Create New ScriptableObject/Player Information_SO")]
 public class CharacterInformation_SO : ScriptableObject
