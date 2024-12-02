@@ -12,13 +12,14 @@ public class Character : MonoBehaviour, IDamagable
     protected Animator animator;
     protected Collider2D col;
 
+    protected const int maxJumpCount = 2;
+
     protected Vector3 jumpHeight;
     protected int jumpCount = maxJumpCount;
     protected int playerIndex;
 
-    private const int maxJumpCount = 2;
-
     private int health;
+    private bool enterFloor = true;
 
     public int PlayerIndex { get { return playerIndex; } }
     protected virtual void Awake()
@@ -57,19 +58,29 @@ public class Character : MonoBehaviour, IDamagable
     }
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("wall"))
-        {
-            animator.Play("wallslide");
-        }
-        else if(collision.gameObject.CompareTag("floor"))
+        if(collision.gameObject.CompareTag("floor"))
         {
             jumpCount = maxJumpCount;
 
             animator.Play("player_idle");
+
+            enterFloor = true;
+        }
+        else if (collision.gameObject.CompareTag("wall"))
+        {
+            if(enterFloor)
+            {
+                return;
+            }
+
+            animator.Play("wallslide");
         }
     }
     protected virtual void OnCollisionExit2D(Collision2D collision)
     {
-
+        if(collision.gameObject.CompareTag("floor"))
+        {
+            enterFloor = false;
+        }
     }
 }

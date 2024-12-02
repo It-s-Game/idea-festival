@@ -9,6 +9,7 @@ public class CharacterController : Character
     private InputAction rightStick = null;
 
     private PlayerInput playerInput;
+    private Coroutine attackDuration;
     private Vector3 directionVec = new();
     private int direction;
 
@@ -30,6 +31,13 @@ public class CharacterController : Character
         {
             LeftStick(ctx);
         });
+        leftStick.performed += (ctx =>
+        {
+            if(jumpCount == maxJumpCount)
+            {
+                animator.Play("run");
+            }
+;        });
         leftStick.canceled += (ctx =>
         {
             LeftStick(ctx);
@@ -38,9 +46,9 @@ public class CharacterController : Character
     private void CharacterMove()
     {
         direction = leftStick.ReadValue<Vector2>().x > 0 ? 1 : -1;
-        directionVec = new Vector3(direction, rigid.velocity.y);
+        directionVec = new Vector3(direction * stat.moveSpeed, rigid.velocity.y);
 
-        rigid.velocity = directionVec * stat.moveSpeed;
+        rigid.velocity = directionVec;
 
         if (direction == 1)
         {
@@ -57,7 +65,10 @@ public class CharacterController : Character
     {
         if (leftStickCoroutine == null)
         {
-            animator.Play("run");
+            if(jumpCount == maxJumpCount)
+            {
+                animator.Play("run");
+            }
 
             leftStickCoroutine = StartCoroutine(LeftStick());
         }
@@ -88,6 +99,13 @@ public class CharacterController : Character
             jumpCount--;
         }
     }
+    protected virtual void OnButtonX(InputValue value)
+    {
+        if(attackDuration == null)
+        {
+            attackDuration = StartCoroutine(AttackDuration());
+        }
+    }
     protected IEnumerator LeftStick()
     {
         while (true)
@@ -97,9 +115,16 @@ public class CharacterController : Character
             yield return null;
         }
     }
+    protected IEnumerator AttackDuration()
+    {
+        //play animation -> attack
+
+        yield return new WaitForSeconds(2);//
+
+        attackDuration = null;
+    }
     protected virtual void OnButtonB(InputValue value) { }
     protected virtual void OnButtonY(InputValue value) { }
-    protected virtual void OnButtonX(InputValue value) { }
     protected virtual void OnLeftBumper(InputValue value) { }
     protected virtual void OnRightBumper(InputValue value) { }
     protected virtual void OnLeftTrigger(InputValue value) { }
