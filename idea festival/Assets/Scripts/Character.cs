@@ -1,7 +1,5 @@
-using System.Collections;
 using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
 public class Character : MonoBehaviour, IDamagable
 {
@@ -14,15 +12,12 @@ public class Character : MonoBehaviour, IDamagable
     protected Animator animator;
     protected Collider2D col;
 
+    protected int jumpCount = maxJumpCount;
     protected int playerIndex;
 
-    private Coroutine leftStickCoroutine = null;
-    private InputAction leftStick = null;
-    private InputAction rightStick = null;
-    private PlayerInput playerInput;
+    private const int maxJumpCount = 2;
 
     private int health;
-    private int direction;
 
     public int PlayerIndex { get { return playerIndex; } }
     protected virtual void Awake()
@@ -38,28 +33,15 @@ public class Character : MonoBehaviour, IDamagable
         {
             this.col = transform.AddComponent<CapsuleCollider2D>();
         }
-
-        playerInput.actions.Enable();
     }
     protected virtual void Start()
     {
         //Init();
-
-        leftStick = playerInput.actions["LeftStick"];
-
-        leftStick.started += (ctx =>
-        {
-            LeftStick(ctx);
-        });
     }
     private void Init()
     {
         stat = characterInfo.stat;
         health = stat.maxHealth;
-    }
-    private void CharacterMove()
-    {
-        transform.position += new Vector3(direction, 0) * 4 * Time.deltaTime;
     }
     public void TakeDamage(int damage)
     {
@@ -70,26 +52,11 @@ public class Character : MonoBehaviour, IDamagable
             //die
         }
     }
-    protected virtual void LeftStick(InputAction.CallbackContext value)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
-        if(leftStickCoroutine == null)
+        if(collision.gameObject.CompareTag("wall"))
         {
-            leftStickCoroutine = StartCoroutine(LeftStick());
-        }
-        else
-        {
-            StopCoroutine(leftStickCoroutine);
-
-            leftStickCoroutine = null;
-        }
-    }
-    protected IEnumerator LeftStick()
-    {
-        while(true)
-        {
-            CharacterMove();
-
-            yield return null;
+            animator.Play("wallslide");
         }
     }
 }
