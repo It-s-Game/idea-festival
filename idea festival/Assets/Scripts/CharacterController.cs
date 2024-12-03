@@ -46,7 +46,7 @@ public class CharacterController : Character
     private void CharacterMove()
     {
         direction = leftStick.ReadValue<Vector2>().x > 0 ? 1 : -1;
-        directionVec = new Vector3(direction * stat.moveSpeed, rigid.velocity.y);
+        directionVec = new Vector3(direction * status.moveSpeed, rigid.velocity.y);
 
         rigid.velocity = directionVec;
 
@@ -74,7 +74,12 @@ public class CharacterController : Character
         }
         else
         {
-            animator.Play("player_idle");
+            rigid.velocity = Vector2.zero;
+
+            if(!isJump)
+            {
+                animator.Play("player_idle");
+            }
 
             StopCoroutine(leftStickCoroutine);
 
@@ -97,6 +102,7 @@ public class CharacterController : Character
             rigid.AddForce(jumpHeight, ForceMode2D.Impulse);
 
             jumpCount--;
+            isJump = true;
         }
     }
     protected virtual void OnButtonX(InputValue value)
@@ -117,9 +123,28 @@ public class CharacterController : Character
     }
     protected IEnumerator AttackDuration()
     {
-        //play animation -> attack
+        if(isJump)
+        {
+            yield break;
+        }
 
-        yield return new WaitForSeconds(2);//
+        if(status.jumpAttack)
+        {
+            if (isJump == true)
+            {
+                animator.Play("jump attack");
+            }
+            else
+            {
+                animator.Play("player_attack");
+            }
+        }
+        else
+        {
+            animator.Play("player_attack");
+        }
+
+        yield return new WaitForSeconds(status.attackDelay);
 
         attackDuration = null;
     }

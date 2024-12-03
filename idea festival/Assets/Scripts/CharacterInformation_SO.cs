@@ -1,18 +1,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
-public class Stat
+public class Status
 {
     public int maxHealth;
     public int damage;
-    public int attackSpeed;
+    public int attackDelay;
     public int moveSpeed;
     public int jumpHeight = 5;
+    public bool jumpAttack = false;
 }
 [CreateAssetMenu(fileName = "Player Information", menuName = "Create New ScriptableObject/Player Information_SO")]
 public class CharacterInformation_SO : ScriptableObject
 {
     public List<SkillInformation_SO> skillList = new();
 
-    public Stat stat;
+    public Status status;
 }

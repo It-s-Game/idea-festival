@@ -6,7 +6,7 @@ public class Character : MonoBehaviour, IDamagable
     [SerializeField]
     protected CharacterInformation_SO characterInfo;
     
-    protected Stat stat;
+    protected Status status;
 
     protected Rigidbody2D rigid;
     protected Animator animator;
@@ -17,6 +17,7 @@ public class Character : MonoBehaviour, IDamagable
     protected Vector3 jumpHeight;
     protected int jumpCount = maxJumpCount;
     protected int playerIndex;
+    protected bool isJump = false;
 
     private int health;
     private bool enterFloor = true;
@@ -42,10 +43,10 @@ public class Character : MonoBehaviour, IDamagable
     }
     private void Init()
     {
-        stat = characterInfo.stat;
-        health = stat.maxHealth;
+        status = characterInfo.status;
+        health = status.maxHealth;
 
-        jumpHeight = new Vector3(0, stat.jumpHeight);
+        jumpHeight = new Vector3(0, status.jumpHeight);
     }
     public void TakeDamage(int damage)
     {
@@ -53,7 +54,7 @@ public class Character : MonoBehaviour, IDamagable
 
         if (health <= 0)
         {
-            //die
+            animator.Play("die");
         }
     }
     protected virtual void OnCollisionEnter2D(Collision2D collision)
@@ -61,6 +62,7 @@ public class Character : MonoBehaviour, IDamagable
         if(collision.gameObject.CompareTag("floor"))
         {
             jumpCount = maxJumpCount;
+            isJump = false;
 
             animator.Play("player_idle");
 
