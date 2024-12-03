@@ -6,7 +6,6 @@ public class CharacterController : Character
 {
     private Coroutine leftStickCoroutine = null;
     private InputAction leftStick = null;
-    private InputAction rightStick = null;
 
     private PlayerInput playerInput;
     private Coroutine attackDuration;
@@ -42,6 +41,13 @@ public class CharacterController : Character
         {
             LeftStick(ctx);
         });
+    }
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            TakeDamage(status.maxHealth);
+        }
     }
     private void CharacterMove()
     {
@@ -123,14 +129,9 @@ public class CharacterController : Character
     }
     protected IEnumerator AttackDuration()
     {
-        if(isJump)
-        {
-            yield break;
-        }
-
         if(status.jumpAttack)
         {
-            if (isJump == true)
+            if(isJump == true)
             {
                 animator.Play("jump attack");
             }
