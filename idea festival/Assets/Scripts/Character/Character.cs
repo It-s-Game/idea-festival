@@ -5,12 +5,17 @@ public class Character : MonoBehaviour, IDamagable
 {
     [SerializeField]
     protected CharacterInformation_SO characterInfo;
+    [SerializeField]
+    protected GameObject deathSmoke;
+    [SerializeField]
+    protected GameObject groundDust;
+    [SerializeField]
+    protected GameObject wallSlide;
     
     protected Status status;
 
     protected Rigidbody2D rigid;
     protected Animator animator;
-    protected Animator fx;
     protected Collider2D col;
 
     protected const int maxJumpCount = 2;
@@ -28,7 +33,6 @@ public class Character : MonoBehaviour, IDamagable
     {
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-        fx = transform.GetChild(0).GetComponent<Animator>();
 
         if(TryGetComponent(out Collider2D col))
         {
@@ -57,7 +61,8 @@ public class Character : MonoBehaviour, IDamagable
         if (health <= 0)
         {
             animator.Play("die");
-            fx.Play("Ground Dust");
+
+            deathSmoke.SetActive(true);
         }
     }
     protected virtual void OnCollisionEnter2D(Collision2D collision)
