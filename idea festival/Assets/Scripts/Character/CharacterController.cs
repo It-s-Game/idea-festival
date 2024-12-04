@@ -9,8 +9,8 @@ public class CharacterController : Character
 
     private PlayerInput playerInput;
     private Coroutine attackDuration;
-    private Vector3 directionVec = new();
-    private int direction;
+    private Vector3 moveVec = new();
+    private int direction = 0;
 
     protected override void Awake()
     {
@@ -51,21 +51,25 @@ public class CharacterController : Character
     }
     private void CharacterMove()
     {
-        direction = leftStick.ReadValue<Vector2>().x > 0 ? 1 : -1;
-        directionVec = new Vector3(direction * status.moveSpeed, rigid.velocity.y);
-
-        rigid.velocity = directionVec;
-
-        if (direction == 1)
+        if ((Mathf.Sign(leftStick.ReadValue<Vector2>().x)) != direction )
         {
-            directionVec = new Vector3(0, 0);
-        }
-        else
-        {
-            directionVec = new Vector3(0, 180);
+            direction = (int)Mathf.Sign(leftStick.ReadValue<Vector2>().x);
+
+            if (direction == 1)
+            {
+                moveVec = new Vector3(0, 0);
+            }
+            else
+            {
+                moveVec = new Vector3(0, 180);
+            }
+
+            transform.rotation = Quaternion.Euler(moveVec);
         }
 
-        transform.rotation = Quaternion.Euler(directionVec);
+        moveVec = new Vector3(direction * status.moveSpeed, rigid.velocity.y);
+
+        rigid.velocity = moveVec;
     }
     protected virtual void LeftStick(InputAction.CallbackContext value)
     {

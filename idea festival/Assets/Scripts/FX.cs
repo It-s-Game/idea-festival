@@ -1,6 +1,9 @@
 using UnityEngine;
 public class FX : MonoBehaviour
 {
+    [SerializeField]
+    private bool isLoop = false;
+
     private Animator animator;
 
     private void Awake()
@@ -11,9 +14,12 @@ public class FX : MonoBehaviour
     }
     private void Update()
     {
-        if(animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
+        if(!isLoop)
         {
-            gameObject.SetActive(false);
+            if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1)
+            {
+                gameObject.SetActive(false);
+            }
         }
     }
 }

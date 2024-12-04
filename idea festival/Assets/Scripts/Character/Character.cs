@@ -74,6 +74,24 @@ public class Character : MonoBehaviour, IDamagable
 
             animator.Play("player_idle");
 
+            groundDust.gameObject.SetActive(true);
+
+            if(wallSlide.activeSelf)
+            {
+                if(transform.rotation.y == 0)
+                {
+                    transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+                }
+                else
+                {
+                    transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+                }
+
+                animator.Play("player_idle");
+
+                wallSlide.SetActive(false);
+            }
+
             enterFloor = true;
         }
         else if (collision.gameObject.CompareTag("wall"))
@@ -84,6 +102,8 @@ public class Character : MonoBehaviour, IDamagable
             }
 
             animator.Play("wallslide");
+
+            wallSlide.SetActive(true);
         }
     }
     protected virtual void OnCollisionExit2D(Collision2D collision)
@@ -91,6 +111,15 @@ public class Character : MonoBehaviour, IDamagable
         if(collision.gameObject.CompareTag("floor"))
         {
             enterFloor = false;
+        }
+        else if(collision.gameObject.CompareTag("wall"))
+        {
+            if(isJump)
+            {
+                animator.Play("jump");
+
+                wallSlide.SetActive(false);
+            }
         }
     }
 }
