@@ -117,10 +117,12 @@ public class CharacterController : Character
     }
     protected virtual void OnButtonX(InputValue value)
     {
-        if(attackDuration == null)
+        if(attackDuration != null || isJump)
         {
-            attackDuration = StartCoroutine(AttackDuration());
+            return;
         }
+
+        attackDuration = StartCoroutine(AttackDuration());
     }
     protected IEnumerator LeftStick()
     {

@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using UnityEngine;
 [System.Serializable]
 public class Status
@@ -13,7 +12,5 @@ public class Status
 [CreateAssetMenu(fileName = "Player Information", menuName = "Create New ScriptableObject/Player Information_SO")]
 public class CharacterInformation_SO : ScriptableObject
 {
-    public List<SkillInformation_SO> skillList = new();
-
     public Status status;
 }

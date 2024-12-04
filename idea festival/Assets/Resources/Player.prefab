@@ -158,6 +158,7 @@ Transform:
   - {fileID: 5599986355204498241}
   - {fileID: 7546738218113319280}
   - {fileID: 2024948428839682044}
+  - {fileID: 6477087783583777230}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4952120893101607396
@@ -591,3 +592,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isLoop: 0
+--- !u!1001 &8023420637158300887
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1968221176728829967}
+    m_Modifications:
+    - target: {fileID: 3943982890271071513, guid: 379133e0432310142927dc3e59e6b65d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.069106795
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943982890271071513, guid: 379133e0432310142927dc3e59e6b65d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.9451172
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943982890271071513, guid: 379133e0432310142927dc3e59e6b65d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -4.1995697
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943982890271071513, guid: 379133e0432310142927dc3e59e6b65d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943982890271071513, guid: 379133e0432310142927dc3e59e6b65d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943982890271071513, guid: 379133e0432310142927dc3e59e6b65d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943982890271071513, guid: 379133e0432310142927dc3e59e6b65d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943982890271071513, guid: 379133e0432310142927dc3e59e6b65d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943982890271071513, guid: 379133e0432310142927dc3e59e6b65d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3943982890271071513, guid: 379133e0432310142927dc3e59e6b65d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669193934479893371, guid: 379133e0432310142927dc3e59e6b65d, type: 3}
+      propertyPath: m_Name
+      value: Archer Hero Arrows
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 379133e0432310142927dc3e59e6b65d, type: 3}
+--- !u!4 &6477087783583777230 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3943982890271071513, guid: 379133e0432310142927dc3e59e6b65d, type: 3}
+  m_PrefabInstance: {fileID: 8023420637158300887}
+  m_PrefabAsset: {fileID: 0}
