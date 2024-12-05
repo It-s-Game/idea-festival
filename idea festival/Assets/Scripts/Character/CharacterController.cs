@@ -30,13 +30,6 @@ public class CharacterController : Character
         {
             LeftStick(ctx);
         });
-        leftStick.performed += (ctx =>
-        {
-            if(jumpCount == maxJumpCount)
-            {
-                animator.Play("run");
-            }
-;        });
         leftStick.canceled += (ctx =>
         {
             LeftStick(ctx);
@@ -51,6 +44,11 @@ public class CharacterController : Character
     }
     private void CharacterMove()
     {
+        if (jumpCount == maxJumpCount)
+        {
+            animator.Play("run");
+        }
+
         if ((Mathf.Sign(leftStick.ReadValue<Vector2>().x)) != direction )
         {
             direction = (int)Mathf.Sign(leftStick.ReadValue<Vector2>().x);
@@ -71,7 +69,7 @@ public class CharacterController : Character
 
         rigid.velocity = moveVec;
     }
-    protected virtual void LeftStick(InputAction.CallbackContext value)
+    public virtual void LeftStick(InputAction.CallbackContext value)
     {
         if (leftStickCoroutine == null)
         {
@@ -96,7 +94,7 @@ public class CharacterController : Character
             leftStickCoroutine = null;
         }
     }
-    protected virtual void OnButtonA(InputValue value)
+    public virtual void ButtonA(InputValue value)
     {
         if(jumpCount > 0)
         {
@@ -115,7 +113,7 @@ public class CharacterController : Character
             isJump = true;
         }
     }
-    protected virtual void OnButtonX(InputValue value)
+    public virtual void ButtonX(InputValue value)
     {
         if(attackDuration != null || isJump)
         {
@@ -155,12 +153,12 @@ public class CharacterController : Character
 
         attackDuration = null;
     }
-    protected virtual void OnButtonB(InputValue value) { }
-    protected virtual void OnButtonY(InputValue value) { }
-    protected virtual void OnLeftBumper(InputValue value) { }
-    protected virtual void OnRightBumper(InputValue value) { }
-    protected virtual void OnLeftTrigger(InputValue value) { }
-    protected virtual void OnRightTrigger(InputValue value) { }
-    protected virtual void OnLeftStickPress(InputValue value) { }
-    protected virtual void OnRightStickPress(InputValue value) { }
+    public virtual void ButtonB(InputValue value) { }
+    public virtual void ButtonY(InputValue value) { }
+    public virtual void LeftBumper(InputValue value) { }
+    public virtual void RightBumper(InputValue value) { }
+    public virtual void LeftTrigger(InputValue value) { }
+    public virtual void RightTrigger(InputValue value) { }
+    public virtual void LeftStickPress(InputValue value) { }
+    public virtual void RightStickPress(InputValue value) { }
 }
