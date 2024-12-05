@@ -32,39 +32,39 @@ public class Player : MonoBehaviour
     }
     private void OnButtonY(InputValue value)
     {
-        character.ButtonY(value);
+        character.OnButtonY(value);
     }
     private void OnButtonX(InputValue value)
     {
-        character.ButtonX(value);
+        character.OnButtonX(value);
     }
     private void OnButtonA(InputValue value)
     {
-        character.ButtonA(value);
+        character.OnButtonA(value);
     }
     private void OnButtonB(InputValue value)
     {
-        character.ButtonB(value);
+        character.OnButtonB(value);
     }
     private void OnLeftBumper(InputValue value)
     {
-        character.LeftBumper(value);
+        character.OnLeftBumper(value);
     }
     private void OnRightBumper(InputValue value)
     {
-        character.RightBumper(value);
+        character.OnRightBumper(value);
     }
     private void OnLeftTrigger(InputValue value)
     {
-        character.LeftTrigger(value);
+        character.OnLeftTrigger(value);
     }
     private void OnRightTrigger(InputValue value)
     {
-        character.RightTrigger(value);
+        character.OnRightTrigger(value);
     }
     private void OnLeftStickPress(InputValue value)
     {
-        character.LeftStickPress(value);
+        character.OnLeftStickPress(value);
     }
     private void OnRightStickPress(InputValue value)
     {

@@ -44,11 +44,6 @@ public class CharacterController : Character
     }
     private void CharacterMove()
     {
-        if (jumpCount == maxJumpCount)
-        {
-            animator.Play("run");
-        }
-
         if ((Mathf.Sign(leftStick.ReadValue<Vector2>().x)) != direction )
         {
             direction = (int)Mathf.Sign(leftStick.ReadValue<Vector2>().x);
@@ -63,6 +58,11 @@ public class CharacterController : Character
             }
 
             transform.rotation = Quaternion.Euler(moveVec);
+
+            if (jumpCount == maxJumpCount)
+            {
+                animator.Play("run");
+            }
         }
 
         moveVec = new Vector3(direction * status.moveSpeed, rigid.velocity.y);
@@ -94,10 +94,15 @@ public class CharacterController : Character
             leftStickCoroutine = null;
         }
     }
-    public virtual void ButtonA(InputValue value)
+    public virtual void OnButtonA(InputValue value)
     {
         if(jumpCount > 0)
         {
+            if(wallSlide.activeSelf)
+            {
+                return;
+            }
+
             if(jumpCount == 2)
             {
                 animator.Play("jump");
@@ -113,7 +118,7 @@ public class CharacterController : Character
             isJump = true;
         }
     }
-    public virtual void ButtonX(InputValue value)
+    public virtual void OnButtonX(InputValue value)
     {
         if(attackDuration != null || isJump)
         {
@@ -153,12 +158,12 @@ public class CharacterController : Character
 
         attackDuration = null;
     }
-    public virtual void ButtonB(InputValue value) { }
-    public virtual void ButtonY(InputValue value) { }
-    public virtual void LeftBumper(InputValue value) { }
-    public virtual void RightBumper(InputValue value) { }
-    public virtual void LeftTrigger(InputValue value) { }
-    public virtual void RightTrigger(InputValue value) { }
-    public virtual void LeftStickPress(InputValue value) { }
+    public virtual void OnButtonB(InputValue value) { }
+    public virtual void OnButtonY(InputValue value) { }
+    public virtual void OnLeftBumper(InputValue value) { }
+    public virtual void OnRightBumper(InputValue value) { }
+    public virtual void OnLeftTrigger(InputValue value) { }
+    public virtual void OnRightTrigger(InputValue value) { }
+    public virtual void OnLeftStickPress(InputValue value) { }
     public virtual void RightStickPress(InputValue value) { }
 }
