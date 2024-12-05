@@ -2,6 +2,8 @@ using UnityEngine;
 [System.Serializable]
 public class Projectile_Info
 {
+    public Sprite defaultImage = null;
+
     public int damage;
     public int projectileSpeed;
     public float cooltime;

@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(PlayerInput))]
-public class CharacterController : Character
+public abstract class CharacterController : Character
 {
     private Coroutine leftStickCoroutine = null;
     private InputAction leftStick = null;
@@ -11,7 +11,7 @@ public class CharacterController : Character
     private Coroutine attackDuration;
     private Vector3 moveVec = new();
     private int direction = 0;
-
+    
     protected override void Awake()
     {
         base.Awake();
@@ -143,21 +143,22 @@ public class CharacterController : Character
             if(isJump == true)
             {
                 animator.Play("jump attack");
-            }
-            else
-            {
-                animator.Play("player_attack");
+
+                attackDuration = null;
+
+                yield break;
             }
         }
-        else
-        {
-            animator.Play("player_attack");
-        }
+
+        animator.Play("player_attack");
+
+        Attack(direction);
 
         yield return new WaitForSeconds(status.attackDelay);
 
         attackDuration = null;
     }
+    protected abstract void Attack(int direction = 0);
     public virtual void OnButtonB(InputValue value) { }
     public virtual void OnButtonY(InputValue value) { }
     public virtual void OnLeftBumper(InputValue value) { }

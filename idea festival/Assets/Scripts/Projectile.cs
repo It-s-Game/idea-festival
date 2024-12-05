@@ -9,26 +9,30 @@ public class Projectile : MonoBehaviour
     private GameObject obj;
     private Projectile_Info info;
 
+    private Coroutine move;
     private Vector3 direction;
     private string animationName;
 
     private void Awake()
     {
         animator = GetComponent<Animator>();
+
         Init();
+
+        gameObject.SetActive(false);
     }
     private void Init()
     {
         info = so.info;
+
+        animator.enabled = false;
     }
     public void Set(int direction, GameObject obj)
     {
         this.direction = new Vector3(direction, 0) * info.projectileSpeed * Time.deltaTime;
         this.obj = obj;
-    }
-    private void Update()
-    {
-        transform.position += direction;
+
+        move = StartCoroutine(Move());
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -39,11 +43,26 @@ public class Projectile : MonoBehaviour
 
         StartCoroutine(AnimationPlaying());
     }
+    private IEnumerator Move()
+    {
+        while(true)
+        {
+            transform.position += direction;
+
+            yield return null;
+        }
+    }
     private IEnumerator AnimationPlaying()
     {
-        animator.Play(animationName);
+        StopCoroutine(move);
+
+        animator.enabled = true;
+
+        yield return null;
 
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
+
+        animator.enabled = false;
 
         gameObject.SetActive(false);
     }
