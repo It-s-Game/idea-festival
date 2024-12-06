@@ -9,7 +9,22 @@ public abstract class CharacterController : Character
     private Coroutine attackDuration;
     private Vector3 moveVec = new();
     private int direction = 0;
-    
+
+    public void Set(int playerIndex)
+    {
+        if ((playerIndex + 1) % 2 == 0)
+        {
+            direction = -1;
+
+            //transform.position
+        }
+        else
+        {
+            direction = 1;
+
+            //transform.position
+        }
+    }
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space))
@@ -19,11 +34,11 @@ public abstract class CharacterController : Character
     }
     private void CharacterMove()
     {
-        if ((Mathf.Sign(leftStick.ReadValue<Vector2>().x)) != direction )
+        if((Mathf.Sign(leftStick.ReadValue<Vector2>().x)) != direction )
         {
             direction = (int)Mathf.Sign(leftStick.ReadValue<Vector2>().x);
 
-            if (direction == 1)
+            if(direction == 1)
             {
                 moveVec = new Vector3(0, 0);
             }
@@ -34,7 +49,7 @@ public abstract class CharacterController : Character
 
             transform.rotation = Quaternion.Euler(moveVec);
 
-            if (jumpCount == maxJumpCount)
+            if(jumpCount == maxJumpCount)
             {
                 animator.Play("run");
             }
@@ -46,7 +61,7 @@ public abstract class CharacterController : Character
     }
     public virtual void LeftStick(InputAction.CallbackContext value)
     {
-        if (leftStickCoroutine == null)
+        if(leftStickCoroutine == null)
         {
             if(jumpCount == maxJumpCount)
             {

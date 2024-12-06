@@ -11,6 +11,7 @@ public class Projectile : MonoBehaviour
 
     private Coroutine move;
     private Vector3 direction;
+    private Vector2 position;
     private string animationName;
 
     private void Awake()
@@ -24,6 +25,8 @@ public class Projectile : MonoBehaviour
     private void Init()
     {
         info = so.info;
+
+        position = transform.position;
 
         animator.enabled = false;
     }
@@ -61,6 +64,8 @@ public class Projectile : MonoBehaviour
         yield return null;
 
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
+
+        transform.position = position;
 
         animator.enabled = false;
 
