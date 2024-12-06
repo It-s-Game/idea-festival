@@ -5,6 +5,7 @@ public class Player : MonoBehaviour
 {
     private InputAction leftStick = null;
 
+    [SerializeField]//
     private CharacterController character;
     private PlayerInput playerInput;
 
@@ -32,39 +33,39 @@ public class Player : MonoBehaviour
     }
     private void OnButtonY(InputValue value)
     {
-        character.OnButtonY(value);
+        character.ButtonY(value);
     }
     private void OnButtonX(InputValue value)
     {
-        character.OnButtonX(value);
+        character.ButtonX(value);
     }
     private void OnButtonA(InputValue value)
     {
-        character.OnButtonA(value);
+        character.ButtonA(value);
     }
     private void OnButtonB(InputValue value)
     {
-        character.OnButtonB(value);
+        character.ButtonB(value);
     }
     private void OnLeftBumper(InputValue value)
     {
-        character.OnLeftBumper(value);
+        character.LeftBumper(value);
     }
     private void OnRightBumper(InputValue value)
     {
-        character.OnRightBumper(value);
+        character.RightBumper(value);
     }
     private void OnLeftTrigger(InputValue value)
     {
-        character.OnLeftTrigger(value);
+        character.LeftTrigger(value);
     }
     private void OnRightTrigger(InputValue value)
     {
-        character.OnRightTrigger(value);
+        character.RightTrigger(value);
     }
     private void OnLeftStickPress(InputValue value)
     {
-        character.OnLeftStickPress(value);
+        character.LeftStickPress(value);
     }
     private void OnRightStickPress(InputValue value)
     {

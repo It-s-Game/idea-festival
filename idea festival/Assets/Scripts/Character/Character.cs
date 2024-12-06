@@ -22,13 +22,11 @@ public class Character : MonoBehaviour, IDamagable
 
     protected Vector3 jumpHeight;
     protected int jumpCount = maxJumpCount;
-    protected int playerIndex;
     protected bool isJump = false;
 
     private int health;
     private bool enterFloor = true;
 
-    public int PlayerIndex { get { return playerIndex; } }
     protected virtual void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();

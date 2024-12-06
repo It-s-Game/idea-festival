@@ -1,40 +1,15 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-[RequireComponent(typeof(PlayerInput))]
 public abstract class CharacterController : Character
 {
     private Coroutine leftStickCoroutine = null;
     private InputAction leftStick = null;
 
-    private PlayerInput playerInput;
     private Coroutine attackDuration;
     private Vector3 moveVec = new();
     private int direction = 0;
     
-    protected override void Awake()
-    {
-        base.Awake();
-
-        playerInput = GetComponent<PlayerInput>();
-
-        playerInput.actions.Enable();
-    }
-    protected override void Start()
-    {
-        base.Start();
-
-        leftStick = playerInput.actions["LeftStick"];
-
-        leftStick.started += (ctx =>
-        {
-            LeftStick(ctx);
-        });
-        leftStick.canceled += (ctx =>
-        {
-            LeftStick(ctx);
-        });
-    }
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.Space))
@@ -94,7 +69,7 @@ public abstract class CharacterController : Character
             leftStickCoroutine = null;
         }
     }
-    public virtual void OnButtonA(InputValue value)
+    public virtual void ButtonA(InputValue value)
     {
         if(jumpCount > 0)
         {
@@ -118,7 +93,7 @@ public abstract class CharacterController : Character
             isJump = true;
         }
     }
-    public virtual void OnButtonX(InputValue value)
+    public virtual void ButtonX(InputValue value)
     {
         if(attackDuration != null || isJump)
         {
@@ -159,12 +134,12 @@ public abstract class CharacterController : Character
         attackDuration = null;
     }
     protected abstract void Attack(int direction = 0);
-    public virtual void OnButtonB(InputValue value) { }
-    public virtual void OnButtonY(InputValue value) { }
-    public virtual void OnLeftBumper(InputValue value) { }
-    public virtual void OnRightBumper(InputValue value) { }
-    public virtual void OnLeftTrigger(InputValue value) { }
-    public virtual void OnRightTrigger(InputValue value) { }
-    public virtual void OnLeftStickPress(InputValue value) { }
+    public virtual void ButtonB(InputValue value) { }
+    public virtual void ButtonY(InputValue value) { }
+    public virtual void LeftBumper(InputValue value) { }
+    public virtual void RightBumper(InputValue value) { }
+    public virtual void LeftTrigger(InputValue value) { }
+    public virtual void RightTrigger(InputValue value) { }
+    public virtual void LeftStickPress(InputValue value) { }
     public virtual void RightStickPress(InputValue value) { }
 }
