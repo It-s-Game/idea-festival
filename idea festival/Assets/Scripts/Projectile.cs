@@ -4,6 +4,8 @@ public class Projectile : MonoBehaviour
 {
     [SerializeField]
     private Projectile_SO so;
+    [SerializeField]
+    private GameObject initalObject;
 
     private Animator animator;
     private GameObject obj;
@@ -11,8 +13,6 @@ public class Projectile : MonoBehaviour
 
     private Coroutine move;
     private Vector3 direction;
-    private Vector2 position;
-    private string animationName;
 
     private void Awake()
     {
@@ -25,8 +25,6 @@ public class Projectile : MonoBehaviour
     private void Init()
     {
         info = so.info;
-
-        position = transform.position;
 
         animator.enabled = false;
     }
@@ -65,7 +63,7 @@ public class Projectile : MonoBehaviour
 
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
 
-        transform.position = position;
+        transform.position = initalObject.transform.position;
 
         animator.enabled = false;
 
