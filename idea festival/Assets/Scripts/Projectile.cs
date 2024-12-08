@@ -6,6 +6,8 @@ public class Projectile : MonoBehaviour
     private Projectile_SO so;
     [SerializeField]
     private GameObject initalObject;
+    [SerializeField]
+    private string hitAnimationName = "";
 
     private Animator animator;
     private GameObject obj;
@@ -25,15 +27,17 @@ public class Projectile : MonoBehaviour
     private void Init()
     {
         info = so.info;
-
-        animator.enabled = false;
     }
     public void Set(int direction, GameObject obj)
     {
-        this.direction = new Vector3(direction, 0) * info.projectileSpeed * Time.deltaTime;
+        this.direction = new Vector3(direction, 0);
         this.obj = obj;
 
-        move = StartCoroutine(Move());
+        move = StartCoroutine(Moving());
+    }
+    protected virtual void Move()
+    {
+
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -42,22 +46,16 @@ public class Projectile : MonoBehaviour
             return;
         }
 
-        StartCoroutine(AnimationPlaying());
+        StartCoroutine(Collide());
     }
-    private IEnumerator Move()
+    protected virtual IEnumerator Collide()
     {
-        while(true)
+        if(hitAnimationName == "")
         {
-            transform.position += direction;
-
-            yield return null;
+            yield break;
         }
-    }
-    private IEnumerator AnimationPlaying()
-    {
-        StopCoroutine(move);
 
-        animator.enabled = true;
+        animator.Play(hitAnimationName);
 
         yield return null;
 
@@ -68,5 +66,14 @@ public class Projectile : MonoBehaviour
         animator.enabled = false;
 
         gameObject.SetActive(false);
+    }
+    private IEnumerator Moving()
+    {
+        while (true)
+        {
+            Move();
+
+            yield return null;
+        }
     }
 }
