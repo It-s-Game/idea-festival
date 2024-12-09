@@ -2,6 +2,9 @@ using UnityEngine;
 [System.Serializable]
 public class Status
 {
+    public float[] skills = new float[] { };
+
+    public float defaultAttack;
     public int maxHealth;
     public int damage;
     public int attackDelay;

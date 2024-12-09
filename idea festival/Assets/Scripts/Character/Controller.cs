@@ -4,14 +4,15 @@ using UnityEngine.InputSystem;
 public abstract class Controller : Character
 {
     private Coroutine leftStickCoroutine = null;
-    private InputAction leftStick = null;
 
     private Coroutine attackDuration;
     private Vector3 moveVec = new();
     private int direction = 0;
 
-    public void Set(int playerIndex)
+    public void Set(InputAction leftStick, int playerIndex)
     {
+        this.leftStick = leftStick;
+
         if ((playerIndex + 1) % 2 == 0)
         {
             direction = -1;
@@ -34,7 +35,7 @@ public abstract class Controller : Character
     }
     private void CharacterMove()
     {
-        if((Mathf.Sign(leftStick.ReadValue<Vector2>().x)) != direction )
+        if((Mathf.Sign(leftStick.ReadValue<Vector2>().x)) != direction)
         {
             direction = (int)Mathf.Sign(leftStick.ReadValue<Vector2>().x);
 
@@ -142,13 +143,13 @@ public abstract class Controller : Character
 
         animator.Play("player_attack");
 
-        yield return null;
+        yield return new WaitForSeconds(status.defaultAttack);
+
+        Attack(direction);
 
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
 
         animator.Play("player_idle");
-
-        Attack(direction);
 
         yield return new WaitForSeconds(status.attackDelay);
 

@@ -6,12 +6,12 @@ public class Player : MonoBehaviour
     private InputAction leftStick = null;
 
     [SerializeField]//
-    private Controller character;
+    private Controller controller;
     private PlayerInput playerInput;
 
     private int playerIndex;
 
-    public Controller Character { set { character = value; } }
+    public Controller Character { set { controller = value; } }
     public int PlayerIndex { get { return playerIndex; } }
     private void Awake()
     {
@@ -23,12 +23,12 @@ public class Player : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.A))
         {
-            Init(character);
+            Init(controller);
         }
     }
     public void Init(Controller character)
     {
-        this.character = character;
+        this.controller = character;
         
         leftStick = playerInput.actions["LeftStick"];
 
@@ -36,55 +36,55 @@ public class Player : MonoBehaviour
     }
     public void Set()
     {
+        controller.Set(leftStick, playerIndex);
+
         leftStick.started += (ctx =>
         {
-            character.LeftStick(ctx);
+            controller.LeftStick(ctx);
         });
         leftStick.canceled += (ctx =>
         {
-            character.LeftStick(ctx);
+            controller.LeftStick(ctx);
         });
-
-        character.Set(playerIndex);
     }
     private void OnButtonY(InputValue value)
     {
-        character.ButtonY(value);
+        controller.ButtonY(value);
     }
     private void OnButtonX(InputValue value)
     {
-        character.ButtonX(value);
+        controller.ButtonX(value);
     }
     private void OnButtonA(InputValue value)
     {
-        character.ButtonA(value);
+        controller.ButtonA(value);
     }
     private void OnButtonB(InputValue value)
     {
-        character.ButtonB(value);
+        controller.ButtonB(value);
     }
     private void OnLeftBumper(InputValue value)
     {
-        character.LeftBumper(value);
+        controller.LeftBumper(value);
     }
     private void OnRightBumper(InputValue value)
     {
-        character.RightBumper(value);
+        controller.RightBumper(value);
     }
     private void OnLeftTrigger(InputValue value)
     {
-        character.LeftTrigger(value);
+        controller.LeftTrigger(value);
     }
     private void OnRightTrigger(InputValue value)
     {
-        character.RightTrigger(value);
+        controller.RightTrigger(value);
     }
     private void OnLeftStickPress(InputValue value)
     {
-        character.LeftStickPress(value);
+        controller.LeftStickPress(value);
     }
     private void OnRightStickPress(InputValue value)
     {
-        character.RightStickPress(value);
+        controller.RightStickPress(value);
     }
 }

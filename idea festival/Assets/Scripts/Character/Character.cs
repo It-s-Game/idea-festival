@@ -1,5 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
 public class Character : MonoBehaviour, IDamagable
 {
@@ -17,6 +19,7 @@ public class Character : MonoBehaviour, IDamagable
     protected Rigidbody2D rigid;
     protected Animator animator;
     protected Collider2D col;
+    protected InputAction leftStick = null;
 
     protected const int maxJumpCount = 2;
 

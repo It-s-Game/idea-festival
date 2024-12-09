@@ -2,7 +2,7 @@ using UnityEngine;
 public class Archer_Hero : Controller
 {
     [SerializeField]
-    private Projectile[] arrows = new Projectile[8];
+    private Projectile[] arrows = new Projectile[] { };
 
     protected override void Attack(int direction)
     {

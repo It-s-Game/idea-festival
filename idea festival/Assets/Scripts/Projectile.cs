@@ -29,6 +29,8 @@ public abstract class Projectile : MonoBehaviour
     }
     public virtual void Set(int direction, GameObject obj)
     {
+        transform.position = initalObject.transform.position;
+
         this.direction = new Vector3(direction, 0);
         this.obj = obj;
 
@@ -62,8 +64,6 @@ public abstract class Projectile : MonoBehaviour
         yield return null;
 
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
-
-        transform.position = initalObject.transform.position;
 
         gameObject.SetActive(false);
     }
