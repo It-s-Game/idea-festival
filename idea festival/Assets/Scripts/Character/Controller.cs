@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
-public abstract class CharacterController : Character
+public abstract class Controller : Character
 {
     private Coroutine leftStickCoroutine = null;
     private InputAction leftStick = null;
@@ -142,13 +142,18 @@ public abstract class CharacterController : Character
 
         animator.Play("player_attack");
 
+        yield return null;
+
+        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
+
+        animator.Play("player_idle");
+
         Attack(direction);
 
         yield return new WaitForSeconds(status.attackDelay);
 
         attackDuration = null;
     }
-    protected abstract void Attack(int direction = 0);
     public virtual void ButtonB(InputValue value) { }
     public virtual void ButtonY(InputValue value) { }
     public virtual void LeftBumper(InputValue value) { }
@@ -157,4 +162,5 @@ public abstract class CharacterController : Character
     public virtual void RightTrigger(InputValue value) { }
     public virtual void LeftStickPress(InputValue value) { }
     public virtual void RightStickPress(InputValue value) { }
+    protected abstract void Attack(int direction = 0);
 }

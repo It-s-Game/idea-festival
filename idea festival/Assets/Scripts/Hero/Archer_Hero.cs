@@ -1,5 +1,5 @@
 using UnityEngine;
-public class Archer_Hero : CharacterController
+public class Archer_Hero : Controller
 {
     [SerializeField]
     private Projectile[] arrows = new Projectile[8];

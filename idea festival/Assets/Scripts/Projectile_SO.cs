@@ -4,9 +4,11 @@ public class Projectile_Info
 {
     public Sprite defaultImage = null;
 
+    public string defaultAnimationName = "";
+    public string hitAnimationName = "";
+    public float cooltime;
     public int damage;
     public int projectileSpeed;
-    public float cooltime;
 }
 [CreateAssetMenu(fileName = "Projectile Information", menuName = "Create New ScriptableObject/Projectile Information_SO")]
 public class Projectile_SO : ScriptableObject

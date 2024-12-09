@@ -1,20 +1,19 @@
 using System.Collections;
 using UnityEngine;
-public class Projectile : MonoBehaviour
+public abstract class Projectile : MonoBehaviour
 {
     [SerializeField]
-    private Projectile_SO so;
+    protected Projectile_SO so;
     [SerializeField]
     private GameObject initalObject;
-    [SerializeField]
-    private string hitAnimationName = "";
 
-    private Animator animator;
+    protected Animator animator;
+    protected Projectile_Info info;
+
+    protected Coroutine move;
+    protected Vector3 direction;
+
     private GameObject obj;
-    private Projectile_Info info;
-
-    private Coroutine move;
-    private Vector3 direction;
 
     private void Awake()
     {
@@ -28,16 +27,12 @@ public class Projectile : MonoBehaviour
     {
         info = so.info;
     }
-    public void Set(int direction, GameObject obj)
+    public virtual void Set(int direction, GameObject obj)
     {
         this.direction = new Vector3(direction, 0);
         this.obj = obj;
 
         move = StartCoroutine(Moving());
-    }
-    protected virtual void Move()
-    {
-
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -45,25 +40,30 @@ public class Projectile : MonoBehaviour
         {
             return;
         }
+        else if(collision.gameObject.CompareTag("Player"))
+        {
+            if(collision.gameObject.TryGetComponent(out IDamagable damagable))
+            {
+                damagable.TakeDamage(info.damage);
+            }
+        }
 
         StartCoroutine(Collide());
     }
     protected virtual IEnumerator Collide()
     {
-        if(hitAnimationName == "")
+        if(info.hitAnimationName == "")
         {
             yield break;
         }
 
-        animator.Play(hitAnimationName);
+        animator.Play(info.hitAnimationName);
 
         yield return null;
 
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
 
         transform.position = initalObject.transform.position;
-
-        animator.enabled = false;
 
         gameObject.SetActive(false);
     }
@@ -76,4 +76,5 @@ public class Projectile : MonoBehaviour
             yield return null;
         }
     }
+    protected abstract void Move();
 }

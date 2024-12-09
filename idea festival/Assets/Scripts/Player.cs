@@ -6,12 +6,12 @@ public class Player : MonoBehaviour
     private InputAction leftStick = null;
 
     [SerializeField]//
-    private CharacterController character;
+    private Controller character;
     private PlayerInput playerInput;
 
     private int playerIndex;
 
-    public CharacterController Character { set { character = value; } }
+    public Controller Character { set { character = value; } }
     public int PlayerIndex { get { return playerIndex; } }
     private void Awake()
     {
@@ -26,7 +26,7 @@ public class Player : MonoBehaviour
             Init(character);
         }
     }
-    public void Init(CharacterController character)
+    public void Init(Controller character)
     {
         this.character = character;
         
