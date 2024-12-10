@@ -3,8 +3,6 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public abstract class Controller : Character
 {
-    private Coroutine leftStickCoroutine = null;
-
     private Coroutine attackDuration;
     private Vector3 moveVec = new();
     private int direction = 0;
@@ -149,7 +147,10 @@ public abstract class Controller : Character
 
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
 
-        animator.Play("player_idle");
+        if(enterFloor)
+        {
+            animator.Play("player_idle");
+        }
 
         yield return new WaitForSeconds(status.attackDelay);
 

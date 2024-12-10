@@ -1,7 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
 public class Character : MonoBehaviour, IDamagable
 {
@@ -23,12 +22,13 @@ public class Character : MonoBehaviour, IDamagable
 
     protected const int maxJumpCount = 2;
 
+    protected Coroutine leftStickCoroutine = null;
     protected Vector3 jumpHeight;
     protected int jumpCount = maxJumpCount;
     protected bool isJump = false;
+    protected bool enterFloor = true;
 
     private int health;
-    private bool enterFloor = true;
 
     protected virtual void Awake()
     {
@@ -73,7 +73,14 @@ public class Character : MonoBehaviour, IDamagable
             jumpCount = maxJumpCount;
             isJump = false;
 
-            animator.Play("player_idle");
+            if(leftStickCoroutine == null)
+            {
+                animator.Play("player_idle");
+            }
+            else
+            {
+                animator.Play("run");
+            }
 
             groundDust.gameObject.SetActive(true);
 
