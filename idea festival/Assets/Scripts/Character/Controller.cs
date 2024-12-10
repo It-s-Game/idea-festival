@@ -3,6 +3,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public abstract class Controller : Character
 {
+    private const float dash_Duration = 0.4f;
+
     private Coroutine attackDuration;
     private Vector3 moveVec = new();
     private int direction = 0;
@@ -33,6 +35,11 @@ public abstract class Controller : Character
     }
     private void CharacterMove()
     {
+        if(inTheDash)
+        {
+            return;
+        }
+
         if((Mathf.Sign(leftStick.ReadValue<Vector2>().x)) != direction)
         {
             direction = (int)Mathf.Sign(leftStick.ReadValue<Vector2>().x);
@@ -58,7 +65,7 @@ public abstract class Controller : Character
 
         rigid.velocity = moveVec;
     }
-    public virtual void LeftStick(InputAction.CallbackContext value)
+    public virtual void LeftStick()
     {
         if(leftStickCoroutine == null)
         {
@@ -67,7 +74,7 @@ public abstract class Controller : Character
                 animator.Play("run");
             }
 
-            leftStickCoroutine = StartCoroutine(LeftStick());
+            leftStickCoroutine = StartCoroutine(Moving());
         }
         else
         {
@@ -109,14 +116,14 @@ public abstract class Controller : Character
     }
     public virtual void ButtonX(InputValue value)
     {
-        if(attackDuration != null || isJump)
+        if(attackDuration != null || isJump || !enterFloor || inTheDash)
         {
             return;
         }
 
         attackDuration = StartCoroutine(AttackDuration());
     }
-    protected IEnumerator LeftStick()
+    protected IEnumerator Moving()
     {
         while (true)
         {
@@ -127,21 +134,9 @@ public abstract class Controller : Character
     }
     protected IEnumerator AttackDuration()
     {
-        if(status.jumpAttack)
-        {
-            if(isJump == true)
-            {
-                animator.Play("jump attack");
-
-                attackDuration = null;
-
-                yield break;
-            }
-        }
-
         animator.Play("player_attack");
 
-        yield return new WaitForSeconds(status.defaultAttack);
+        yield return new WaitForSeconds(so.default_Attack.delay);
 
         Attack(direction);
 
@@ -152,13 +147,39 @@ public abstract class Controller : Character
             animator.Play("player_idle");
         }
 
-        yield return new WaitForSeconds(status.attackDelay);
+        yield return new WaitForSeconds(so.default_Attack.coolTime);
 
         attackDuration = null;
     }
+    protected IEnumerator Dash()
+    {
+        inTheDash = true;
+
+        animator.Play("dash");
+
+        moveVec = new Vector3(direction * status.moveSpeed * 1.5f, rigid.velocity.y);
+
+        rigid.velocity = moveVec;
+
+        yield return new WaitForSeconds(dash_Duration);
+
+        inTheDash = false;
+
+        yield return new WaitForSeconds(status.dash_coolTime);
+
+        dash = null;
+    }
+    public virtual void LeftBumper(InputValue value) 
+    {
+        if(inTheDash | dash != null)
+        {
+            return;
+        }
+
+        dash = StartCoroutine(Dash());
+    }
     public virtual void ButtonB(InputValue value) { }
     public virtual void ButtonY(InputValue value) { }
-    public virtual void LeftBumper(InputValue value) { }
     public virtual void RightBumper(InputValue value) { }
     public virtual void LeftTrigger(InputValue value) { }
     public virtual void RightTrigger(InputValue value) { }

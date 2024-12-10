@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 public class Character : MonoBehaviour, IDamagable
 {
     [SerializeField]
-    protected CharacterInformation_SO characterInfo;
+    protected Character_SO so;
     [SerializeField]
     protected GameObject deathSmoke;
     [SerializeField]
@@ -23,13 +23,15 @@ public class Character : MonoBehaviour, IDamagable
     protected const int maxJumpCount = 2;
 
     protected Coroutine leftStickCoroutine = null;
+    protected Coroutine dash = null;
     protected Vector3 jumpHeight;
     protected int jumpCount = maxJumpCount;
     protected bool isJump = false;
+    protected bool inTheDash = false;
     protected bool enterFloor = true;
 
     private int health;
-
+    
     protected virtual void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();
@@ -50,7 +52,7 @@ public class Character : MonoBehaviour, IDamagable
     }
     private void Init()
     {
-        status = characterInfo.status;
+        status = so.status;
         health = status.maxHealth;
 
         jumpHeight = new Vector3(0, status.jumpHeight);

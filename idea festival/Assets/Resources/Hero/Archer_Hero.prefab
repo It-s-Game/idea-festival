@@ -299,6 +299,10 @@ PrefabInstance:
       value: Character
       objectReference: {fileID: 0}
     - target: {fileID: 6114272288740664481, guid: 7fa8a282b6ae263479617baf91cf8387, type: 3}
+      propertyPath: so
+      value: 
+      objectReference: {fileID: 11400000, guid: 3eb011df84ea5e847abd36d4accd3d0e, type: 2}
+    - target: {fileID: 6114272288740664481, guid: 7fa8a282b6ae263479617baf91cf8387, type: 3}
       propertyPath: arrows.Array.size
       value: 8
       objectReference: {fileID: 0}

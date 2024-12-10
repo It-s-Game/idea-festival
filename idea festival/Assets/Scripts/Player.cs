@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
 
     private int playerIndex;
 
-    public Controller Character { set { controller = value; } }
+    public Controller Controller { set { controller = value; } }
     public int PlayerIndex { get { return playerIndex; } }
     private void Awake()
     {
@@ -40,11 +40,11 @@ public class Player : MonoBehaviour
 
         leftStick.started += (ctx =>
         {
-            controller.LeftStick(ctx);
+            controller.LeftStick();
         });
         leftStick.canceled += (ctx =>
         {
-            controller.LeftStick(ctx);
+            controller.LeftStick();
         });
     }
     private void OnButtonY(InputValue value)
