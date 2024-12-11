@@ -33,6 +33,7 @@ public abstract class Controller : Character
     private void CharacterMove()
     {
         if(inTheDash || isAttack)
+
         {
             return;
         }
