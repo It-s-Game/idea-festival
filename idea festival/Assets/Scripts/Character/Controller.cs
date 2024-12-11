@@ -32,7 +32,12 @@ public abstract class Controller : Character
     }
     private void CharacterMove()
     {
-        if((Mathf.Sign(leftStick.ReadValue<Vector2>().x)) != direction)
+        if (inTheDash)
+        {
+            return;
+        }
+
+        if ((Mathf.Sign(leftStick.ReadValue<Vector2>().x)) != direction)
         {
             direction = (int)Mathf.Sign(leftStick.ReadValue<Vector2>().x);
 
@@ -214,7 +219,7 @@ public abstract class Controller : Character
     }
     protected IEnumerator Dash_Moving()
     {
-        moveVec = new Vector3(direction * status.moveSpeed * 1.5f, 0);
+        moveVec = new Vector3(direction * status.moveSpeed * 1.75f, 0);
 
         while (true)
         {
