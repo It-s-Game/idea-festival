@@ -35,11 +35,6 @@ public abstract class Controller : Character
     }
     private void CharacterMove()
     {
-        if(inTheDash)
-        {
-            return;
-        }
-
         if((Mathf.Sign(leftStick.ReadValue<Vector2>().x)) != direction)
         {
             direction = (int)Mathf.Sign(leftStick.ReadValue<Vector2>().x);
@@ -92,6 +87,11 @@ public abstract class Controller : Character
     }
     public virtual void ButtonA(InputValue value)
     {
+        if(isAttack)
+        {
+            return;
+        }
+
         if(jumpCount > 0)
         {
             if(wallSlide.activeSelf)
@@ -121,13 +121,26 @@ public abstract class Controller : Character
             return;
         }
 
+        isAttack = true;
         attackDuration = StartCoroutine(AttackDuration());
+    }
+    public virtual void LeftBumper(InputValue value)
+    {
+        if(dash != null || isAttack || inTheDash)
+        {
+            return;
+        }
+
+        dash = StartCoroutine(Dash());
     }
     protected IEnumerator Moving()
     {
         while (true)
         {
-            CharacterMove();
+            if(!inTheDash || !isAttack)
+            {
+                CharacterMove();
+            }
 
             yield return null;
         }
@@ -141,6 +154,8 @@ public abstract class Controller : Character
         Attack(direction);
 
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
+
+        isAttack = false;
 
         if(enterFloor)
         {
@@ -157,11 +172,32 @@ public abstract class Controller : Character
 
         animator.Play("dash");
 
-        moveVec = new Vector3(direction * status.moveSpeed * 1.5f, rigid.velocity.y);
+        groundDust.SetActive(true);
 
-        rigid.velocity = moveVec;
+        Coroutine dash_Moving = StartCoroutine(Dash_Moving());
 
         yield return new WaitForSeconds(dash_Duration);
+
+        StopCoroutine(dash_Moving);
+
+        if(enterFloor)
+        {
+            if(leftStickCoroutine == null)
+            {
+                animator.Play("player_idle");
+            }
+            else
+            {
+                animator.Play("run");
+            }
+        }
+        else
+        {
+            if(!wallSlide.activeSelf)
+            {
+                animator.Play("double jump");
+            }
+        }
 
         inTheDash = false;
 
@@ -169,14 +205,16 @@ public abstract class Controller : Character
 
         dash = null;
     }
-    public virtual void LeftBumper(InputValue value) 
+    protected IEnumerator Dash_Moving()
     {
-        if(inTheDash | dash != null)
-        {
-            return;
-        }
+        moveVec = new Vector3(direction * status.moveSpeed * 1.5f, rigid.velocity.y);
 
-        dash = StartCoroutine(Dash());
+        while (true)
+        {
+            rigid.velocity = moveVec;
+
+            yield return null;
+        }
     }
     public virtual void ButtonB(InputValue value) { }
     public virtual void ButtonY(InputValue value) { }

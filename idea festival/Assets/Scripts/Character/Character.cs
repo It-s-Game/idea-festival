@@ -24,10 +24,11 @@ public class Character : MonoBehaviour, IDamagable
 
     protected Coroutine leftStickCoroutine = null;
     protected Coroutine dash = null;
-    protected Vector3 jumpHeight;
+    protected Vector3 jumpHeight;//
     protected int jumpCount = maxJumpCount;
     protected bool isJump = false;
     protected bool inTheDash = false;
+    protected bool isAttack = false;
     protected bool enterFloor = true;
 
     private int health;
