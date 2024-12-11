@@ -26,9 +26,11 @@ public class Character : MonoBehaviour, IDamagable
     protected Coroutine dash = null;
     protected Vector3 jumpHeight;//
     protected int jumpCount = maxJumpCount;
+    protected int direction = 0;
     protected bool isJump = false;
     protected bool inTheDash = false;
     protected bool isAttack = false;
+    protected bool enterWall = false;
     protected bool enterFloor = true;
 
     private int health;
@@ -89,13 +91,15 @@ public class Character : MonoBehaviour, IDamagable
 
             if(wallSlide.activeSelf)
             {
-                if(transform.rotation.y == 0)
+                if(direction == -1)
                 {
-                    transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+                    direction = 1;
+                    transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
                 }
                 else
                 {
-                    transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+                    direction = -1;
+                    transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
                 }
 
                 animator.Play("player_idle");
@@ -107,6 +111,8 @@ public class Character : MonoBehaviour, IDamagable
         }
         else if (collision.gameObject.CompareTag("wall"))
         {
+            enterWall = true;
+
             if(enterFloor)
             {
                 return;
@@ -125,6 +131,8 @@ public class Character : MonoBehaviour, IDamagable
         }
         else if(collision.gameObject.CompareTag("wall"))
         {
+            enterWall = false;
+
             if(isJump)
             {
                 animator.Play("jump");

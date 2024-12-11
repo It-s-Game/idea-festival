@@ -3,11 +3,8 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 public abstract class Controller : Character
 {
-    private const float dash_Duration = 0.4f;
-
     private Coroutine attackDuration;
     private Vector3 moveVec = new();
-    private int direction = 0;
 
     public void Set(InputAction leftStick, int playerIndex)
     {
@@ -50,7 +47,12 @@ public abstract class Controller : Character
 
             transform.rotation = Quaternion.Euler(moveVec);
 
-            if(jumpCount == maxJumpCount)
+            if (enterWall)
+            {
+                return;
+            }
+
+            if (jumpCount == maxJumpCount)
             {
                 animator.Play("run");
             }
@@ -176,11 +178,16 @@ public abstract class Controller : Character
 
         Coroutine dash_Moving = StartCoroutine(Dash_Moving());
 
-        yield return new WaitForSeconds(dash_Duration);
+        yield return new WaitForSeconds(0.35f);
 
         StopCoroutine(dash_Moving);
 
-        if(enterFloor)
+        while (Mathf.Abs(rigid.velocity.x) >= status.moveSpeed)
+        {
+            yield return null;
+        }
+
+        if (enterFloor)
         {
             if(leftStickCoroutine == null)
             {
@@ -207,7 +214,7 @@ public abstract class Controller : Character
     }
     protected IEnumerator Dash_Moving()
     {
-        moveVec = new Vector3(direction * status.moveSpeed * 1.5f, rigid.velocity.y);
+        moveVec = new Vector3(direction * status.moveSpeed * 1.5f, 0);
 
         while (true)
         {
