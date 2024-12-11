@@ -32,7 +32,12 @@ public abstract class Controller : Character
     }
     private void CharacterMove()
     {
-        if((Mathf.Sign(leftStick.ReadValue<Vector2>().x)) != direction)
+        if(inTheDash || isAttack)
+        {
+            return;
+        }
+
+        if ((Mathf.Sign(leftStick.ReadValue<Vector2>().x)) != direction)
         {
             direction = (int)Mathf.Sign(leftStick.ReadValue<Vector2>().x);
 
@@ -58,7 +63,14 @@ public abstract class Controller : Character
             }
         }
 
-        moveVec = new Vector3(direction * status.moveSpeed, rigid.velocity.y);
+        if(wallSlide.activeSelf)
+        {
+            moveVec = new Vector3(direction * status.moveSpeed, rigid.velocity.y * 0.9f);
+        }
+        else
+        {
+            moveVec = new Vector3(direction * status.moveSpeed, rigid.velocity.y);
+        }
 
         rigid.velocity = moveVec;
     }
@@ -68,15 +80,16 @@ public abstract class Controller : Character
         {
             if(jumpCount == maxJumpCount)
             {
-                animator.Play("run");
+                if(!isAttack)
+                {
+                    animator.Play("run");
+                }
             }
 
             leftStickCoroutine = StartCoroutine(Moving());
         }
         else
         {
-            rigid.velocity = Vector2.zero;
-
             if(!isJump)
             {
                 animator.Play("player_idle");
@@ -123,12 +136,11 @@ public abstract class Controller : Character
             return;
         }
 
-        isAttack = true;
         attackDuration = StartCoroutine(AttackDuration());
     }
     public virtual void LeftBumper(InputValue value)
     {
-        if(dash != null || isAttack || inTheDash)
+        if(dash != null || wallSlide.activeSelf || isAttack || inTheDash)
         {
             return;
         }
@@ -149,6 +161,8 @@ public abstract class Controller : Character
     }
     protected IEnumerator AttackDuration()
     {
+        isAttack = true;
+
         animator.Play("player_attack");
 
         yield return new WaitForSeconds(so.default_Attack.delay);
@@ -161,7 +175,14 @@ public abstract class Controller : Character
 
         if(enterFloor)
         {
-            animator.Play("player_idle");
+            if(leftStickCoroutine != null)
+            {
+                animator.Play("run");
+            }
+            else
+            {
+                animator.Play("player_idle");
+            }
         }
 
         yield return new WaitForSeconds(so.default_Attack.coolTime);
@@ -214,7 +235,7 @@ public abstract class Controller : Character
     }
     protected IEnumerator Dash_Moving()
     {
-        moveVec = new Vector3(direction * status.moveSpeed * 1.5f, 0);
+        moveVec = new Vector3(direction * status.moveSpeed * 1.75f, 0);
 
         while (true)
         {

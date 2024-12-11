@@ -46,7 +46,7 @@ public class Character : MonoBehaviour, IDamagable
         }
         else
         {
-            this.col = transform.AddComponent<CapsuleCollider2D>();
+            this.col = transform.AddComponent<BoxCollider2D>();
         }
     }
     protected virtual void Start()
