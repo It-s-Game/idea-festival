@@ -4,23 +4,15 @@ public class Archer_Hero : Controller
 {
     [SerializeField]
     private Projectile[] arrows = new Projectile[] { };
+    [SerializeField]
+    private Projectile[] dogs = new Projectile[] { };
 
-    protected override void Attack(int direction)
+    protected override void Attack()
     {
-        foreach(Projectile arrow in arrows)
-        {
-            if(!arrow.gameObject.activeSelf)
-            {
-                arrow.gameObject.SetActive(true);
-
-                arrow.Set(direction, gameObject);
-
-                break;
-            }
-        }
+        ActiveProjectile(arrows);
     }
     public override void ButtonY(InputValue value)
     {
-
+        ActiveProjectile(dogs);
     }
 }

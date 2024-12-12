@@ -30,6 +30,20 @@ public abstract class Controller : Character
             TakeDamage(status.maxHealth);
         }
     }
+    protected void ActiveProjectile(Projectile[] projectiles)
+    {
+        foreach(Projectile projectile in projectiles)
+        {
+            if(!projectile.gameObject.activeSelf)
+            {
+                projectile.gameObject.SetActive(true);
+
+                projectile.Set(direction, gameObject);
+
+                break;
+            }
+        }
+    }
     private void CharacterMove()
     {
         if(inTheDash || isAttack)
@@ -139,7 +153,7 @@ public abstract class Controller : Character
             return;
         }
 
-        attackDuration = StartCoroutine(AttackDuration());
+        attackDuration = StartCoroutine(AttackDuration("player_attack", so.default_Attack.delay));//
     }
     public virtual void LeftBumper(InputValue value)
     {
@@ -162,15 +176,15 @@ public abstract class Controller : Character
             yield return null;
         }
     }
-    protected IEnumerator AttackDuration()
+    protected IEnumerator AttackDuration(string animationName, float delay)
     {
         isAttack = true;
 
-        animator.Play("player_attack");
+        animator.Play(animationName);
 
-        yield return new WaitForSeconds(so.default_Attack.delay);
+        yield return new WaitForSeconds(delay);
 
-        Attack(direction);
+        Attack();
 
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
 
@@ -254,5 +268,5 @@ public abstract class Controller : Character
     public virtual void RightTrigger(InputValue value) { }
     public virtual void LeftStickPress(InputValue value) { }
     public virtual void RightStickPress(InputValue value) { }
-    protected abstract void Attack(int direction = 0);
+    protected abstract void Attack();
 }

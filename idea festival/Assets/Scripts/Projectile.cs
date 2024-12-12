@@ -9,6 +9,7 @@ public abstract class Projectile : MonoBehaviour
     private GameObject initalObject;
 
     protected Animator animator;
+    protected Collider2D col;
     protected Projectile_Info info;
 
     protected Coroutine move;
@@ -19,6 +20,15 @@ public abstract class Projectile : MonoBehaviour
     private void Awake()
     {
         animator = GetComponent<Animator>();
+
+        if(TryGetComponent(out Collider2D col))
+        {
+            this.col = col;
+        }
+        else
+        {
+            this.col = gameObject.AddComponent<BoxCollider2D>();
+        }
 
         Init();
 
