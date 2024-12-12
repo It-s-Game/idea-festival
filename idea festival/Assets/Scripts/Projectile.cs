@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+[RequireComponent(typeof(Animator))]
 public abstract class Projectile : MonoBehaviour
 {
     [SerializeField]
@@ -67,7 +68,7 @@ public abstract class Projectile : MonoBehaviour
 
         gameObject.SetActive(false);
     }
-    private IEnumerator Moving()
+    protected virtual IEnumerator Moving()
     {
         while (true)
         {

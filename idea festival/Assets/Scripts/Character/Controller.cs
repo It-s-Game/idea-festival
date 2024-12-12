@@ -91,7 +91,9 @@ public abstract class Controller : Character
         }
         else
         {
-            if(!isJump)
+            rigid.velocity = new Vector3(0, rigid.velocity.y);
+
+            if (!isJump)
             {
                 animator.Play("player_idle");
             }

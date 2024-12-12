@@ -1,7 +1,7 @@
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
-[RequireComponent(typeof(Rigidbody2D), typeof(Animator))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Animator), typeof(BoxCollider2D))]
 public class Character : MonoBehaviour, IDamagable
 {
     [SerializeField]
@@ -39,15 +39,7 @@ public class Character : MonoBehaviour, IDamagable
     {
         rigid = GetComponent<Rigidbody2D>();
         animator = GetComponent<Animator>();
-
-        if(TryGetComponent(out Collider2D col))
-        {
-            this.col = col;
-        }
-        else
-        {
-            this.col = transform.AddComponent<BoxCollider2D>();
-        }
+        col = GetComponent<Collider2D>();
     }
     protected virtual void Start()
     {
@@ -55,6 +47,8 @@ public class Character : MonoBehaviour, IDamagable
     }
     private void Init()
     {
+        rigid.freezeRotation = true;
+
         status = so.status;
         health = status.maxHealth;
 

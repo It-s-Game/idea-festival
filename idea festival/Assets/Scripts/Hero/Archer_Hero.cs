@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 public class Archer_Hero : Controller
 {
     [SerializeField]
@@ -17,5 +18,9 @@ public class Archer_Hero : Controller
                 break;
             }
         }
+    }
+    public override void ButtonY(InputValue value)
+    {
+
     }
 }
