@@ -168,7 +168,7 @@ public abstract class Controller : Character
             return;
         }
 
-        dash = StartCoroutine(Dash());
+        dash = StartCoroutine(Dash("dash"));
     }
     protected void Skill(Action skill, string animationName, float delay, ref bool inCoolTime)
     {
@@ -239,24 +239,21 @@ public abstract class Controller : Character
 
         inCoolTime = false;
     }
-    protected IEnumerator Dash()
+    protected IEnumerator Dash(string animationName, float magnification = 1.35f)
     {
         inTheDash = true;
 
-        animator.Play("dash");
+        animator.Play(animationName);
 
         groundDust.SetActive(true);
 
-        Coroutine dash_Moving = StartCoroutine(Dash_Moving());
+        Coroutine dash_Moving = StartCoroutine(Dash_Moving(magnification));
 
         yield return new WaitForSeconds(0.35f);
 
         StopCoroutine(dash_Moving);
 
-        while (Mathf.Abs(rigid.velocity.x) >= status.moveSpeed)
-        {
-            yield return null;
-        }
+        rigid.velocity = new Vector3(Mathf.Sign(rigid.velocity.x) * status.moveSpeed, rigid.velocity.y);
 
         if (enterFloor)
         {
@@ -273,7 +270,14 @@ public abstract class Controller : Character
         {
             if(!wallSlide.activeSelf)
             {
-                animator.Play("double jump");
+                if(jumpCount == 1)
+                {
+                    animator.Play("jump");
+                }
+                else
+                {
+                    animator.Play("double jump");
+                }
             }
         }
 
@@ -283,12 +287,21 @@ public abstract class Controller : Character
 
         dash = null;
     }
-    protected IEnumerator Dash_Moving()
+    protected IEnumerator Dash_Moving(float magnification)
     {
-        moveVec = new Vector3(direction * status.moveSpeed * 1.75f, 0);
+        moveVec = new Vector3(rigid.velocity.x + direction * status.moveSpeed * magnification, 0);
 
         while (true)
         {
+            if(rigid.velocity.y > 0)
+            {
+                moveVec.y = rigid.velocity.y;
+            }
+            else
+            {
+                moveVec.y = 0;
+            }
+
             rigid.velocity = moveVec;
 
             yield return null;

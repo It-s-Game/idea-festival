@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class Archer_Hero : Controller
@@ -6,6 +7,8 @@ public class Archer_Hero : Controller
     private Projectile[] arrows = new Projectile[] { };
     [SerializeField]
     private Projectile[] dogs = new Projectile[] { };
+    [SerializeField]
+    private AttackRange skill2_Range;
 
     private bool skill1 = false;
     private bool skill2 = false;
@@ -14,6 +17,12 @@ public class Archer_Hero : Controller
     protected override void DefaultAttack()
     {
         ActiveProjectile(arrows);
+    }
+    protected override void Awake()
+    {
+        base.Awake();
+
+        skill2_Range.Init(gameObject);
     }
     public override void ButtonY(InputValue value)
     {
@@ -35,7 +44,13 @@ public class Archer_Hero : Controller
     }
     public override void RightBumper(InputValue value)
     {
-        Skill(Skill3, "skill3", so.skills[2].delay, ref skill3);
+        if(skill3)
+        {
+            return;
+        }
+
+        StartCoroutine(Casting_Skill3());
+        StartCoroutine(Dash("skill3", 2.5f));
     }
     public void Skill1()
     {
@@ -43,10 +58,24 @@ public class Archer_Hero : Controller
     }
     public void Skill2()
     {
-        
+        StartCoroutine(Casting_Skill2());
     }
-    public void Skill3()
+    private IEnumerator Casting_Skill2()
     {
+        skill2_Range.gameObject.SetActive(true);
 
+        skill2_Range.Set(so.skills[1].damage);
+
+        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
+
+        skill2_Range.gameObject.SetActive(false);
+    }
+    private IEnumerator Casting_Skill3()
+    {
+        skill3 = true;
+
+        yield return new WaitForSeconds(so.skills[2].coolTime);
+        
+        skill3 = false;
     }
 }

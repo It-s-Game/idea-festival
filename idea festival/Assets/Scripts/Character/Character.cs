@@ -1,4 +1,3 @@
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator), typeof(BoxCollider2D))]
@@ -24,7 +23,7 @@ public class Character : MonoBehaviour, IDamagable
 
     protected Coroutine leftStickCoroutine = null;
     protected Coroutine dash = null;
-    protected Vector3 jumpHeight;//
+    protected Vector3 jumpHeight;
     protected int jumpCount = maxJumpCount;
     protected int direction = 0;
     protected bool isJump = false;

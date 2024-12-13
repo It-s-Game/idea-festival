@@ -53,12 +53,9 @@ public abstract class Projectile : MonoBehaviour
         {
             return;
         }
-        else if(collision.gameObject.CompareTag("Player"))
+        else if(collision.gameObject.TryGetComponent(out IDamagable damagable))
         {
-            if(collision.gameObject.TryGetComponent(out IDamagable damagable))
-            {
-                damagable.TakeDamage(info.damage);
-            }
+            damagable.TakeDamage(info.damage);
         }
 
         StartCoroutine(Collide());
