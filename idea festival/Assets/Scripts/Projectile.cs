@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(Animator))]
 public abstract class Projectile : MonoBehaviour
@@ -7,6 +8,8 @@ public abstract class Projectile : MonoBehaviour
     protected Projectile_SO so;
     [SerializeField]
     private GameObject initalObject;
+
+    protected List<GameObject> objects = new();
 
     protected Animator animator;
     protected Collider2D col;
@@ -34,6 +37,10 @@ public abstract class Projectile : MonoBehaviour
 
         gameObject.SetActive(false);
     }
+    protected void OnEnable()
+    {
+        objects = new();
+    }
     private void Init()
     {
         info = so.info;
@@ -55,10 +62,20 @@ public abstract class Projectile : MonoBehaviour
         }
         else if(collision.gameObject.TryGetComponent(out IDamagable damagable))
         {
-            damagable.TakeDamage(info.damage);
-        }
+            foreach (GameObject go in objects)
+            {
+                if (collision.gameObject == go)
+                {
+                    return;
+                }
+            }
 
-        StartCoroutine(Collide());
+            damagable.TakeDamage(info.damage);
+
+            objects.Add(collision.gameObject);
+
+            StartCoroutine(Collide());
+        }
     }
     protected virtual IEnumerator Collide()
     {

@@ -1,11 +1,14 @@
+using System.Collections.Generic;
 using UnityEngine;
 public class AttackRange : MonoBehaviour
 {
+    protected List<GameObject> objects;
+
     private GameObject obj;
 
     private int damage;
 
-    private void Awake()
+    protected void Awake()
     {
         if(!GetComponent<Collider2D>())
         {
@@ -14,14 +17,15 @@ public class AttackRange : MonoBehaviour
             col.isTrigger = true;
         }
     }
+    protected void OnEnable()
+    {
+        objects = new();
+    }
     public void Init(GameObject obj)
     {
         this.obj = obj;
 
         gameObject.SetActive(false);
-    }
-    private void Start()
-    {
     }
     public void Set(int damage)
     {
@@ -35,7 +39,17 @@ public class AttackRange : MonoBehaviour
         }
         else if (collision.gameObject.TryGetComponent(out IDamagable damagable))
         {
+            foreach(GameObject go in objects)
+            {
+                if(collision.gameObject == go)
+                {
+                    return;
+                }
+            }
+
             damagable.TakeDamage(damage);
+
+            objects.Add(collision.gameObject);
         }
     }
 }
