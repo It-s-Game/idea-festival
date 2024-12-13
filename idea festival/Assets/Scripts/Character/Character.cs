@@ -29,7 +29,7 @@ public class Character : MonoBehaviour, IDamagable
     protected int direction = 0;
     protected bool isJump = false;
     protected bool inTheDash = false;
-    protected bool isAttack = false;
+    protected bool castingSkill = false;
     protected bool enterWall = false;
     protected bool enterFloor = true;
 

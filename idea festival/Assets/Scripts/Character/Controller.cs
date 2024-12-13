@@ -1,10 +1,11 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public abstract class Controller : Character
 {
-    private Coroutine attackDuration;
     private Vector3 moveVec = new();
+    private bool defaultAttack = false;
 
     public void Set(InputAction leftStick, int playerIndex)
     {
@@ -46,7 +47,7 @@ public abstract class Controller : Character
     }
     private void CharacterMove()
     {
-        if(inTheDash || isAttack)
+        if(inTheDash || castingSkill)
 
         {
             return;
@@ -95,7 +96,7 @@ public abstract class Controller : Character
         {
             if(jumpCount == maxJumpCount)
             {
-                if(!isAttack)
+                if(!castingSkill)
                 {
                     animator.Play("run");
                 }
@@ -119,7 +120,7 @@ public abstract class Controller : Character
     }
     public virtual void ButtonA(InputValue value)
     {
-        if(isAttack)
+        if(castingSkill)
         {
             return;
         }
@@ -148,27 +149,46 @@ public abstract class Controller : Character
     }
     public virtual void ButtonX(InputValue value)
     {
-        if(attackDuration != null || isJump || !enterFloor || inTheDash)
+        if(castingSkill || isJump || !enterFloor || inTheDash)
         {
             return;
         }
 
-        attackDuration = StartCoroutine(AttackDuration("player_attack", so.default_Attack.delay));//
+        if(!defaultAttack)
+        {
+            defaultAttack = true;
+        }
+
+        StartCoroutine(CastingSkill(DefaultAttack, "player_attack", so.default_Attack.delay, defaultAttack));
     }
     public virtual void LeftBumper(InputValue value)
     {
-        if(dash != null || wallSlide.activeSelf || isAttack || inTheDash)
+        if(dash != null || wallSlide.activeSelf || castingSkill || inTheDash)
         {
             return;
         }
 
         dash = StartCoroutine(Dash());
     }
+    protected void Skill(Action skill, string animationName, float delay, ref bool inCoolTime)
+    {
+        if (castingSkill || !enterFloor || inTheDash)
+        {
+            return;
+        }
+
+        if (!inCoolTime)
+        {
+            inCoolTime = true;
+        }
+
+        StartCoroutine(CastingSkill(skill, animationName, delay, inCoolTime));
+    }
     protected IEnumerator Moving()
     {
         while (true)
         {
-            if(!inTheDash || !isAttack)
+            if(!inTheDash || !castingSkill)
             {
                 CharacterMove();
             }
@@ -176,19 +196,21 @@ public abstract class Controller : Character
             yield return null;
         }
     }
-    protected IEnumerator AttackDuration(string animationName, float delay)
+    protected IEnumerator CastingSkill(Action skill, string animationName, float delay, bool inCoolTime)
     {
-        isAttack = true;
+        castingSkill = true;
+
+        rigid.velocity = new Vector3(0, rigid.velocity.y);
 
         animator.Play(animationName);
 
         yield return new WaitForSeconds(delay);
 
-        Attack();
+        skill.Invoke();
 
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
 
-        isAttack = false;
+        castingSkill = false;
 
         if(enterFloor)
         {
@@ -201,10 +223,21 @@ public abstract class Controller : Character
                 animator.Play("player_idle");
             }
         }
+        else
+        {
+            if(enterWall)
+            {
+                animator.Play("wallslide");
+            }
+            else
+            {
+                animator.Play("jump");
+            }
+        }
 
         yield return new WaitForSeconds(so.default_Attack.coolTime);
 
-        attackDuration = null;
+        inCoolTime = false;
     }
     protected IEnumerator Dash()
     {
@@ -268,5 +301,5 @@ public abstract class Controller : Character
     public virtual void RightTrigger(InputValue value) { }
     public virtual void LeftStickPress(InputValue value) { }
     public virtual void RightStickPress(InputValue value) { }
-    protected abstract void Attack();
+    protected abstract void DefaultAttack();
 }
