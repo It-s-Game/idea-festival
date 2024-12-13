@@ -110,7 +110,7 @@ public abstract class Controller : Character
 
             if (!isJump)
             {
-                animator.Play("player_idle");
+                animator.Play("idle");
             }
 
             StopCoroutine(leftStickCoroutine);
@@ -220,7 +220,7 @@ public abstract class Controller : Character
             }
             else
             {
-                animator.Play("player_idle");
+                animator.Play("idle");
             }
         }
         else
@@ -259,7 +259,7 @@ public abstract class Controller : Character
         {
             if(leftStickCoroutine == null)
             {
-                animator.Play("player_idle");
+                animator.Play("idle");
             }
             else
             {

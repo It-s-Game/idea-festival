@@ -73,7 +73,7 @@ public class Character : MonoBehaviour, IDamagable
 
             if(leftStickCoroutine == null)
             {
-                animator.Play("player_idle");
+                animator.Play("idle");
             }
             else
             {
@@ -95,7 +95,7 @@ public class Character : MonoBehaviour, IDamagable
                     transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
                 }
 
-                animator.Play("player_idle");
+                animator.Play("idle");
 
                 wallSlide.SetActive(false);
             }
