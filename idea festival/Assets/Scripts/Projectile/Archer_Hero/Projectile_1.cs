@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-public class Archer_Hero_Arrow : Projectile
+public class Projectile_1 : Projectile
 {
     public override void Set(int direction, GameObject obj)
     {

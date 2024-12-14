@@ -4,9 +4,9 @@ using UnityEngine.InputSystem;
 public class Archer_Hero : Controller
 {
     [SerializeField]
-    private Projectile[] arrows = new Projectile[] { };
+    private Projectile[] projectile1 = new Projectile[] { };
     [SerializeField]
-    private Projectile[] dogs = new Projectile[] { };
+    private Projectile[] projectile2 = new Projectile[] { };
     [SerializeField]
     private AttackRange skill2_Range;
 
@@ -16,7 +16,7 @@ public class Archer_Hero : Controller
 
     protected override void DefaultAttack()
     {
-        ActiveProjectile(arrows);
+        ActiveProjectile(projectile1);
     }
     protected override void Awake()
     {
@@ -54,7 +54,7 @@ public class Archer_Hero : Controller
     }
     public void Skill1()
     {
-        ActiveProjectile(dogs);
+        ActiveProjectile(projectile2);
     }
     public void Skill2()
     {

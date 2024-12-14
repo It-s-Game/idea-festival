@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-public class Archer_Hero_Dog : Projectile
+public class Projectile_2 : Projectile
 {
     protected override void Move()
     {

@@ -159,7 +159,7 @@ public abstract class Controller : Character
             defaultAttack = true;
         }
 
-        StartCoroutine(CastingSkill(DefaultAttack, "player_attack", so.default_Attack.delay, defaultAttack));
+        StartCoroutine(CastingSkill(DefaultAttack, "attack", so.default_Attack.delay, defaultAttack));
     }
     public virtual void LeftBumper(InputValue value)
     {
