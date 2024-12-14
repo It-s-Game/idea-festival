@@ -81,6 +81,8 @@ public abstract class Projectile : MonoBehaviour
     {
         if(info.hitAnimationName == "")
         {
+            gameObject.SetActive(false);
+
             yield break;
         }
 

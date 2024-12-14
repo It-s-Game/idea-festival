@@ -28,7 +28,7 @@ public class Player : MonoBehaviour
     }
     public void Init(Controller character)
     {
-        this.controller = character;
+        controller = character;
         
         leftStick = playerInput.actions["LeftStick"];
 

@@ -18,7 +18,7 @@ public class Bat_Hero : Controller
 
     protected override void DefaultAttack()
     {
-
+        StartCoroutine(Casting_DefaultAttack());
     }
     public override void ButtonY(InputValue value)
     {
@@ -27,7 +27,7 @@ public class Bat_Hero : Controller
             return;
         }
 
-        Skill(Skill1, "skilll1", so.skills[0].delay, ref skill1);
+        Skill(Skill1, "skill1", so.skills[0].delay, ref skill1);
     }
     public override void ButtonB(InputValue value)
     {
@@ -36,7 +36,7 @@ public class Bat_Hero : Controller
             return;
         }
 
-        Skill(Skill2, "skilll1", so.skills[1].delay, ref skill2);
+        Skill(Skill2, "skill2", so.skills[1].delay, ref skill2);
     }
     public override void RightBumper(InputValue value)
     {
@@ -45,7 +45,7 @@ public class Bat_Hero : Controller
             return;
         }
 
-        Skill(Skill3, "skilll1", so.skills[2].delay, ref skill3);
+        Skill(Skill3, "skill3", so.skills[2].delay, ref skill3);
     }
     public void Skill1()
     {
@@ -65,7 +65,7 @@ public class Bat_Hero : Controller
 
         defaultAttack_Range.Set(so.default_Attack.damage);
 
-        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);//
+        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
 
         defaultAttack_Range.gameObject.SetActive(false);
     }
