@@ -54,7 +54,7 @@ public abstract class Projectile : MonoBehaviour
 
         move = StartCoroutine(Moving());
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject == obj)
         {
@@ -73,9 +73,9 @@ public abstract class Projectile : MonoBehaviour
             damagable.TakeDamage(info.damage);
 
             objects.Add(collision.gameObject);
-
-            StartCoroutine(Collide());
         }
+
+        StartCoroutine(Collide());
     }
     protected virtual IEnumerator Collide()
     {

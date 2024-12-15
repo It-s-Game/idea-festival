@@ -124,10 +124,26 @@ PrefabInstance:
       propertyPath: initalObject
       value: 
       objectReference: {fileID: 597576631785614666}
+    - target: {fileID: 3681718199429349983, guid: df45f443c4e1e04439f3431517910bbf, type: 3}
+      propertyPath: initalObject
+      value: 
+      objectReference: {fileID: 597576631785614666}
+    - target: {fileID: 3697098886980023256, guid: df45f443c4e1e04439f3431517910bbf, type: 3}
+      propertyPath: initalObject
+      value: 
+      objectReference: {fileID: 597576631785614666}
     - target: {fileID: 3919275880370961159, guid: df45f443c4e1e04439f3431517910bbf, type: 3}
       propertyPath: m_Name
       value: Bat Hero Weapons
       objectReference: {fileID: 0}
+    - target: {fileID: 3930420591338503961, guid: df45f443c4e1e04439f3431517910bbf, type: 3}
+      propertyPath: initalObject
+      value: 
+      objectReference: {fileID: 597576631785614666}
+    - target: {fileID: 4576186470025471419, guid: df45f443c4e1e04439f3431517910bbf, type: 3}
+      propertyPath: initalObject
+      value: 
+      objectReference: {fileID: 597576631785614666}
     - target: {fileID: 4958440184961648800, guid: df45f443c4e1e04439f3431517910bbf, type: 3}
       propertyPath: initalObject
       value: 
@@ -136,11 +152,27 @@ PrefabInstance:
       propertyPath: initalObject
       value: 
       objectReference: {fileID: 597576631785614666}
+    - target: {fileID: 5951504941291496817, guid: df45f443c4e1e04439f3431517910bbf, type: 3}
+      propertyPath: initalObject
+      value: 
+      objectReference: {fileID: 597576631785614666}
+    - target: {fileID: 6634612533509676859, guid: df45f443c4e1e04439f3431517910bbf, type: 3}
+      propertyPath: initalObject
+      value: 
+      objectReference: {fileID: 597576631785614666}
     - target: {fileID: 6872675487977612821, guid: df45f443c4e1e04439f3431517910bbf, type: 3}
       propertyPath: initalObject
       value: 
       objectReference: {fileID: 597576631785614666}
+    - target: {fileID: 6940117561677069470, guid: df45f443c4e1e04439f3431517910bbf, type: 3}
+      propertyPath: initalObject
+      value: 
+      objectReference: {fileID: 597576631785614666}
     - target: {fileID: 7441804369922962086, guid: df45f443c4e1e04439f3431517910bbf, type: 3}
+      propertyPath: initalObject
+      value: 
+      objectReference: {fileID: 597576631785614666}
+    - target: {fileID: 8440801758923571870, guid: df45f443c4e1e04439f3431517910bbf, type: 3}
       propertyPath: initalObject
       value: 
       objectReference: {fileID: 597576631785614666}

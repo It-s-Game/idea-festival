@@ -16,6 +16,6 @@ public class Projectile_1 : Projectile
     {
         StopCoroutine(move);
 
-        return base.Collide();
+        yield return base.Collide();
     }
 }
