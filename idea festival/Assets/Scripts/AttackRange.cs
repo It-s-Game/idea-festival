@@ -16,6 +16,8 @@ public class AttackRange : MonoBehaviour
 
             col.isTrigger = true;
         }
+
+        gameObject.SetActive(false);
     }
     protected void OnEnable()
     {

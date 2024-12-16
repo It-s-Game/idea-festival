@@ -19,12 +19,6 @@ public class Projectile_2 : Projectile
 
         base.Set(direction, obj);
     }
-    protected override IEnumerator Collide()
-    {
-        StopCoroutine(move);
-
-        return base.Collide();
-    }
     protected override IEnumerator Moving()
     {
         col.enabled = false;

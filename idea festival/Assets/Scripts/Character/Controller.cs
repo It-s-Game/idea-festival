@@ -48,7 +48,6 @@ public abstract class Controller : Character
     private void CharacterMove()
     {
         if(inTheDash || castingSkill)
-
         {
             return;
         }
@@ -108,7 +107,7 @@ public abstract class Controller : Character
         {
             rigid.velocity = new Vector3(0, rigid.velocity.y);
 
-            if (!isJump)
+            if (!isJump && !castingSkill)
             {
                 animator.Play("idle");
             }

@@ -53,7 +53,7 @@ public abstract class Projectile : MonoBehaviour
         this.obj = obj;
 
         move = StartCoroutine(Moving());
-    }
+    }    
     protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject == obj)
@@ -75,10 +75,17 @@ public abstract class Projectile : MonoBehaviour
             objects.Add(collision.gameObject);
         }
 
-        StartCoroutine(Collide());
+        StartCoroutine(EnterCollide());
     }
-    protected virtual IEnumerator Collide()
+    private IEnumerator EnterCollide()
     {
+        if (info.stopMove)
+        {
+            StopCoroutine(move);
+        }
+
+        yield return null;
+
         if(info.hitAnimationName == "")
         {
             gameObject.SetActive(false);

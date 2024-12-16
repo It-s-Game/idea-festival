@@ -61,6 +61,18 @@ public class Bat_Hero : Controller
     }
     private IEnumerator Casting_DefaultAttack()
     {
+        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.35f);
+
+        defaultAttack_Range.gameObject.SetActive(true);
+
+        defaultAttack_Range.Set(so.default_Attack.damage);
+
+        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.6f);
+
+        defaultAttack_Range.gameObject.SetActive(false);
+
+        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.65f);
+
         defaultAttack_Range.gameObject.SetActive(true);
 
         defaultAttack_Range.Set(so.default_Attack.damage);
@@ -71,13 +83,23 @@ public class Bat_Hero : Controller
     }
     private IEnumerator Casting_Skill3()
     {
+        skill3_Range.gameObject.transform.position = transform.position;
+
         skill3_Range.gameObject.SetActive(true);
 
         skill3_Range.Set(so.skills[1].damage);
 
+        col.enabled = false;
+
+        rigid.constraints = RigidbodyConstraints2D.FreezePositionY;
+
+        rigid.velocity = new Vector3(direction * 1.5f, 0);
+
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
 
-        //move charcter transform position;
+        col.enabled = true;
+
+        rigid.constraints = RigidbodyConstraints2D.None;
 
         skill3_Range.gameObject.SetActive(false);
     }

@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 public class Projectile_1 : Projectile
 {
@@ -11,11 +10,5 @@ public class Projectile_1 : Projectile
     protected override void Move()
     {
         transform.position += direction * info.projectileSpeed * Time.deltaTime;
-    }
-    protected override IEnumerator Collide()
-    {
-        StopCoroutine(move);
-
-        yield return base.Collide();
     }
 }

@@ -165,7 +165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1179605093953795157}
   m_Layer: 0
-  m_Name: skill dog position
+  m_Name: skill3 position
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -246,6 +246,14 @@ PrefabInstance:
       propertyPath: initalObject
       value: 
       objectReference: {fileID: 6579325030710775300}
+    - target: {fileID: 4904322926812063994, guid: fc36fbb5ecf155f448e7d0a4735a0cfd, type: 3}
+      propertyPath: initalObject
+      value: 
+      objectReference: {fileID: 6579325030710775300}
+    - target: {fileID: 7636914817267518926, guid: fc36fbb5ecf155f448e7d0a4735a0cfd, type: 3}
+      propertyPath: initalObject
+      value: 
+      objectReference: {fileID: 6579325030710775300}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -256,9 +264,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 216079748174058044, guid: fc36fbb5ecf155f448e7d0a4735a0cfd, type: 3}
   m_PrefabInstance: {fileID: 1266467764732294039}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1665116834696016570 stripped
+--- !u!114 &6169018961019411309 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 470849674208461101, guid: fc36fbb5ecf155f448e7d0a4735a0cfd, type: 3}
+  m_CorrespondingSourceObject: {fileID: 4904322926812063994, guid: fc36fbb5ecf155f448e7d0a4735a0cfd, type: 3}
   m_PrefabInstance: {fileID: 1266467764732294039}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -267,9 +275,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a1ff09f8da86af46b42f85c21a4afd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4246838200424601486 stripped
+--- !u!114 &8676360778933878361 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3133565736669668377, guid: fc36fbb5ecf155f448e7d0a4735a0cfd, type: 3}
+  m_CorrespondingSourceObject: {fileID: 7636914817267518926, guid: fc36fbb5ecf155f448e7d0a4735a0cfd, type: 3}
   m_PrefabInstance: {fileID: 1266467764732294039}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -584,10 +592,10 @@ PrefabInstance:
       addedObject: {fileID: 832126122343055971}
     - targetCorrespondingSourceObject: {fileID: 1968221176728829967, guid: 7fa8a282b6ae263479617baf91cf8387, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1179605093953795157}
+      addedObject: {fileID: 3186796576675026209}
     - targetCorrespondingSourceObject: {fileID: 1968221176728829967, guid: 7fa8a282b6ae263479617baf91cf8387, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3186796576675026209}
+      addedObject: {fileID: 1179605093953795157}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5160486943751051708, guid: 7fa8a282b6ae263479617baf91cf8387, type: 3}
       insertIndex: -1
@@ -726,7 +734,7 @@ MonoBehaviour:
   deathSmoke: {fileID: 7609185199046108639}
   groundDust: {fileID: 186049943526656211}
   wallSlide: {fileID: 97491838990034399}
-  arrows:
+  projectile1:
   - {fileID: 7050462836042420219}
   - {fileID: 1821150161064278717}
   - {fileID: 4147540504179812850}
@@ -735,9 +743,9 @@ MonoBehaviour:
   - {fileID: 4144069387815998774}
   - {fileID: 891263717225904930}
   - {fileID: 8428486056969297046}
-  dogs:
-  - {fileID: 4246838200424601486}
-  - {fileID: 1665116834696016570}
+  projectile2:
+  - {fileID: 6169018961019411309}
+  - {fileID: 8676360778933878361}
   skill2_Range: {fileID: 4862075081950184418}
 --- !u!4 &5621713010915502774 stripped
 Transform:
