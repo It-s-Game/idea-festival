@@ -23,7 +23,7 @@ public class Character : MonoBehaviour, IDamagable
 
     protected Coroutine leftStickCoroutine = null;
     protected Coroutine dash = null;
-    protected Vector3 jumpHeight;
+    protected float jumpHeight;
     protected int jumpCount = maxJumpCount;
     protected int direction = 0;
     protected bool isJump = false;
@@ -50,8 +50,7 @@ public class Character : MonoBehaviour, IDamagable
 
         status = so.status;
         health = status.maxHealth;
-
-        jumpHeight = new Vector3(0, status.jumpHeight);
+        jumpHeight = status.jumpHeight;
     }
     public void TakeDamage(int damage)
     {

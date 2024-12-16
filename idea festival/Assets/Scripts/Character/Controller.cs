@@ -140,7 +140,7 @@ public abstract class Controller : Character
                 animator.Play("double jump");
             }
 
-            rigid.AddForce(jumpHeight, ForceMode2D.Impulse);
+            rigid.velocity = new Vector2(rigid.velocity.x, jumpHeight);
 
             jumpCount--;
             isJump = true;
