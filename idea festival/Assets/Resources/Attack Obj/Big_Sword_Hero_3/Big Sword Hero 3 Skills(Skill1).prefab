@@ -1,0 +1,537 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1336452312773514595
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8245695600782585703}
+  m_Layer: 0
+  m_Name: Big Sword Hero 3 Skills(Skill1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8245695600782585703
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336452312773514595}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.09804895, y: -1.165854, z: -0.071784094}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7583974931274362362}
+  - {fileID: 4033770034656551297}
+  - {fileID: 2376458942359401647}
+  - {fileID: 8796026988550482365}
+  - {fileID: 1247216180442586030}
+  - {fileID: 6094614218247352415}
+  - {fileID: 1839602351734244868}
+  - {fileID: 6424031984538685976}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1218711408133462654
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8245695600782585703}
+    m_Modifications:
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09804895
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.165854
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.071784094
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276982162586273915, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_Name
+      value: Big Sword Hero 3 Skill1 (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+--- !u!4 &1247216180442586030 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+  m_PrefabInstance: {fileID: 1218711408133462654}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1738723175592839124
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8245695600782585703}
+    m_Modifications:
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09804895
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.165854
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.071784094
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276982162586273915, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_Name
+      value: Big Sword Hero 3 Skill1 (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+--- !u!4 &1839602351734244868 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+  m_PrefabInstance: {fileID: 1738723175592839124}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &2403897192814572927
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8245695600782585703}
+    m_Modifications:
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09804895
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.165854
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.071784094
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276982162586273915, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_Name
+      value: Big Sword Hero 3 Skill1 (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+--- !u!4 &2376458942359401647 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+  m_PrefabInstance: {fileID: 2403897192814572927}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3917128276991352913
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8245695600782585703}
+    m_Modifications:
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09804895
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.165854
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.071784094
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276982162586273915, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_Name
+      value: Big Sword Hero 3 Skill1 (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+--- !u!4 &4033770034656551297 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+  m_PrefabInstance: {fileID: 3917128276991352913}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6139198235845669263
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8245695600782585703}
+    m_Modifications:
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09804895
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.165854
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.071784094
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276982162586273915, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_Name
+      value: Big Sword Hero 3 Skill1 (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+--- !u!4 &6094614218247352415 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+  m_PrefabInstance: {fileID: 6139198235845669263}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6377101600674649032
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8245695600782585703}
+    m_Modifications:
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09804895
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.165854
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.071784094
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276982162586273915, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_Name
+      value: Big Sword Hero 3 Skill1 (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+--- !u!4 &6424031984538685976 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+  m_PrefabInstance: {fileID: 6377101600674649032}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7537066546103315498
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8245695600782585703}
+    m_Modifications:
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09804895
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.165854
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.071784094
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276982162586273915, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_Name
+      value: Big Sword Hero 3 Skill1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+--- !u!4 &7583974931274362362 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+  m_PrefabInstance: {fileID: 7537066546103315498}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8914726903012157549
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8245695600782585703}
+    m_Modifications:
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.09804895
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.165854
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.071784094
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276982162586273915, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+      propertyPath: m_Name
+      value: Big Sword Hero 3 Skill1 (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+--- !u!4 &8796026988550482365 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 118988132680237520, guid: 07c659d05ec3d8e4aa07c9acdeadfa1d, type: 3}
+  m_PrefabInstance: {fileID: 8914726903012157549}
+  m_PrefabAsset: {fileID: 0}

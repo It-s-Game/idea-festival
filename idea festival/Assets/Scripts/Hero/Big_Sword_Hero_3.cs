@@ -7,6 +7,8 @@ public class Big_Sword_Hero_3 : Controller
     private Projectile[] projectile1 = new Projectile[] { };
     [SerializeField]
     private AttackRange defaultAttack_Range;
+    [SerializeField]
+    private Shield shield;
 
     private bool skill1 = false;
     private bool skill2 = false;
@@ -44,6 +46,7 @@ public class Big_Sword_Hero_3 : Controller
             return;
         }
 
+        StartCoroutine(Casting_Skill2());
         Skill(Skill2, "skill2", so.skills[1].delay, ref skill2);
     }
     public override void RightBumper(InputValue value)
@@ -53,18 +56,36 @@ public class Big_Sword_Hero_3 : Controller
             return;
         }
 
-        Skill(Skill3, "skill3", so.skills[2].delay, ref skill3);
+        Debug.Log(direction);
+
+        shield.gameObject.SetActive(true);
+        shield.Set(direction);
     }
     public void Skill1()
     {
-        ActiveProjectile(projectile1);
+        StartCoroutine(Casting_Skill1());
     }
     public void Skill2()
     {
-
+        rigid.velocity = new Vector3(direction * status.moveSpeed * 1.2f, 0);
     }
     public void Skill3()
     {
+        shield.gameObject.SetActive(true);
+        shield.Set(direction);
+    }
+    private IEnumerator Casting_Skill1()
+    {
+        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.45f);
 
+        ActiveProjectile(projectile1);
+    }
+    private IEnumerator Casting_Skill2()
+    {
+        skill2 = true;
+
+        yield return new WaitForSeconds(so.skills[1].coolTime);
+        
+        skill2 = false;
     }
 }

@@ -52,6 +52,15 @@ public abstract class Projectile : MonoBehaviour
         this.direction = new Vector3(direction, 0);
         this.obj = obj;
 
+        if (direction == 1)
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+        }
+
         move = StartCoroutine(Moving());
     }    
     protected void OnTriggerEnter2D(Collider2D collision)

@@ -103,6 +103,7 @@ public class Character : MonoBehaviour, IDamagable
         }
         else if (collision.gameObject.CompareTag("wall"))
         {
+            jumpCount = maxJumpCount;
             enterWall = true;
 
             if(enterFloor)

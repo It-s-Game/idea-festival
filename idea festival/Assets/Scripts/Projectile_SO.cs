@@ -2,8 +2,6 @@ using UnityEngine;
 [System.Serializable]
 public class Projectile_Info
 {
-    public Sprite defaultImage = null;
-
     public string defaultAnimationName = "";
     public string hitAnimationName = "";
     public float cooltime;

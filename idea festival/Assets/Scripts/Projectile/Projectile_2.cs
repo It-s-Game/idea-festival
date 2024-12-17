@@ -6,19 +6,6 @@ public class Projectile_2 : Projectile
     {
         transform.position += direction * info.projectileSpeed * Time.deltaTime;
     }
-    public override void Set(int direction, GameObject obj)
-    {
-        if(direction == 1)
-        {
-            transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-        }
-        else
-        {
-            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
-        }
-
-        base.Set(direction, obj);
-    }
     protected override IEnumerator Moving()
     {
         col.enabled = false;

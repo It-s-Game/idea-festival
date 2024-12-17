@@ -99,7 +99,7 @@ public class Bat_Hero : Controller
 
         col.enabled = true;
 
-        rigid.constraints = RigidbodyConstraints2D.None;
+        rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         skill3_Range.gameObject.SetActive(false);
     }

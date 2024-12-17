@@ -148,7 +148,7 @@ public abstract class Controller : Character
     }
     public virtual void ButtonX(InputValue value)
     {
-        if(castingSkill || isJump || !enterFloor || inTheDash)
+        if(castingSkill)//isJump ||  || !enterFloor || inTheDash
         {
             return;
         }
@@ -252,7 +252,7 @@ public abstract class Controller : Character
 
         StopCoroutine(dash_Moving);
 
-        rigid.velocity = new Vector3(Mathf.Sign(rigid.velocity.x) * status.moveSpeed, rigid.velocity.y);
+        rigid.velocity = new Vector3(moveVec.x / magnification, rigid.velocity.y);
 
         if (enterFloor)
         {
