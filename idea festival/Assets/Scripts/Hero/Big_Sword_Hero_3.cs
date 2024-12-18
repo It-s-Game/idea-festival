@@ -18,17 +18,11 @@ public class Big_Sword_Hero_3 : Controller
     {
         StartCoroutine(Casting_DefaultAttack());
     }
-    private IEnumerator Casting_DefaultAttack()
+    protected override void Awake()
     {
-        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.5f);
+        base.Awake();
 
-        defaultAttack_Range.gameObject.SetActive(true);
-
-        defaultAttack_Range.Set(so.default_Attack.damage);
-
-        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
-
-        defaultAttack_Range.gameObject.SetActive(false);
+        defaultAttack_Range.Init(gameObject, so.default_Attack.damage);
     }
     public override void ButtonY(InputValue value)
     {
@@ -71,6 +65,16 @@ public class Big_Sword_Hero_3 : Controller
     {
         shield.gameObject.SetActive(true);
         shield.Set(direction);
+    }
+    private IEnumerator Casting_DefaultAttack()
+    {
+        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.5f);
+
+        defaultAttack_Range.gameObject.SetActive(true);
+
+        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
+
+        defaultAttack_Range.gameObject.SetActive(false);
     }
     private IEnumerator Casting_Skill1()
     {

@@ -20,6 +20,13 @@ public class Bat_Hero : Controller
     {
         StartCoroutine(Casting_DefaultAttack());
     }
+    protected override void Awake()
+    {
+        base.Awake();
+
+        defaultAttack_Range.Init(gameObject, so.default_Attack.damage);
+        skill3_Range.Init(gameObject, so.skills[2].damage);
+    }
     public override void ButtonY(InputValue value)
     {
         if(isJump)
@@ -65,8 +72,6 @@ public class Bat_Hero : Controller
 
         defaultAttack_Range.gameObject.SetActive(true);
 
-        defaultAttack_Range.Set(so.default_Attack.damage);
-
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.6f);
 
         defaultAttack_Range.gameObject.SetActive(false);
@@ -74,8 +79,6 @@ public class Bat_Hero : Controller
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.65f);
 
         defaultAttack_Range.gameObject.SetActive(true);
-
-        defaultAttack_Range.Set(so.default_Attack.damage);
 
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
 
@@ -86,8 +89,6 @@ public class Bat_Hero : Controller
         skill3_Range.gameObject.transform.position = transform.position;
 
         skill3_Range.gameObject.SetActive(true);
-
-        skill3_Range.Set(so.skills[1].damage);
 
         col.enabled = false;
 

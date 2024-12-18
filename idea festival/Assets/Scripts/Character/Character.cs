@@ -11,7 +11,7 @@ public class Character : MonoBehaviour, IDamagable
     protected GameObject groundDust;
     [SerializeField]
     protected GameObject wallSlide;
-    
+
     protected Status status;
 
     protected Rigidbody2D rigid;

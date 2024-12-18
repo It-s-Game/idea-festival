@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class Archer_Hero : Controller
@@ -22,7 +23,7 @@ public class Archer_Hero : Controller
     {
         base.Awake();
 
-        skill2_Range.Init(gameObject);
+        skill2_Range.Init(gameObject, so.skills[1].damage);
     }
     public override void ButtonY(InputValue value)
     {
@@ -63,8 +64,6 @@ public class Archer_Hero : Controller
     private IEnumerator Casting_Skill2()
     {
         skill2_Range.gameObject.SetActive(true);
-
-        skill2_Range.Set(so.skills[1].damage);
 
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
 
