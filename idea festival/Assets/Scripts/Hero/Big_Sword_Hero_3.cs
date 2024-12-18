@@ -56,8 +56,6 @@ public class Big_Sword_Hero_3 : Controller
             return;
         }
 
-        Debug.Log(direction);
-
         shield.gameObject.SetActive(true);
         shield.Set(direction);
     }

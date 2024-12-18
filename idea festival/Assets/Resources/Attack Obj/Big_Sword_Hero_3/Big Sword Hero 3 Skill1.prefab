@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2023418545339864981}
   - component: {fileID: 3891920587976543347}
   - component: {fileID: 7724300561061091186}
-  - component: {fileID: 3024742803542400457}
+  - component: {fileID: 3987406131755340390}
   m_Layer: 0
   m_Name: Big Sword Hero 3 Skill1
   m_TagString: Untagged
@@ -142,7 +142,7 @@ Animator:
   m_GameObject: {fileID: 8056485606681107960}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 94a3cc9e2b448f44caed2cb738818f09, type: 2}
+  m_Controller: {fileID: 9100000, guid: 15012ca0a8ce2224a85e8e733568c27c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -153,7 +153,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3024742803542400457
+--- !u!114 &3987406131755340390
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,7 +162,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8056485606681107960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9accf4c3ba1b36b43b0b18e71be27e53, type: 3}
+  m_Script: {fileID: 11500000, guid: b98f0c8bb4772c646a450085b021ace4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   so: {fileID: 11400000, guid: 819e1f532111d9641838669127eb22ae, type: 2}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8984738656724760828}
   - component: {fileID: 1476333228779618977}
   - component: {fileID: 4962534394432399015}
-  - component: {fileID: 5120194380379350600}
+  - component: {fileID: -1487283863312580492}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Untagged
@@ -142,7 +142,7 @@ Animator:
   m_GameObject: {fileID: 2938390723182191196}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bf6759cb99aaab74194de2f42314c5f9, type: 2}
+  m_Controller: {fileID: 9100000, guid: 52794e4e43a5d8e4bb44a448d491f679, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -153,7 +153,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5120194380379350600
+--- !u!114 &-1487283863312580492
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,8 +162,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 2938390723182191196}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6a1ff09f8da86af46b42f85c21a4afd9, type: 3}
+  m_Script: {fileID: 11500000, guid: 979f1cc6b6e8462478c847d4f8cd1185, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so: {fileID: 11400000, guid: 1d8a73ac02a40e54d96c326aa26a751c, type: 2}
+  so: {fileID: 0}
   initalObject: {fileID: 0}
