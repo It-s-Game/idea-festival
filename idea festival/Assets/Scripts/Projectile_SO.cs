@@ -4,7 +4,6 @@ public class Projectile_Info
 {
     public string defaultAnimationName = "";
     public string hitAnimationName = "";
-    public float cooltime;
     public int damage;
     public int projectileSpeed;
     public bool stopMove = true;

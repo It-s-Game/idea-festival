@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 public class Archer_Hero : Controller
@@ -32,7 +31,7 @@ public class Archer_Hero : Controller
             return;
         }
 
-        Skill(Skill1, "skill1", so.skills[0].delay, ref skill1);
+        Skill(Skill1, "skill1", so.skills[0], ref skill1);
     }
     public override void ButtonB(InputValue value)
     {
@@ -41,7 +40,7 @@ public class Archer_Hero : Controller
             return;
         }
 
-        Skill(Skill2, "skill2", so.skills[1].delay, ref skill2);
+        Skill(Skill2, "skill2", so.skills[1], ref skill2);
     }
     public override void RightBumper(InputValue value)
     {

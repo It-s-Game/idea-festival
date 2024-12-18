@@ -6,6 +6,10 @@ public class Cowboy_Hero : Controller
     [SerializeField]
     private Projectile[] defaultAttacks = new Projectile[] { };
     [SerializeField]
+    private Projectile[] skill1_Projectile = new Projectile[] { };
+    [SerializeField]
+    private Projectile[] skill2_Projectile = new Projectile[] { };
+    [SerializeField]
     private AttackRange skill2_Range;
 
     private bool skill1 = false;
@@ -31,7 +35,7 @@ public class Cowboy_Hero : Controller
             return;
         }
 
-        Skill(Skill1, "skill1", so.skills[0].delay, ref skill1);
+        Skill(Skill1, "skill1", so.skills[0], ref skill1);
     }
     public override void ButtonB(InputValue value)
     {
@@ -40,7 +44,7 @@ public class Cowboy_Hero : Controller
             return;
         }
 
-        Skill(Skill2, "skill2", so.skills[1].delay, ref skill2);
+        Skill(Skill2, "skill2", so.skills[1], ref skill2);
     }
     public override void RightBumper(InputValue value)
     {
@@ -49,7 +53,7 @@ public class Cowboy_Hero : Controller
             return;
         }
 
-        Skill(Skill3, "skill3", so.skills[2].delay, ref skill3);
+        Skill(Skill3, "skill3", so.skills[2], ref skill3);
     }
     public override void LeftTrigger(InputValue value)
     {
@@ -58,7 +62,7 @@ public class Cowboy_Hero : Controller
             return;
         }
 
-        Skill(Skill4, "skill4", so.skills[3].delay, ref skill4);
+        Skill(Skill4, "skill4", so.skills[3], ref skill4);
     }
     public override void RightTrigger(InputValue value)
     {
@@ -67,11 +71,11 @@ public class Cowboy_Hero : Controller
             return;
         }
 
-        Skill(Skill1, "skill5", so.skills[4].delay, ref skill5);
+        Skill(Skill1, "skill5", so.skills[4], ref skill5);
     }
     public void Skill1()
     {
-
+        ActiveProjectile(skill1_Projectile);
     }
     public void Skill2()
     {
@@ -79,7 +83,7 @@ public class Cowboy_Hero : Controller
     }
     public void Skill3()
     {
-
+        ActiveProjectile(skill2_Projectile);
     }
     public void Skill4()
     {

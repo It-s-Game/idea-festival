@@ -1,0 +1,537 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8307370113335524762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8250191707336810469}
+  m_Layer: 0
+  m_Name: Cowboy Hero Axes
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8250191707336810469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8307370113335524762}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.65459204, y: -2.8042612, z: -10.030091}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 7379074113074782236}
+  - {fileID: 7686549964206008086}
+  - {fileID: 6823311729698151578}
+  - {fileID: 5444456252019604640}
+  - {fileID: 8476387549355420031}
+  - {fileID: 7462459566436023888}
+  - {fileID: 6749045571219778470}
+  - {fileID: 6671866638944421482}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &5729975533109666
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8250191707336810469}
+    m_Modifications:
+    - target: {fileID: 5689850562652591057, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_Name
+      value: Cowboy Hero Axe 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.030091
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+--- !u!4 &7462459566436023888 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+  m_PrefabInstance: {fileID: 5729975533109666}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &143021030879862766
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8250191707336810469}
+    m_Modifications:
+    - target: {fileID: 5689850562652591057, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_Name
+      value: Cowboy Hero Axe 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.030091
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+--- !u!4 &7379074113074782236 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+  m_PrefabInstance: {fileID: 143021030879862766}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &952436993974933732
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8250191707336810469}
+    m_Modifications:
+    - target: {fileID: 5689850562652591057, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_Name
+      value: Cowboy Hero Axe 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.030091
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+--- !u!4 &7686549964206008086 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+  m_PrefabInstance: {fileID: 952436993974933732}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1313236351642293901
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8250191707336810469}
+    m_Modifications:
+    - target: {fileID: 5689850562652591057, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_Name
+      value: Cowboy Hero Axe 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.030091
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+--- !u!4 &8476387549355420031 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+  m_PrefabInstance: {fileID: 1313236351642293901}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3176506738464719698
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8250191707336810469}
+    m_Modifications:
+    - target: {fileID: 5689850562652591057, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_Name
+      value: Cowboy Hero Axe 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.030091
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+--- !u!4 &5444456252019604640 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+  m_PrefabInstance: {fileID: 3176506738464719698}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4119357473997022056
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8250191707336810469}
+    m_Modifications:
+    - target: {fileID: 5689850562652591057, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_Name
+      value: Cowboy Hero Axe 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.030091
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+--- !u!4 &6823311729698151578 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+  m_PrefabInstance: {fileID: 4119357473997022056}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4193639747226244180
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8250191707336810469}
+    m_Modifications:
+    - target: {fileID: 5689850562652591057, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_Name
+      value: Cowboy Hero Axe 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.030091
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+--- !u!4 &6749045571219778470 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+  m_PrefabInstance: {fileID: 4193639747226244180}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4254946490475395480
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 8250191707336810469}
+    m_Modifications:
+    - target: {fileID: 5689850562652591057, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_Name
+      value: Cowboy Hero Axe 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 10.030091
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+--- !u!4 &6671866638944421482 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7465736806401277938, guid: ef9be7fd92f884444b31d03e6b4414cd, type: 3}
+  m_PrefabInstance: {fileID: 4254946490475395480}
+  m_PrefabAsset: {fileID: 0}

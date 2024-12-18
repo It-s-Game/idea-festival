@@ -31,7 +31,7 @@ public class Big_Sword_Hero_3 : Controller
             return;
         }
 
-        Skill(Skill1, "skill1", so.skills[0].delay, ref skill1);
+        Skill(Skill1, "skill1", so.skills[0], ref skill1);
     }
     public override void ButtonB(InputValue value)
     {
@@ -41,7 +41,7 @@ public class Big_Sword_Hero_3 : Controller
         }
 
         StartCoroutine(Casting_Skill2());
-        Skill(Skill2, "skill2", so.skills[1].delay, ref skill2);
+        Skill(Skill2, "skill2", so.skills[1], ref skill2);
     }
     public override void RightBumper(InputValue value)
     {
@@ -52,6 +52,8 @@ public class Big_Sword_Hero_3 : Controller
 
         shield.gameObject.SetActive(true);
         shield.Set(direction);
+
+        StartCoroutine(Casting_Skill3());
     }
     public void Skill1()
     {
@@ -89,5 +91,13 @@ public class Big_Sword_Hero_3 : Controller
         yield return new WaitForSeconds(so.skills[1].coolTime);
         
         skill2 = false;
+    }
+    private IEnumerator Casting_Skill3()
+    {
+        skill3 = true;
+
+        yield return new WaitForSeconds(so.skills[2].coolTime);
+
+        skill3 = false;
     }
 }

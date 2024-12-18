@@ -158,7 +158,7 @@ public abstract class Controller : Character
             defaultAttack = true;
         }
 
-        StartCoroutine(CastingSkill(DefaultAttack, "attack", so.default_Attack.delay, defaultAttack));
+        StartCoroutine(CastingSkill(DefaultAttack, "attack", so.default_Attack, defaultAttack));
     }
     public virtual void LeftBumper(InputValue value)
     {
@@ -169,7 +169,7 @@ public abstract class Controller : Character
 
         dash = StartCoroutine(Dash("dash"));
     }
-    protected void Skill(Action skill, string animationName, float delay, ref bool inCoolTime)
+    protected void Skill(Action skill, string animationName, Attack so, ref bool inCoolTime)
     {
         if (castingSkill || !enterFloor || inTheDash)
         {
@@ -181,7 +181,7 @@ public abstract class Controller : Character
             inCoolTime = true;
         }
 
-        StartCoroutine(CastingSkill(skill, animationName, delay, inCoolTime));
+        StartCoroutine(CastingSkill(skill, animationName, so, inCoolTime));
     }
     protected IEnumerator Moving()
     {
@@ -195,7 +195,7 @@ public abstract class Controller : Character
             yield return null;
         }
     }
-    protected IEnumerator CastingSkill(Action skill, string animationName, float delay, bool inCoolTime)
+    protected IEnumerator CastingSkill(Action skill, string animationName, Attack so, bool inCoolTime)
     {
         castingSkill = true;
 
@@ -203,7 +203,7 @@ public abstract class Controller : Character
 
         animator.Play(animationName);
 
-        yield return new WaitForSeconds(delay);
+        yield return new WaitForSeconds(so.delay);
 
         skill.Invoke();
 
@@ -234,7 +234,7 @@ public abstract class Controller : Character
             }
         }
 
-        yield return new WaitForSeconds(so.default_Attack.coolTime);
+        yield return new WaitForSeconds(so.coolTime);
 
         inCoolTime = false;
     }
