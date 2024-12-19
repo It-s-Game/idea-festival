@@ -66,6 +66,13 @@ public class Bat_Hero : Controller
     {
         StartCoroutine(Casting_Skill3());
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("wall"))
+        {
+            enterWall = true;
+        }
+    }
     private IEnumerator Casting_DefaultAttack()
     {
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.35f);
@@ -90,15 +97,25 @@ public class Bat_Hero : Controller
 
         skill3_Range.gameObject.SetActive(true);
 
-        col.enabled = false;
+        col.isTrigger = true;
 
         rigid.constraints = RigidbodyConstraints2D.FreezePositionY;
 
         rigid.velocity = new Vector3(direction * 1.5f, 0);
 
-        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
+        while(animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1)
+        {
+            if(enterWall)
+            {
+                rigid.velocity = Vector2.zero;
 
-        col.enabled = true;
+                break;
+            }
+
+            yield return null;
+        }
+
+        col.isTrigger = false;
 
         rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
 
