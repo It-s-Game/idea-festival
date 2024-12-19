@@ -1,3 +1,5 @@
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator), typeof(BoxCollider2D))]
@@ -32,6 +34,7 @@ public class Character : MonoBehaviour, IDamagable
     protected bool enterWall = false;
     protected bool enterFloor = true;
 
+    private Coroutine dieing = null;
     private int health;
     
     protected virtual void Awake()
@@ -58,15 +61,17 @@ public class Character : MonoBehaviour, IDamagable
 
         if (health <= 0)
         {
-            rigid.gravityScale = 0;
+            StopAllCoroutines();
+
+            rigid.gravityScale = 1.5f;
 
             animator.Play("die");
 
+            dieing = StartCoroutine(Dieing());
+
             deathSmoke.SetActive(true);
 
-            col.enabled = false;
-
-            enabled = false;
+            rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
         }
     }
     private void CollisionEnter()
@@ -147,6 +152,23 @@ public class Character : MonoBehaviour, IDamagable
             CollisionEnterWall();
         }
     }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(health > 0)
+        {
+            return;
+        }
+
+        if(collision.gameObject.CompareTag("floor"))
+        {
+            rigid.constraints |= RigidbodyConstraints2D.FreezePositionY;
+        }
+
+        if(dieing == null)
+        {
+            rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+        }
+    }
     protected virtual void OnCollisionExit2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("floor"))
@@ -154,8 +176,6 @@ public class Character : MonoBehaviour, IDamagable
             rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
 
             enterFloor = false;
-
-            return;
         }
         else if(collision.gameObject.CompareTag("Player"))
         {
@@ -164,13 +184,13 @@ public class Character : MonoBehaviour, IDamagable
                 rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
 
                 enterFloor = false;
-
-                return;
             }
         }
 
         if(collision.gameObject.CompareTag("wall"))
         {
+            wallSlide.SetActive(false);
+
             enterWall = false;
 
             if(isJump)
@@ -179,6 +199,30 @@ public class Character : MonoBehaviour, IDamagable
 
                 wallSlide.SetActive(false);
             }
+        }
+    }
+    private IEnumerator Dieing()
+    {
+        yield return null;
+
+        col.isTrigger = true;
+
+        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
+
+        dieing = null;
+
+        rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+
+        while(true)
+        {
+            if(transform.position.y < -100)
+            {
+                gameObject.SetActive(false);
+            }
+
+            rigid.velocity = new(0, -1);
+
+            yield return null;
         }
     }
 }

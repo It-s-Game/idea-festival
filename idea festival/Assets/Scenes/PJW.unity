@@ -181,7 +181,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -264,6 +264,10 @@ PrefabInstance:
     - target: {fileID: 2957843126625636706, guid: ce4b06a7122919040b5c2c9b56b7b420, type: 3}
       propertyPath: m_Name
       value: Bat_Hero
+      objectReference: {fileID: 0}
+    - target: {fileID: 5710419957091309446, guid: ce4b06a7122919040b5c2c9b56b7b420, type: 3}
+      propertyPath: m_Name
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6436587440257607742, guid: ce4b06a7122919040b5c2c9b56b7b420, type: 3}
       propertyPath: m_LocalPosition.x
@@ -357,6 +361,10 @@ PrefabInstance:
     - target: {fileID: 1803213164423191686, guid: 8df2b47a16de7844abb7ca055aab5b21, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3145847808375404359, guid: 8df2b47a16de7844abb7ca055aab5b21, type: 3}
+      propertyPath: m_Name
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4078907713082534920, guid: 8df2b47a16de7844abb7ca055aab5b21, type: 3}
       propertyPath: m_Name
@@ -528,6 +536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Archer_Hero
       objectReference: {fileID: 0}
+    - target: {fileID: 1353730815121371909, guid: e3f699207600bcf46a3deafcea138ff8, type: 3}
+      propertyPath: m_Name
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8867252731915865181, guid: e3f699207600bcf46a3deafcea138ff8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4
@@ -624,6 +636,10 @@ PrefabInstance:
     - target: {fileID: 3737733108540985434, guid: 486539cca3fe39d45b386e5a59776ffa, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6674647655813900865, guid: 486539cca3fe39d45b386e5a59776ffa, type: 3}
+      propertyPath: m_Name
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
