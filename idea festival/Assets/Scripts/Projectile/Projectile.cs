@@ -1,8 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[RequireComponent(typeof(Animator))]
-public abstract class Projectile : MonoBehaviour
+public class Projectile : MonoBehaviour
 {
     [SerializeField]
     protected Projectile_SO so;
@@ -22,7 +21,10 @@ public abstract class Projectile : MonoBehaviour
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+        if(TryGetComponent(out Animator animator))
+        {
+            this.animator = animator;
+        }
 
         if(TryGetComponent(out Collider2D col))
         {
@@ -45,6 +47,10 @@ public abstract class Projectile : MonoBehaviour
     {
         info = so.info;
     }
+    private void Update()
+    {
+        isInvisible();
+    }
     public virtual void Set(int direction, GameObject obj)
     {
         transform.position = initalObject.transform.position;
@@ -62,7 +68,20 @@ public abstract class Projectile : MonoBehaviour
         }
 
         move = StartCoroutine(Moving());
-    }    
+    }
+    private void isInvisible()
+    {
+        Plane[] planes = GeometryUtility.CalculateFrustumPlanes(Camera.main);
+
+        if(!GeometryUtility.TestPlanesAABB(planes, col.bounds))
+        {
+            gameObject.SetActive(false);
+        }
+    }
+    protected virtual void Move()
+    {
+        transform.position += direction * info.projectileSpeed * Time.deltaTime;
+    }
     protected void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject == obj)
@@ -119,5 +138,4 @@ public abstract class Projectile : MonoBehaviour
             yield return null;
         }
     }
-    protected abstract void Move();
 }

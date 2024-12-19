@@ -1,4 +1,5 @@
 using UnityEngine;
+[RequireComponent(typeof(Animator))]
 public class Projectile_1 : Projectile
 {
     public override void Set(int direction, GameObject obj)
@@ -6,9 +7,5 @@ public class Projectile_1 : Projectile
         base.Set(direction, obj);
 
         animator.Play(info.defaultAnimationName);
-    }
-    protected override void Move()
-    {
-        transform.position += direction * info.projectileSpeed * Time.deltaTime;
     }
 }
