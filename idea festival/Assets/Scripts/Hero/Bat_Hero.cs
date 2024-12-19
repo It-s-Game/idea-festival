@@ -99,8 +99,6 @@ public class Bat_Hero : Controller
 
         col.isTrigger = true;
 
-        rigid.constraints = RigidbodyConstraints2D.FreezePositionY;
-
         rigid.velocity = new Vector3(direction * 1.5f, 0);
 
         while(animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1)
@@ -116,8 +114,6 @@ public class Bat_Hero : Controller
         }
 
         col.isTrigger = false;
-
-        rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         skill3_Range.gameObject.SetActive(false);
     }

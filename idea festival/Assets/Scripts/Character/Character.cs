@@ -46,7 +46,7 @@ public class Character : MonoBehaviour, IDamagable
     }
     private void Init()
     {
-        rigid.freezeRotation = true;
+        rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         status = so.status;
         health = status.maxHealth;
@@ -58,71 +58,118 @@ public class Character : MonoBehaviour, IDamagable
 
         if (health <= 0)
         {
+            rigid.gravityScale = 0;
+
             animator.Play("die");
 
             deathSmoke.SetActive(true);
+
+            col.enabled = false;
+
+            enabled = false;
         }
+    }
+    private void CollisionEnter()
+    {
+        if (leftStickCoroutine == null)
+        {
+            animator.Play("idle");
+        }
+        else
+        {
+            animator.Play("run");
+        }
+
+        if (wallSlide.activeSelf)
+        {
+            if (direction == -1)
+            {
+                direction = 1;
+                transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+            }
+            else
+            {
+                direction = -1;
+                transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+            }
+
+            animator.Play("idle");
+
+            wallSlide.SetActive(false);
+        }
+
+        if(!isJump)
+        {
+            rigid.constraints |= RigidbodyConstraints2D.FreezePositionY;
+        }
+
+        rigid.velocity = new Vector3(rigid.velocity.x, 0);
+
+        jumpCount = maxJumpCount;
+        isJump = false;
+        enterFloor = true;
+    }
+    private void CollisionEnterWall()
+    {
+        jumpCount = maxJumpCount;
+        enterWall = true;
+
+        if (enterFloor)
+        {
+            return;
+        }
+
+        animator.Play("wallslide");
+
+        wallSlide.SetActive(true);
     }
     protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("floor"))
         {
-            jumpCount = maxJumpCount;
-            isJump = false;
-
-            if(leftStickCoroutine == null)
-            {
-                animator.Play("idle");
-            }
-            else
-            {
-                animator.Play("run");
-            }
+            CollisionEnter();
 
             groundDust.gameObject.SetActive(true);
-
-            if(wallSlide.activeSelf)
+        }
+        else if(collision.gameObject.CompareTag("Player"))
+        {
+            if(collision.gameObject != gameObject && !enterFloor)
             {
-                if(direction == -1)
-                {
-                    direction = 1;
-                    transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
-                }
-                else
-                {
-                    direction = -1;
-                    transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
-                }
-
-                animator.Play("idle");
-
-                wallSlide.SetActive(false);
+                CollisionEnter();
             }
-
-            enterFloor = true;
+            else if (collision.gameObject.CompareTag("wall"))
+            {
+                CollisionEnterWall();
+            }
         }
         else if (collision.gameObject.CompareTag("wall"))
         {
-            jumpCount = maxJumpCount;
-            enterWall = true;
-
-            if(enterFloor)
-            {
-                return;
-            }
-
-            animator.Play("wallslide");
-
-            wallSlide.SetActive(true);
+            CollisionEnterWall();
         }
     }
     protected virtual void OnCollisionExit2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("floor"))
         {
+            rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+
             enterFloor = false;
+
+            return;
         }
-        else if(collision.gameObject.CompareTag("wall"))
+        else if(collision.gameObject.CompareTag("Player"))
+        {
+            if (collision.gameObject != gameObject && enterFloor)
+            {
+                rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+
+                enterFloor = false;
+
+                return;
+            }
+        }
+
+        if(collision.gameObject.CompareTag("wall"))
         {
             enterWall = false;
 

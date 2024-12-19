@@ -101,6 +101,8 @@ public abstract class Controller : Character
                 }
             }
 
+            rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
+
             leftStickCoroutine = StartCoroutine(Moving());
         }
         else
@@ -111,6 +113,8 @@ public abstract class Controller : Character
             {
                 animator.Play("idle");
             }
+
+            rigid.constraints |= RigidbodyConstraints2D.FreezePositionX;
 
             StopCoroutine(leftStickCoroutine);
 
@@ -124,7 +128,9 @@ public abstract class Controller : Character
             return;
         }
 
-        if(jumpCount > 0)
+        rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+
+        if (jumpCount > 0)
         {
             if(wallSlide.activeSelf)
             {
@@ -148,7 +154,7 @@ public abstract class Controller : Character
     }
     public virtual void ButtonX(InputValue value)
     {
-        if(castingSkill)//isJump ||  || !enterFloor || inTheDash
+        if(castingSkill)
         {
             return;
         }
@@ -248,11 +254,15 @@ public abstract class Controller : Character
 
         Coroutine dash_Moving = StartCoroutine(Dash_Moving(magnification));
 
+        rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
+
         yield return new WaitForSeconds(0.35f);
 
         StopCoroutine(dash_Moving);
 
         rigid.velocity = new Vector3(moveVec.x / magnification, rigid.velocity.y);
+
+        yield return null;
 
         if (enterFloor)
         {
@@ -278,6 +288,11 @@ public abstract class Controller : Character
                     animator.Play("double jump");
                 }
             }
+        }
+
+        if(leftStickCoroutine == null)
+        {
+            rigid.constraints |= RigidbodyConstraints2D.FreezePositionX;
         }
 
         inTheDash = false;
