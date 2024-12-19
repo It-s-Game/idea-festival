@@ -171,6 +171,8 @@ public class Character : MonoBehaviour, IDamagable
     }
     protected virtual void OnCollisionExit2D(Collision2D collision)
     {
+        Debug.Log(collision.gameObject.name);
+
         if(collision.gameObject.CompareTag("floor"))
         {
             rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;

@@ -60,11 +60,11 @@ public class Gun_Hero_1 : Controller
     }
     private IEnumerator Casting_Skill1()
     {
-        while(true)
+        foreach(Projectile projectile in projectile2)
         {
-            ActiveProjectile(projectile2);
+            ActiveProjectile(projectile);
 
-            yield return new WaitForSeconds(0.05f);
+            yield return new WaitForSeconds(0.0225f);
         }
     }
 }

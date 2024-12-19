@@ -45,6 +45,15 @@ public abstract class Controller : Character
             }
         }
     }
+    protected void ActiveProjectile(Projectile projectile)
+    {
+        if(!projectile.gameObject.activeSelf)
+        {
+            projectile.gameObject.SetActive(true);
+
+            projectile.Set(direction, gameObject);
+        }
+    }
     private void CharacterMove()
     {
         if(inTheDash || castingSkill)
