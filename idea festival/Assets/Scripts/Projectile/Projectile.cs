@@ -11,13 +11,12 @@ public class Projectile : MonoBehaviour
     protected List<GameObject> objects = new();
 
     protected Animator animator;
-    protected Collider2D col;
+    protected BoxCollider2D col;
     protected Projectile_Info info;
+    protected GameObject obj;
 
     protected Coroutine move;
     protected Vector3 direction;
-
-    private GameObject obj;
 
     private void Awake()
     {
@@ -26,7 +25,7 @@ public class Projectile : MonoBehaviour
             this.animator = animator;
         }
 
-        if(TryGetComponent(out Collider2D col))
+        if(TryGetComponent(out BoxCollider2D col))
         {
             this.col = col;
         }
@@ -39,12 +38,14 @@ public class Projectile : MonoBehaviour
 
         gameObject.SetActive(false);
     }
-    protected void OnEnable()
+    protected virtual void OnEnable()
     {
         objects = new();
     }
-    private void Init()
+    protected virtual void Init()
     {
+        col.isTrigger = true;
+
         info = so.info;
     }
     private void Update()
@@ -82,9 +83,9 @@ public class Projectile : MonoBehaviour
     {
         transform.position += direction * info.projectileSpeed * Time.deltaTime;
     }
-    protected void OnTriggerEnter2D(Collider2D collision)
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == obj)
+        if(collision.gameObject == obj || collision.gameObject.CompareTag("Untagged"))
         {
             return;
         }
@@ -105,7 +106,7 @@ public class Projectile : MonoBehaviour
 
         StartCoroutine(EnterCollide());
     }
-    private IEnumerator EnterCollide()
+    protected virtual IEnumerator EnterCollide()
     {
         if (info.stopMove)
         {

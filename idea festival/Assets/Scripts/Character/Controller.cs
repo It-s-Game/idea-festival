@@ -15,20 +15,15 @@ public abstract class Controller : Character
         {
             direction = -1;
 
+            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
             //transform.position
         }
         else
         {
             direction = 1;
 
+            transform.rotation = Quaternion.Euler(Vector3.zero);
             //transform.position
-        }
-    }
-    private void Update()
-    {
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            TakeDamage(status.maxHealth);
         }
     }
     protected void ActiveProjectile(Projectile[] projectiles)
@@ -60,6 +55,11 @@ public abstract class Controller : Character
         {
             return;
         }
+
+        if(!enterWall)
+        {
+            wallSlide.SetActive(false);
+        }    
 
         if ((Mathf.Sign(leftStick.ReadValue<Vector2>().x)) != direction)
         {
@@ -186,7 +186,7 @@ public abstract class Controller : Character
     }
     protected void Skill(Action skill, string animationName, Attack so, ref bool inCoolTime)
     {
-        if (castingSkill || !enterFloor || inTheDash)
+        if (castingSkill || !Actionable || inTheDash)
         {
             return;
         }
@@ -226,7 +226,7 @@ public abstract class Controller : Character
 
         castingSkill = false;
 
-        if(enterFloor)
+        if(Actionable)
         {
             if(leftStickCoroutine != null)
             {
@@ -273,7 +273,7 @@ public abstract class Controller : Character
 
         yield return null;
 
-        if (enterFloor)
+        if (Actionable)
         {
             if(leftStickCoroutine == null)
             {

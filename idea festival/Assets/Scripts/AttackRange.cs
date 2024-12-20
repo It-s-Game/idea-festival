@@ -3,12 +3,21 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class AttackRange : MonoBehaviour
 {
-    protected List<GameObject> objects;
+    private List<GameObject> objects;
 
+    private BoxCollider2D col;
     private GameObject obj;
 
     private int damage = 0;
 
+    private void Awake()
+    {
+        col = GetComponent<BoxCollider2D>();
+    }
+    private void Start()
+    {
+        col.isTrigger = true;
+    }
     private void OnEnable()
     {
         transform.position += new Vector3(0.00001f, 0);

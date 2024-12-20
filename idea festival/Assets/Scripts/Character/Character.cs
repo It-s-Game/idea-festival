@@ -32,7 +32,8 @@ public class Character : MonoBehaviour, IDamagable
     protected bool inTheDash = false;
     protected bool castingSkill = false;
     protected bool enterWall = false;
-    protected bool enterFloor = true;
+    protected bool enterFloor = false;
+    protected bool Actionable = true;
 
     private Coroutine dieing = null;
     private int health;
@@ -112,14 +113,14 @@ public class Character : MonoBehaviour, IDamagable
 
         jumpCount = maxJumpCount;
         isJump = false;
-        enterFloor = true;
+        Actionable = true;
     }
     private void CollisionEnterWall()
     {
         jumpCount = maxJumpCount;
         enterWall = true;
 
-        if (enterFloor)
+        if (Actionable)
         {
             return;
         }
@@ -134,11 +135,12 @@ public class Character : MonoBehaviour, IDamagable
         {
             CollisionEnter();
 
+            enterFloor = true;
             groundDust.gameObject.SetActive(true);
         }
         else if(collision.gameObject.CompareTag("Player"))
         {
-            if(collision.gameObject != gameObject && !enterFloor)
+            if(collision.gameObject != gameObject && !Actionable)
             {
                 CollisionEnter();
             }
@@ -171,21 +173,20 @@ public class Character : MonoBehaviour, IDamagable
     }
     protected virtual void OnCollisionExit2D(Collision2D collision)
     {
-        Debug.Log(collision.gameObject.name);
-
         if(collision.gameObject.CompareTag("floor"))
         {
             rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
 
             enterFloor = false;
+            Actionable = false;
         }
         else if(collision.gameObject.CompareTag("Player"))
         {
-            if (collision.gameObject != gameObject && enterFloor)
+            if (collision.gameObject != gameObject && !enterFloor)
             {
                 rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
 
-                enterFloor = false;
+                Actionable = false;
             }
         }
 
