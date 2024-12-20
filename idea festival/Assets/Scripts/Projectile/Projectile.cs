@@ -48,7 +48,7 @@ public class Projectile : MonoBehaviour
 
         info = so.info;
     }
-    private void Update()
+    protected virtual void Update()
     {
         isInvisible();
     }
