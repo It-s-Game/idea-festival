@@ -3,9 +3,9 @@ using UnityEngine.InputSystem;
 public class Gun_Hero_3 : Controller
 {
     [SerializeField]
-    private Projectile[] projectile1 = new Projectile[] { };
-    [SerializeField]
     private Projectile[] projectile2 = new Projectile[] { };
+    [SerializeField]
+    private Projectile projectile1 = new();
 
     private bool skill1 = false;
     private bool skill2 = false;
