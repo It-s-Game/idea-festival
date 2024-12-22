@@ -6,7 +6,7 @@ public class Projectile : MonoBehaviour
     [SerializeField]
     protected Projectile_SO so;
     [SerializeField]
-    private GameObject initalObject;
+    protected GameObject initalObject;
 
     protected List<GameObject> objects = new();
 
