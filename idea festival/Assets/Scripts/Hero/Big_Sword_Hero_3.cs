@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class Big_Sword_Hero_3 : Controller
 {
     [SerializeField]
-    private Projectile[] projectile1 = new Projectile[] { };
+    private Projectile[] projectile1;
     [SerializeField]
     private AttackRange defaultAttack_Range;
     [SerializeField]

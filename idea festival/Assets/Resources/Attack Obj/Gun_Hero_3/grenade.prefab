@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8582818621717929687
+--- !u!1 &5281216815955463033
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7698267451991869473}
-  - component: {fileID: 5189522537090998513}
-  - component: {fileID: 5055661024008421907}
-  - component: {fileID: 6217317929731731231}
-  - component: {fileID: 1018480464413753675}
+  - component: {fileID: 2768435233566234188}
+  - component: {fileID: 4938044024244038794}
+  - component: {fileID: 9107575152738960393}
+  - component: {fileID: 8318608601734122535}
+  - component: {fileID: 8358779624093078014}
   m_Layer: 0
-  m_Name: Bomb
+  m_Name: grenade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7698267451991869473
+--- !u!4 &2768435233566234188
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8582818621717929687}
+  m_GameObject: {fileID: 5281216815955463033}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4249668, y: -3.3098974, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &5189522537090998513
+--- !u!212 &4938044024244038794
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8582818621717929687}
+  m_GameObject: {fileID: 5281216815955463033}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -87,13 +87,13 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &5055661024008421907
+--- !u!61 &9107575152738960393
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8582818621717929687}
+  m_GameObject: {fileID: 5281216815955463033}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -116,7 +116,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -130,19 +130,19 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3, y: 0.3}
+  m_Size: {x: 0.25, y: 0.25}
   m_EdgeRadius: 0
---- !u!95 &6217317929731731231
+--- !u!95 &8318608601734122535
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8582818621717929687}
+  m_GameObject: {fileID: 5281216815955463033}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9d6ecf0904fa77b479bb1d2a915de49e, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3d593511a2c0fde44ac6f303579e3064, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -153,22 +153,22 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1018480464413753675
+--- !u!114 &8358779624093078014
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8582818621717929687}
+  m_GameObject: {fileID: 5281216815955463033}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 33ec742112eaad94d91f88061b0c4a62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so: {fileID: 11400000, guid: fea8a13a91b05ea4ba9d3b478080c18f, type: 2}
+  so: {fileID: 11400000, guid: 227fd2b3ea68a2341963d12efd8150ef, type: 2}
   initalObject: {fileID: 0}
   offset1: {x: 0, y: 0}
-  offset2: {x: 0, y: -0.5}
-  size1: {x: 0.3, y: 0.3}
-  size2: {x: 1.2, y: 1.6}
-  increasePosition: {x: 0, y: 1, z: 0}
+  offset2: {x: 0.025, y: -0.175}
+  size1: {x: 0.25, y: 0.25}
+  size2: {x: 0.865, y: 0.4}
+  increasePosition: {x: 0, y: 0.25, z: 0}

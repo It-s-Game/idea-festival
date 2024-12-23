@@ -2,6 +2,17 @@ using System.Collections;
 using UnityEngine;
 public class Projectile_3 : Projectile
 {
+    [SerializeField]
+    private Vector2 offset1;
+    [SerializeField]
+    private Vector2 offset2;
+    [SerializeField]
+    private Vector2 size1;
+    [SerializeField]
+    private Vector2 size2;
+    [SerializeField]
+    private Vector3 increasePosition;
+
     private Rigidbody2D rigid = null;
 
     private bool isExplosion = false;
@@ -22,7 +33,7 @@ public class Projectile_3 : Projectile
     }
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject == obj)
+        if (collision.gameObject == obj || collision.gameObject.CompareTag("Untagged"))
         {
             return;
         }
@@ -31,13 +42,16 @@ public class Projectile_3 : Projectile
         {
             if (collision.gameObject.CompareTag("floor"))
             {
-                StartCoroutine(EnterCollide());
+                if(collide == null)
+                {
+                    collide = StartCoroutine(EnterCollide());
+                }
             }
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject == obj)
+        if (collision.gameObject == obj || collision.gameObject.CompareTag("Untagged"))
         {
             return;
         }
@@ -68,16 +82,16 @@ public class Projectile_3 : Projectile
 
         animator.Play(info.hitAnimationName);
 
-        transform.position += new Vector3(0, 1);
-        col.offset = new Vector2(0, -0.5f);
-        col.size = new Vector2(1.2f, 1.6f);
+        transform.position += increasePosition;
+        col.offset = offset2;
+        col.size = size2;
 
         yield return null;
 
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
 
-        col.offset = new Vector2(0, 0);
-        col.size = new Vector2(0.3f, 0.3f);
+        col.offset = offset1;
+        col.size = size1;
 
         gameObject.SetActive(false);
     }

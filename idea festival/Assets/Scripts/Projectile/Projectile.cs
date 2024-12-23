@@ -15,6 +15,7 @@ public class Projectile : MonoBehaviour
     protected Projectile_Info info;
     protected GameObject obj;
 
+    protected Coroutine collide;
     protected Coroutine move;
     protected Vector3 direction;
 
@@ -41,6 +42,7 @@ public class Projectile : MonoBehaviour
     protected virtual void OnEnable()
     {
         objects = new();
+        collide = null;
     }
     protected virtual void Init()
     {
@@ -104,7 +106,10 @@ public class Projectile : MonoBehaviour
             objects.Add(collision.gameObject);
         }
 
-        StartCoroutine(EnterCollide());
+        if(collide == null)
+        {
+            collide = StartCoroutine(EnterCollide());
+        }
     }
     protected virtual IEnumerator EnterCollide()
     {

@@ -4,9 +4,9 @@ using UnityEngine.InputSystem;
 public class Bat_Hero : Controller
 {
     [SerializeField]
-    private Projectile[] projectile1 = new Projectile[] { };
+    private Projectile[] projectile1;
     [SerializeField]
-    private Projectile[] projectile2 = new Projectile[] { };
+    private Projectile[] projectile2;
     [SerializeField]
     private AttackRange defaultAttack_Range;
     [SerializeField]

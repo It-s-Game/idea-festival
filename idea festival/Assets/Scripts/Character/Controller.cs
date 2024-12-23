@@ -59,7 +59,7 @@ public abstract class Controller : Character
         if(!enterWall)
         {
             wallSlide.SetActive(false);
-        }    
+        }
 
         if ((Mathf.Sign(leftStick.ReadValue<Vector2>().x)) != direction)
         {
@@ -253,9 +253,14 @@ public abstract class Controller : Character
 
         inCoolTime = false;
     }
-    protected IEnumerator Dash(string animationName, float magnification = 1.35f)
+    protected IEnumerator Dash(string animationName, float magnification = 1.35f, GameObject range = null)
     {
         inTheDash = true;
+
+        if(range != null)
+        {
+            range.SetActive(true);
+        }
 
         animator.Play(animationName);
 
@@ -272,6 +277,11 @@ public abstract class Controller : Character
         rigid.velocity = new Vector3(moveVec.x / magnification, rigid.velocity.y);
 
         yield return null;
+
+        if (range != null)
+        {
+            range.SetActive(false);
+        }
 
         if (Actionable)
         {

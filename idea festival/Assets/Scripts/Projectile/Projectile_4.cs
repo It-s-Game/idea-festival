@@ -1,4 +1,7 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.UIElements;
+
 public class Projectile_4 : Projectile
 {
     private GameObject targetObject = null;
@@ -14,23 +17,35 @@ public class Projectile_4 : Projectile
         base.OnEnable();
 
         targetObject = null;
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, -90));
+
+        col.offset = new Vector2(0.025f, -0.0175f);
+        col.size = new Vector2(1.25f, 0.4f);
     }
-    private void Start()
+    protected override void Init()
     {
         height = Camera.main.orthographicSize * 2;
         width = height * Camera.main.aspect;
 
         overlapSize = new Vector2(width, height);
+
+        base.Init();
     }
     public override void Set(int direction, GameObject obj)
     {
-        Collider2D[] colliders = Physics2D.OverlapBoxAll(obj.transform.position, overlapSize, LayerMask.GetMask("Player"));
+        this.obj = obj;
+
+        Collider2D[] colliders = Physics2D.OverlapBoxAll(Vector2.zero, overlapSize, 0, LayerMask.GetMask("Character"));
 
         float minDistance = 0;
 
         foreach(Collider2D col in colliders)
         {
-            if(targetObject == null)
+            if(col.gameObject == obj || col.gameObject == gameObject)
+            {
+                continue;
+            }
+            else if(targetObject == null)
             {
                 GetDistance(col.gameObject, out minDistance);
 
@@ -43,7 +58,18 @@ public class Projectile_4 : Projectile
             }
         }
 
-        transform.position = new Vector2(targetObject.transform.position.x, height + 2);
+        if(targetObject == null)
+        {
+            return;
+        }
+
+        transform.position = new Vector2(targetObject.transform.position.x, height);
+
+        move = StartCoroutine(Moving());
+    }
+    protected override void Update()
+    {
+        
     }
     private float GetDistance(GameObject go, out float result)
     {
@@ -53,7 +79,7 @@ public class Projectile_4 : Projectile
     }
     protected override void Move()
     {
-        transform.position += new Vector3(0, -4) * info.projectileSpeed * Time.deltaTime;
+        transform.position += new Vector3(0, -1) * info.projectileSpeed * Time.deltaTime;
     }
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
@@ -78,6 +104,18 @@ public class Projectile_4 : Projectile
             StartCoroutine(EnterCollide());
         }
 
-        StartCoroutine(EnterCollide());
+        if(collide == null)
+        {
+            collide = StartCoroutine(EnterCollide());
+        }
+    }
+    protected override IEnumerator EnterCollide()
+    {
+        transform.rotation = Quaternion.Euler(new Vector3(0, 0, 0));
+        transform.position += new Vector3(0, 0.5f);
+        col.offset = new Vector2(-0.15f, -1);
+        col.size = new Vector2(1.8f, 2.3f);
+
+        return base.EnterCollide();
     }
 }

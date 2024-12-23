@@ -4,11 +4,11 @@ using UnityEngine.InputSystem;
 public class Cowboy_Hero : Controller
 {
     [SerializeField]
-    private Projectile[] defaultAttacks = new Projectile[] { };
+    private Projectile[] defaultAttacks;
     [SerializeField]
-    private Projectile[] skill1_Projectile = new Projectile[] { };
+    private Projectile[] skill1_Projectile;
     [SerializeField]
-    private Projectile[] skill3_Projectile = new Projectile[] { };
+    private Projectile[] skill3_Projectile;
     [SerializeField]
     private AttackRange skill2_Range;
     [SerializeField]
