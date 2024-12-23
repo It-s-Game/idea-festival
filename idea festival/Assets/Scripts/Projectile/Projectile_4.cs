@@ -9,8 +9,6 @@ public class Projectile_4 : Projectile
     private Vector2 overlapSize;
     private float height;
     private float width;
-    private float yPos;
-    private bool isInvisible = false;
 
     protected override void OnEnable()
     {

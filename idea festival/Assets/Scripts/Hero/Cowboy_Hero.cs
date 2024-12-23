@@ -32,38 +32,18 @@ public class Cowboy_Hero : Controller
     }
     public override void ButtonY(InputValue value)
     {
-        if(isJump)
-        {
-            return;
-        }
-
         Skill(Skill1, "skill1", so.skills[0], ref skill1);
     }
     public override void ButtonB(InputValue value)
     {
-        if(isJump)
-        {
-            return;
-        }
-
         Skill(Skill2, "skill2", so.skills[1], ref skill2);
     }
     public override void RightBumper(InputValue value)
     {
-        if(isJump)
-        {
-            return;
-        }
-
         Skill(Skill3, "skill3", so.skills[2], ref skill3);
     }
     public override void LeftTrigger(InputValue value)
     {
-        if(isJump)
-        {
-            return;
-        }
-
         Skill(Skill4, "skill4", so.skills[3], ref skill4);
     }
     public void Skill1()

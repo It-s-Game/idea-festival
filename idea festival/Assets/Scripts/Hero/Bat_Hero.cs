@@ -29,29 +29,14 @@ public class Bat_Hero : Controller
     }
     public override void ButtonY(InputValue value)
     {
-        if(isJump)
-        {
-            return;
-        }
-
         Skill(Skill1, "skill1", so.skills[0], ref skill1);
     }
     public override void ButtonB(InputValue value)
     {
-        if(isJump)
-        {
-            return;
-        }
-
         Skill(Skill2, "skill2", so.skills[1], ref skill2);
     }
     public override void RightBumper(InputValue value)
     {
-        if(isJump)
-        {
-            return;
-        }
-
         Skill(Skill3, "skill3", so.skills[2], ref skill3);
     }
     public void Skill1()
@@ -65,13 +50,6 @@ public class Bat_Hero : Controller
     public void Skill3()
     {
         StartCoroutine(Casting_Skill3());
-    }
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("wall"))
-        {
-            enterWall = true;
-        }
     }
     private IEnumerator Casting_DefaultAttack()
     {
@@ -97,8 +75,6 @@ public class Bat_Hero : Controller
 
         skill3_Range.gameObject.SetActive(true);
 
-        col.isTrigger = true;
-
         rigid.velocity = new Vector3(direction * 1.5f, 0);
 
         while(animator.GetCurrentAnimatorStateInfo(0).normalizedTime <= 1)
@@ -112,8 +88,6 @@ public class Bat_Hero : Controller
 
             yield return null;
         }
-
-        col.isTrigger = false;
 
         skill3_Range.gameObject.SetActive(false);
     }

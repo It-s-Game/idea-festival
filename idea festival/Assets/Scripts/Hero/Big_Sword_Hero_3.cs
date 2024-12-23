@@ -29,30 +29,15 @@ public class Big_Sword_Hero_3 : Controller
     }
     public override void ButtonY(InputValue value)
     {
-        if(isJump)
-        {
-            return;
-        }
-
         Skill(Skill1, "skill1", so.skills[0], ref skill1);
     }
     public override void ButtonB(InputValue value)
     {
-        if(isJump)
-        {
-            return;
-        }
-
         StartCoroutine(Casting_Skill2());
         Skill(Skill2, "skill2", so.skills[1], ref skill2);
     }
     public override void RightBumper(InputValue value)
     {
-        if(isJump)
-        {
-            return;
-        }
-
         shield.gameObject.SetActive(true);
         shield.Set(direction);
 

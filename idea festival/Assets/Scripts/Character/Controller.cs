@@ -186,7 +186,7 @@ public abstract class Controller : Character
     }
     protected void Skill(Action skill, string animationName, Attack so, ref bool inCoolTime)
     {
-        if (castingSkill || !Actionable || inTheDash)
+        if (castingSkill || inTheDash)
         {
             return;
         }
