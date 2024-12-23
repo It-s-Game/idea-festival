@@ -8,6 +8,8 @@ public class Big_Sword_Hero_3 : Controller
     [SerializeField]
     private AttackRange defaultAttack_Range;
     [SerializeField]
+    private AttackRange skill2_Range;
+    [SerializeField]
     private Shield shield;
 
     private bool skill1 = false;
@@ -23,6 +25,7 @@ public class Big_Sword_Hero_3 : Controller
         base.Awake();
 
         defaultAttack_Range.Init(gameObject, so.default_Attack.damage);
+        skill2_Range.Init(gameObject, so.skills[1].damage);
     }
     public override void ButtonY(InputValue value)
     {
@@ -86,11 +89,13 @@ public class Big_Sword_Hero_3 : Controller
     }
     private IEnumerator Casting_Skill2()
     {
+        skill2_Range.gameObject.SetActive(true);
         skill2 = true;
 
         yield return new WaitForSeconds(so.skills[1].coolTime);
         
         skill2 = false;
+        skill2_Range.gameObject.SetActive(false);
     }
     private IEnumerator Casting_Skill3()
     {
