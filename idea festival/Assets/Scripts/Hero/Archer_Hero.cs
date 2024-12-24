@@ -10,9 +10,9 @@ public class Archer_Hero : Controller
     [SerializeField]
     private AttackRange skill2_Range;
 
-    private bool skill1 = false;
-    private bool skill2 = false;
-    private bool skill3 = false;
+    private CoolTime skill1 = new();
+    private CoolTime skill2 = new();
+    private CoolTime skill3 = new();
 
     protected override void DefaultAttack()
     {
@@ -26,15 +26,15 @@ public class Archer_Hero : Controller
     }
     public override void ButtonY(InputValue value)
     {
-        Skill(Skill1, "skill1", so.skills[0], ref skill1);
+        Skill(Skill1, "skill1", so.skills[0], skill1);
     }
     public override void ButtonB(InputValue value)
     {
-        Skill(Skill2, "skill2", so.skills[1], ref skill2);
+        Skill(Skill2, "skill2", so.skills[1], skill2);
     }
     public override void RightBumper(InputValue value)
     {
-        if(skill3)
+        if(skill3.isInCoolTime)
         {
             return;
         }
@@ -60,10 +60,10 @@ public class Archer_Hero : Controller
     }
     private IEnumerator Casting_Skill3()
     {
-        skill3 = true;
+        skill3.isInCoolTime = true;
 
         yield return new WaitForSeconds(so.skills[2].coolTime);
         
-        skill3 = false;
+        skill3.isInCoolTime = false;
     }
 }

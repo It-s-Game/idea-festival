@@ -2,10 +2,15 @@ using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+public class CoolTime
+{
+    public bool isInCoolTime = false;
+}
 public abstract class Controller : Character
 {
+    private CoolTime defaultAttack = new();
+
     private Vector3 moveVec = new();
-    private bool defaultAttack = false;
 
     public void Set(InputAction leftStick, int playerIndex)
     {
@@ -163,17 +168,7 @@ public abstract class Controller : Character
     }
     public virtual void ButtonX(InputValue value)
     {
-        if(castingSkill)
-        {
-            return;
-        }
-
-        if(!defaultAttack)
-        {
-            defaultAttack = true;
-        }
-
-        StartCoroutine(CastingSkill(DefaultAttack, "attack", so.default_Attack, defaultAttack));
+        Skill(DefaultAttack, "attack", so.default_Attack, defaultAttack);
     }
     public virtual void LeftBumper(InputValue value)
     {
@@ -184,16 +179,16 @@ public abstract class Controller : Character
 
         dash = StartCoroutine(Dash("dash"));
     }
-    protected void Skill(Action skill, string animationName, Attack so, ref bool inCoolTime)
+    protected void Skill(Action skill, string animationName, Attack so, CoolTime inCoolTime)
     {
-        if (castingSkill || inTheDash)
+        if(castingSkill || inTheDash)
         {
             return;
         }
 
-        if (!inCoolTime)
+        if(inCoolTime.isInCoolTime)
         {
-            inCoolTime = true;
+            return;
         }
 
         StartCoroutine(CastingSkill(skill, animationName, so, inCoolTime));
@@ -210,8 +205,9 @@ public abstract class Controller : Character
             yield return null;
         }
     }
-    protected IEnumerator CastingSkill(Action skill, string animationName, Attack so, bool inCoolTime)
+    protected IEnumerator CastingSkill(Action skill, string animationName, Attack so, CoolTime inCoolTime)
     {
+        inCoolTime.isInCoolTime = true;
         castingSkill = true;
 
         rigid.velocity = new Vector3(0, rigid.velocity.y);
@@ -222,11 +218,19 @@ public abstract class Controller : Character
 
         skill.Invoke();
 
+        if(so.isCancelable)
+        {
+            castingSkill = false;
+        }
+
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
 
-        castingSkill = false;
+        if(!so.isCancelable)
+        {
+            castingSkill = false;
+        }
 
-        if(Actionable)
+        if(actionable)
         {
             if(leftStickCoroutine != null)
             {
@@ -251,7 +255,7 @@ public abstract class Controller : Character
 
         yield return new WaitForSeconds(so.coolTime);
 
-        inCoolTime = false;
+        inCoolTime.isInCoolTime = false;
     }
     protected IEnumerator Dash(string animationName, float magnification = 1.35f, GameObject range = null)
     {
@@ -283,7 +287,7 @@ public abstract class Controller : Character
             range.SetActive(false);
         }
 
-        if (Actionable)
+        if (actionable)
         {
             if(leftStickCoroutine == null)
             {

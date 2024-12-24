@@ -12,9 +12,9 @@ public class Bat_Hero : Controller
     [SerializeField]
     private AttackRange skill3_Range;
 
-    private bool skill1 = false;
-    private bool skill2 = false;
-    private bool skill3 = false;
+    private CoolTime skill1 = new();
+    private CoolTime skill2 = new();
+    private CoolTime skill3 = new();
 
     protected override void DefaultAttack()
     {
@@ -29,15 +29,15 @@ public class Bat_Hero : Controller
     }
     public override void ButtonY(InputValue value)
     {
-        Skill(Skill1, "skill1", so.skills[0], ref skill1);
+        Skill(Skill1, "skill1", so.skills[0], skill1);
     }
     public override void ButtonB(InputValue value)
     {
-        Skill(Skill2, "skill2", so.skills[1], ref skill2);
+        Skill(Skill2, "skill2", so.skills[1], skill2);
     }
     public override void RightBumper(InputValue value)
     {
-        Skill(Skill3, "skill3", so.skills[2], ref skill3);
+        Skill(Skill3, "skill3", so.skills[2], skill3);
     }
     public void Skill1()
     {

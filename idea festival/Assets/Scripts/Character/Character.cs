@@ -1,5 +1,4 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D), typeof(Animator), typeof(BoxCollider2D))]
@@ -33,7 +32,7 @@ public class Character : MonoBehaviour, IDamagable
     protected bool castingSkill = false;
     protected bool enterWall = false;
     protected bool enterFloor = false;
-    protected bool Actionable = true;
+    protected bool actionable = true;
 
     private Coroutine dieing = null;
     private int health;
@@ -75,8 +74,10 @@ public class Character : MonoBehaviour, IDamagable
             rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
         }
     }
-    private void CollisionEnter()
+    private IEnumerator CollisionEnter()
     {
+        yield return new WaitUntil(() => castingSkill == false);
+
         if (leftStickCoroutine == null)
         {
             animator.Play("idle");
@@ -113,16 +114,18 @@ public class Character : MonoBehaviour, IDamagable
 
         jumpCount = maxJumpCount;
         isJump = false;
-        Actionable = true;
+        actionable = true;
     }
-    private void CollisionEnterWall()
+    private IEnumerator CollisionEnterWall()
     {
+        yield return new WaitUntil(() => castingSkill == false);
+
         jumpCount = maxJumpCount;
         enterWall = true;
 
-        if (Actionable)
+        if (actionable)
         {
-            return;
+            yield break;
         }
 
         animator.Play("wallslide");
@@ -133,25 +136,25 @@ public class Character : MonoBehaviour, IDamagable
     {
         if(collision.gameObject.CompareTag("floor"))
         {
-            CollisionEnter();
+            StartCoroutine(CollisionEnter());
 
             enterFloor = true;
             groundDust.gameObject.SetActive(true);
         }
         else if(collision.gameObject.CompareTag("Player"))
         {
-            if(collision.gameObject != gameObject && !Actionable)
+            if(collision.gameObject != gameObject && !actionable)
             {
-                CollisionEnter();
+                StartCoroutine(CollisionEnter());
             }
             else if (collision.gameObject.CompareTag("wall"))
             {
-                CollisionEnterWall();
+                StartCoroutine(CollisionEnterWall());
             }
         }
         else if (collision.gameObject.CompareTag("wall"))
         {
-            CollisionEnterWall();
+            StartCoroutine(CollisionEnterWall());
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -178,7 +181,7 @@ public class Character : MonoBehaviour, IDamagable
             rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
 
             enterFloor = false;
-            Actionable = false;
+            actionable = false;
         }
         else if(collision.gameObject.CompareTag("Player"))
         {
@@ -186,7 +189,7 @@ public class Character : MonoBehaviour, IDamagable
             {
                 rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
 
-                Actionable = false;
+                actionable = false;
             }
         }
 
