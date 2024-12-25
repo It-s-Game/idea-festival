@@ -1,9 +1,15 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
+public class CoolTime
+{
+    public bool isInCoolTime = false;
+}
 public abstract class Controller : Character
 {
-    private Coroutine attackDuration;
+    private CoolTime defaultAttack = new();
+
     private Vector3 moveVec = new();
 
     public void Set(InputAction leftStick, int playerIndex)
@@ -14,28 +20,50 @@ public abstract class Controller : Character
         {
             direction = -1;
 
+            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
             //transform.position
         }
         else
         {
             direction = 1;
 
+            transform.rotation = Quaternion.Euler(Vector3.zero);
             //transform.position
         }
     }
-    private void Update()
+    protected void ActiveProjectile(Projectile[] projectiles)
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        foreach(Projectile projectile in projectiles)
         {
-            TakeDamage(status.maxHealth);
+            if(!projectile.gameObject.activeSelf)
+            {
+                projectile.gameObject.SetActive(true);
+
+                projectile.Set(direction, gameObject);
+
+                break;
+            }
+        }
+    }
+    protected void ActiveProjectile(Projectile projectile)
+    {
+        if(!projectile.gameObject.activeSelf)
+        {
+            projectile.gameObject.SetActive(true);
+
+            projectile.Set(direction, gameObject);
         }
     }
     private void CharacterMove()
     {
-        if(inTheDash || isAttack)
-
+        if(inTheDash || castingSkill)
         {
             return;
+        }
+
+        if(!enterWall)
+        {
+            wallSlide.SetActive(false);
         }
 
         if ((Mathf.Sign(leftStick.ReadValue<Vector2>().x)) != direction)
@@ -81,20 +109,26 @@ public abstract class Controller : Character
         {
             if(jumpCount == maxJumpCount)
             {
-                if(!isAttack)
+                if(!castingSkill)
                 {
                     animator.Play("run");
                 }
             }
 
+            rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
+
             leftStickCoroutine = StartCoroutine(Moving());
         }
         else
         {
-            if(!isJump)
+            rigid.velocity = new Vector3(0, rigid.velocity.y);
+
+            if (!isJump && !castingSkill)
             {
-                animator.Play("player_idle");
+                animator.Play("idle");
             }
+
+            rigid.constraints |= RigidbodyConstraints2D.FreezePositionX;
 
             StopCoroutine(leftStickCoroutine);
 
@@ -103,12 +137,14 @@ public abstract class Controller : Character
     }
     public virtual void ButtonA(InputValue value)
     {
-        if(isAttack)
+        if(castingSkill)
         {
             return;
         }
 
-        if(jumpCount > 0)
+        rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+
+        if (jumpCount > 0)
         {
             if(wallSlide.activeSelf)
             {
@@ -124,7 +160,7 @@ public abstract class Controller : Character
                 animator.Play("double jump");
             }
 
-            rigid.AddForce(jumpHeight, ForceMode2D.Impulse);
+            rigid.velocity = new Vector2(rigid.velocity.x, jumpHeight);
 
             jumpCount--;
             isJump = true;
@@ -132,27 +168,36 @@ public abstract class Controller : Character
     }
     public virtual void ButtonX(InputValue value)
     {
-        if(attackDuration != null || isJump || !enterFloor || inTheDash)
-        {
-            return;
-        }
-
-        attackDuration = StartCoroutine(AttackDuration());
+        Skill(DefaultAttack, "attack", so.default_Attack, defaultAttack);
     }
     public virtual void LeftBumper(InputValue value)
     {
-        if(dash != null || wallSlide.activeSelf || isAttack || inTheDash)
+        if(dash != null || wallSlide.activeSelf || castingSkill || inTheDash)
         {
             return;
         }
 
-        dash = StartCoroutine(Dash());
+        dash = StartCoroutine(Dash("dash", status.dash_coolTime));
+    }
+    protected void Skill(Action skill, string animationName, Attack so, CoolTime inCoolTime)
+    {
+        if(castingSkill || inTheDash)
+        {
+            return;
+        }
+
+        if(inCoolTime.isInCoolTime)
+        {
+            return;
+        }
+
+        StartCoroutine(CastingSkill(skill, animationName, so, inCoolTime));
     }
     protected IEnumerator Moving()
     {
         while (true)
         {
-            if(!inTheDash || !isAttack)
+            if(!inTheDash || !castingSkill)
             {
                 CharacterMove();
             }
@@ -160,21 +205,32 @@ public abstract class Controller : Character
             yield return null;
         }
     }
-    protected IEnumerator AttackDuration()
+    protected IEnumerator CastingSkill(Action skill, string animationName, Attack so, CoolTime inCoolTime)
     {
-        isAttack = true;
+        inCoolTime.isInCoolTime = true;
+        castingSkill = true;
 
-        animator.Play("player_attack");
+        rigid.velocity = new Vector3(0, rigid.velocity.y);
 
-        yield return new WaitForSeconds(so.default_Attack.delay);
+        animator.Play(animationName);
 
-        Attack(direction);
+        yield return new WaitForSeconds(so.delay);
+
+        skill.Invoke();
+
+        if(so.isCancelable)
+        {
+            castingSkill = false;
+        }
 
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
 
-        isAttack = false;
+        if(!so.isCancelable)
+        {
+            castingSkill = false;
+        }
 
-        if(enterFloor)
+        if(actionable)
         {
             if(leftStickCoroutine != null)
             {
@@ -182,38 +238,68 @@ public abstract class Controller : Character
             }
             else
             {
-                animator.Play("player_idle");
+                animator.Play("idle");
+            }
+        }
+        else
+        {
+            if(enterWall)
+            {
+                animator.Play("wallslide");
+            }
+            else
+            {
+                animator.Play("jump");
             }
         }
 
-        yield return new WaitForSeconds(so.default_Attack.coolTime);
+        yield return new WaitForSeconds(so.coolTime);
 
-        attackDuration = null;
+        inCoolTime.isInCoolTime = false;
     }
-    protected IEnumerator Dash()
+    protected IEnumerator Dash(string animationName, float seconds, float magnification = 1.35f, GameObject range = null, CoolTime coolTime = null)
     {
+        if(coolTime != null)
+        {
+            if(coolTime.isInCoolTime)
+            {
+                yield break;
+            }
+        }    
+
         inTheDash = true;
 
-        animator.Play("dash");
+        if(range != null)
+        {
+            range.SetActive(true);
+        }
+
+        animator.Play(animationName);
 
         groundDust.SetActive(true);
 
-        Coroutine dash_Moving = StartCoroutine(Dash_Moving());
+        Coroutine dash_Moving = StartCoroutine(Dash_Moving(magnification));
+
+        rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionX;
 
         yield return new WaitForSeconds(0.35f);
 
         StopCoroutine(dash_Moving);
 
-        while (Mathf.Abs(rigid.velocity.x) >= status.moveSpeed)
+        rigid.velocity = new Vector3(moveVec.x / magnification, rigid.velocity.y);
+
+        yield return null;
+
+        if (range != null)
         {
-            yield return null;
+            range.SetActive(false);
         }
 
-        if (enterFloor)
+        if (actionable)
         {
             if(leftStickCoroutine == null)
             {
-                animator.Play("player_idle");
+                animator.Play("idle");
             }
             else
             {
@@ -224,22 +310,53 @@ public abstract class Controller : Character
         {
             if(!wallSlide.activeSelf)
             {
-                animator.Play("double jump");
+                if(jumpCount == 1)
+                {
+                    animator.Play("jump");
+                }
+                else
+                {
+                    animator.Play("double jump");
+                }
             }
+        }
+
+        if(leftStickCoroutine == null)
+        {
+            rigid.constraints |= RigidbodyConstraints2D.FreezePositionX;
         }
 
         inTheDash = false;
 
-        yield return new WaitForSeconds(status.dash_coolTime);
+        if(coolTime != null)
+        {
+            coolTime.isInCoolTime = true;
+        }
+
+        yield return new WaitForSeconds(seconds);
+
+        if (coolTime != null)
+        {
+            coolTime.isInCoolTime = false;
+        }
 
         dash = null;
     }
-    protected IEnumerator Dash_Moving()
+    protected IEnumerator Dash_Moving(float magnification)
     {
-        moveVec = new Vector3(direction * status.moveSpeed * 1.75f, 0);
+        moveVec = new Vector3(rigid.velocity.x + direction * status.moveSpeed * magnification, 0);
 
         while (true)
         {
+            if(rigid.velocity.y > 0)
+            {
+                moveVec.y = rigid.velocity.y;
+            }
+            else
+            {
+                moveVec.y = 0;
+            }
+
             rigid.velocity = moveVec;
 
             yield return null;
@@ -252,5 +369,5 @@ public abstract class Controller : Character
     public virtual void RightTrigger(InputValue value) { }
     public virtual void LeftStickPress(InputValue value) { }
     public virtual void RightStickPress(InputValue value) { }
-    protected abstract void Attack(int direction = 0);
+    protected abstract void DefaultAttack();
 }
