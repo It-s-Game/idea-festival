@@ -24,6 +24,7 @@ public class Character : MonoBehaviour, IDamagable
 
     protected Coroutine leftStickCoroutine = null;
     protected Coroutine dash = null;
+    protected float stamina = 1;
     protected float jumpHeight;
     protected int jumpCount = maxJumpCount;
     protected int direction = 0;
@@ -35,7 +36,7 @@ public class Character : MonoBehaviour, IDamagable
     protected bool actionable = true;
 
     private Coroutine dieing = null;
-    private int health;
+    private float health;
     
     protected virtual void Awake()
     {
@@ -57,7 +58,7 @@ public class Character : MonoBehaviour, IDamagable
     }
     public void TakeDamage(int damage)
     {
-        health -= damage;
+        health -= damage * stamina;
 
         if (health <= 0)
         {

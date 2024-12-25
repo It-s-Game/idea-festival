@@ -8,7 +8,7 @@ public class Lightning_Hero : Controller
     [SerializeField]
     private Projectile[] skill2_Projectile;
     [SerializeField]
-    private AttackRange skill1_Range;
+    private AttackRange skill3_Range;
 
     private CoolTime skill1 = new();
     private CoolTime skill2 = new();
@@ -23,7 +23,7 @@ public class Lightning_Hero : Controller
         base.Awake();
 
         defaultAttack_Range.Init(gameObject, so.default_Attack.damage);
-        skill1_Range.Init(gameObject, so.skills[0].damage);
+        skill3_Range.Init(gameObject, so.skills[0].damage);
     }
     public override void ButtonY(InputValue value)
     {
@@ -35,21 +35,23 @@ public class Lightning_Hero : Controller
     }
     public override void RightBumper(InputValue value)
     {
-        if(skill3.isInCoolTime)
-        {
-            return;
-        }
-
-        StartCoroutine(Casting_Skill3());
-        StartCoroutine(Dash("skill3", 1.6f));
+        StartCoroutine(Dash("skill3", so.skills[2].coolTime, 1.6f, skill3_Range.gameObject, skill3));
     }
     public void Skill1()
     {
-
+        StartCoroutine(Casting_Skill1());
     }
     public void Skill2()
     {
         ActiveProjectile(skill2_Projectile);
+    }
+    private IEnumerator Casting_Skill1()
+    {
+        stamina = 0;
+
+        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
+
+        stamina = 1;
     }
     private IEnumerator Casting_DefaultAttack()
     {
@@ -60,13 +62,5 @@ public class Lightning_Hero : Controller
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.625f);
 
         defaultAttack_Range.gameObject.SetActive(false);
-    }
-    private IEnumerator Casting_Skill3()
-    {
-        skill3.isInCoolTime = true;
-
-        yield return new WaitForSeconds(so.skills[2].coolTime);
-
-        skill3.isInCoolTime = false;
     }
 }

@@ -34,13 +34,7 @@ public class Archer_Hero : Controller
     }
     public override void RightBumper(InputValue value)
     {
-        if(skill3.isInCoolTime)
-        {
-            return;
-        }
-
-        StartCoroutine(Casting_Skill3());
-        StartCoroutine(Dash("skill3", 2.5f));
+        StartCoroutine(Dash("skill3", so.skills[2].coolTime, 2.5f, null, skill3));
     }
     public void Skill1()
     {
@@ -57,13 +51,5 @@ public class Archer_Hero : Controller
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
 
         skill2_Range.gameObject.SetActive(false);
-    }
-    private IEnumerator Casting_Skill3()
-    {
-        skill3.isInCoolTime = true;
-
-        yield return new WaitForSeconds(so.skills[2].coolTime);
-        
-        skill3.isInCoolTime = false;
     }
 }

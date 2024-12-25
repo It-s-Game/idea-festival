@@ -177,7 +177,7 @@ public abstract class Controller : Character
             return;
         }
 
-        dash = StartCoroutine(Dash("dash"));
+        dash = StartCoroutine(Dash("dash", status.dash_coolTime));
     }
     protected void Skill(Action skill, string animationName, Attack so, CoolTime inCoolTime)
     {
@@ -257,8 +257,16 @@ public abstract class Controller : Character
 
         inCoolTime.isInCoolTime = false;
     }
-    protected IEnumerator Dash(string animationName, float magnification = 1.35f, GameObject range = null)
+    protected IEnumerator Dash(string animationName, float seconds, float magnification = 1.35f, GameObject range = null, CoolTime coolTime = null)
     {
+        if(coolTime != null)
+        {
+            if(coolTime.isInCoolTime)
+            {
+                yield break;
+            }
+        }    
+
         inTheDash = true;
 
         if(range != null)
@@ -320,7 +328,17 @@ public abstract class Controller : Character
 
         inTheDash = false;
 
-        yield return new WaitForSeconds(status.dash_coolTime);
+        if(coolTime != null)
+        {
+            coolTime.isInCoolTime = true;
+        }
+
+        yield return new WaitForSeconds(seconds);
+
+        if (coolTime != null)
+        {
+            coolTime.isInCoolTime = false;
+        }
 
         dash = null;
     }

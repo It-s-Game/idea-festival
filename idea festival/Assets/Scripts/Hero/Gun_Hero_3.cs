@@ -43,13 +43,7 @@ public class Gun_Hero_3 : Controller
     }
     public override void LeftTrigger(InputValue value)
     {
-        if(skill4.isInCoolTime)
-        {
-            return;
-        }
-
-        StartCoroutine(Casting_Skill4());
-        StartCoroutine(Dash("skill4", 1.35f, skill4_Range.gameObject));
+        StartCoroutine(Dash("skill4", so.skills[3].coolTime, 1.35f, skill4_Range.gameObject, skill4));
     }
     public void Skill1()
     {
@@ -70,13 +64,5 @@ public class Gun_Hero_3 : Controller
         yield return new WaitForSeconds(0.65f);
 
         shield_Range.gameObject.SetActive(false);
-    }
-    private IEnumerator Casting_Skill4()
-    {
-        skill4.isInCoolTime = true;
-
-        yield return new WaitForSeconds(so.skills[3].coolTime);
-
-        skill4.isInCoolTime = false;
     }
 }
