@@ -12,7 +12,7 @@ public class GameManager
 
         for (int i = 0; i < Managers.Instance.players.Count; i++)
         {
-            go = Resources.Load<GameObject>("Hero" + characterName[i]);
+            go = Resources.Load<GameObject>("Hero/" + characterName[i]);
 
             result = Object.Instantiate(go);
 
@@ -23,11 +23,11 @@ public class GameManager
     {
         Managers.Instance.isInGame = true;
 
-        GameSet();
-
         Util.GetMonoBehaviour().StartCoroutine(StartCountdown());
 
-        Managers.UI.ActiveUI("Player_NameTag");
+        GameSet();
+
+        //Managers.UI.ActiveUI("Player_NameTag");
     }
     public void GameOver()
     {
