@@ -46,8 +46,6 @@ ExportedObj/
 *.mdb
 *.opendb
 *.VC.db
-*.asset
-*.txt
 
 # Unity3D generated meta files
 *.pidb.meta
@@ -73,5 +71,20 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
+# Include Tilemap files (Palettes, Tiles, Sprites)
+!Assets/TilePalettes/**/*.asset
+!Assets/TilePalettes/**/*.meta
+!Assets/Tiles/**/*.asset
+!Assets/Tiles/**/*.meta
+!Assets/Sprites/**/*.png
+!Assets/Sprites/**/*.meta
+
 # Exclude meta files from being ignored
 !Assets/**/*.meta
+
+# Optional - Exclude sensitive personal files or settings
+*.user
+*.userprefs
+*.swp
+*.tmp
+*.bak
