@@ -21,14 +21,14 @@ public class Player : MonoBehaviour
     }
     private void Update()//
     {
-        if(Input.GetKeyDown(KeyCode.A))
+        if(Input.GetKeyDown(KeyCode.Space))
         {
             Init(controller);
         }
     }
     public void Init(Controller character)
     {
-        this.controller = character;
+        controller = character;
         
         leftStick = playerInput.actions["LeftStick"];
 

@@ -1,0 +1,537 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2648748852190763975
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 445605223041740621}
+  m_Layer: 0
+  m_Name: Cowboy Hero Bulls
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &445605223041740621
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2648748852190763975}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.39847052, y: -3.6156635, z: 0.05432753}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1593312992692938065}
+  - {fileID: 2598282537263380919}
+  - {fileID: 7674186353664624180}
+  - {fileID: 9134612120990653681}
+  - {fileID: 5825849551614018313}
+  - {fileID: 2804557584947758263}
+  - {fileID: 2721030303572772498}
+  - {fileID: 1201011399202155411}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1602243826126080723
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 445605223041740621}
+    m_Modifications:
+    - target: {fileID: 1625981132682306788, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_Name
+      value: Cowboy Hero Bull 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.39847052
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.6156635
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+--- !u!4 &5825849551614018313 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+  m_PrefabInstance: {fileID: 1602243826126080723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &3199223546451120110
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 445605223041740621}
+    m_Modifications:
+    - target: {fileID: 1625981132682306788, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_Name
+      value: Cowboy Hero Bull 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.39847052
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.6156635
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+--- !u!4 &7674186353664624180 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+  m_PrefabInstance: {fileID: 3199223546451120110}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4044630875499681067
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 445605223041740621}
+    m_Modifications:
+    - target: {fileID: 1625981132682306788, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_Name
+      value: Cowboy Hero Bull 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.39847052
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.6156635
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+--- !u!4 &9134612120990653681 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+  m_PrefabInstance: {fileID: 4044630875499681067}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5834790106625895563
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 445605223041740621}
+    m_Modifications:
+    - target: {fileID: 1625981132682306788, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_Name
+      value: Cowboy Hero Bull 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.39847052
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.6156635
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+--- !u!4 &1593312992692938065 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+  m_PrefabInstance: {fileID: 5834790106625895563}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6219218784553525833
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 445605223041740621}
+    m_Modifications:
+    - target: {fileID: 1625981132682306788, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_Name
+      value: Cowboy Hero Bull 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.39847052
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.6156635
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+--- !u!4 &1201011399202155411 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+  m_PrefabInstance: {fileID: 6219218784553525833}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6921479891148606829
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 445605223041740621}
+    m_Modifications:
+    - target: {fileID: 1625981132682306788, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_Name
+      value: Cowboy Hero Bull 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.39847052
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.6156635
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+--- !u!4 &2804557584947758263 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+  m_PrefabInstance: {fileID: 6921479891148606829}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7127851558409302125
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 445605223041740621}
+    m_Modifications:
+    - target: {fileID: 1625981132682306788, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_Name
+      value: Cowboy Hero Bull 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.39847052
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.6156635
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+--- !u!4 &2598282537263380919 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+  m_PrefabInstance: {fileID: 7127851558409302125}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7144619604920962888
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 445605223041740621}
+    m_Modifications:
+    - target: {fileID: 1625981132682306788, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_Name
+      value: Cowboy Hero Bull 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.39847052
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -3.6156635
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+--- !u!4 &2721030303572772498 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5108703798916565466, guid: 8abe4459e94817643b23a6637037a5dc, type: 3}
+  m_PrefabInstance: {fileID: 7144619604920962888}
+  m_PrefabAsset: {fileID: 0}

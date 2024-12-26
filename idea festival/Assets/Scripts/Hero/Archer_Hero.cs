@@ -1,21 +1,55 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 public class Archer_Hero : Controller
 {
     [SerializeField]
-    private Projectile[] arrows = new Projectile[] { };
+    private Projectile[] projectile1;
+    [SerializeField]
+    private Projectile[] projectile2;
+    [SerializeField]
+    private AttackRange skill2_Range;
 
-    protected override void Attack(int direction)
+    private CoolTime skill1 = new();
+    private CoolTime skill2 = new();
+    private CoolTime skill3 = new();
+
+    protected override void DefaultAttack()
     {
-        foreach(Projectile arrow in arrows)
-        {
-            if(!arrow.gameObject.activeSelf)
-            {
-                arrow.gameObject.SetActive(true);
+        ActiveProjectile(projectile1);
+    }
+    protected override void Awake()
+    {
+        base.Awake();
 
-                arrow.Set(direction, gameObject);
+        skill2_Range.Init(gameObject, so.skills[1].damage);
+    }
+    public override void ButtonY(InputValue value)
+    {
+        Skill(Skill1, "skill1", so.skills[0], skill1);
+    }
+    public override void ButtonB(InputValue value)
+    {
+        Skill(Skill2, "skill2", so.skills[1], skill2);
+    }
+    public override void RightBumper(InputValue value)
+    {
+        StartCoroutine(Dash("skill3", so.skills[2].coolTime, 2.5f, null, skill3));
+    }
+    public void Skill1()
+    {
+        ActiveProjectile(projectile2);
+    }
+    public void Skill2()
+    {
+        StartCoroutine(Casting_Skill2());
+    }
+    private IEnumerator Casting_Skill2()
+    {
+        skill2_Range.gameObject.SetActive(true);
 
-                break;
-            }
-        }
+        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
+
+        skill2_Range.gameObject.SetActive(false);
     }
 }
