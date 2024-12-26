@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1638311296333033659}
   m_Layer: 0
-  m_Name: Psychic_Hero
+  m_Name: Psychic Hero
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

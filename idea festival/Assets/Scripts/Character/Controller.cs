@@ -12,23 +12,22 @@ public abstract class Controller : Character
 
     private Vector3 moveVec = new();
 
-    public void Set(InputAction leftStick, int playerIndex)
+    public void Set(InputAction leftStick, Vector3 position)
     {
         this.leftStick = leftStick;
+        transform.position = position;
 
-        if ((playerIndex + 1) % 2 == 0)
-        {
-            direction = -1;
-
-            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
-            //transform.position
-        }
-        else
+        if(position.x >= 0)
         {
             direction = 1;
 
             transform.rotation = Quaternion.Euler(Vector3.zero);
-            //transform.position
+        }
+        else
+        {
+            direction = -1;//right
+
+            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
         }
     }
     protected void ActiveProjectile(Projectile[] projectiles)
