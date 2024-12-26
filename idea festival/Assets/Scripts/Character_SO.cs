@@ -13,6 +13,8 @@ public class Attack
 {
     public float coolTime;
     public float delay;
+    public int damage;
+    public bool isCancelable = true;
 }
 [CreateAssetMenu(fileName = "Character_SO", menuName = "Create New ScriptableObject/Character_SO")]
 public class Character_SO : ScriptableObject
