@@ -79,6 +79,24 @@ crashlytics-build.properties
 !Assets/Sprites/**/*.png
 !Assets/Sprites/**/*.meta
 
+!Assets/**/*.asset
+!Assets/**/*.meta
+!Assets/**/*.png
+!Assets/**/*.jpg
+!Assets/**/*.psd
+!Assets/**/*.wav
+!Assets/**/*.mp3
+!Assets/**/*.prefab
+!Assets/**/*.unity
+!Assets/**/*.mat
+!Assets/**/*.shader
+!Assets/**/*.txt
+!Assets/**/*.json
+!Assets/**/*.xml
+!Assets/**/*.cs
+!Assets/**/*.anim
+!Assets/**/*.controller
+
 # Exclude meta files from being ignored
 !Assets/**/*.meta
 
