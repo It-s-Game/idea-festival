@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4938044024244038794}
   - component: {fileID: 9107575152738960393}
   - component: {fileID: 8318608601734122535}
-  - component: {fileID: 8358779624093078014}
+  - component: {fileID: 174525461463656681}
   m_Layer: 0
   m_Name: grenade
   m_TagString: Untagged
@@ -142,7 +142,7 @@ Animator:
   m_GameObject: {fileID: 5281216815955463033}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 3d593511a2c0fde44ac6f303579e3064, type: 2}
+  m_Controller: {fileID: 9100000, guid: 146c1670aad335c46adedb0aaf421ac7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -153,7 +153,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &8358779624093078014
+--- !u!114 &174525461463656681
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,13 +162,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5281216815955463033}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33ec742112eaad94d91f88061b0c4a62, type: 3}
+  m_Script: {fileID: 11500000, guid: 252c65c30a0a84281b32f9f2c57d0d9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so: {fileID: 11400000, guid: 227fd2b3ea68a2341963d12efd8150ef, type: 2}
+  so: {fileID: 11400000, guid: 4cab298941f1bef4fbdde3b588b977c5, type: 2}
   initalObject: {fileID: 0}
-  offset1: {x: 0, y: 0}
-  offset2: {x: 0.025, y: -0.175}
-  size1: {x: 0.25, y: 0.25}
-  size2: {x: 0.865, y: 0.4}
-  increasePosition: {x: 0, y: 0.25, z: 0}

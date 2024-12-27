@@ -87,7 +87,7 @@ public class Projectile : MonoBehaviour
     }
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject == obj || collision.gameObject.CompareTag("Untagged"))
+        if(collision.gameObject == obj || collision.gameObject.CompareTag("Untagged") || collision.gameObject.CompareTag("collider"))
         {
             return;
         }

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2783010762037200042}
   - component: {fileID: 1551877086864982774}
   - component: {fileID: 6716600655514187773}
-  - component: {fileID: 7145550108185161244}
+  - component: {fileID: 4931025578544481614}
   m_Layer: 0
   m_Name: spear
   m_TagString: Untagged
@@ -142,7 +142,7 @@ Animator:
   m_GameObject: {fileID: 4205990614164623538}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b51ec21f76d0ada48ab155e655e91d28, type: 2}
+  m_Controller: {fileID: 9100000, guid: fa8ddd30f40414146a8d424f3c119ea2, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -153,7 +153,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7145550108185161244
+--- !u!114 &4931025578544481614
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,8 +162,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4205990614164623538}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b98f0c8bb4772c646a450085b021ace4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fbf742df87d546d8b3f3ff65bf20d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so: {fileID: 11400000, guid: 17ac73e955d6d434fb691ae8b232880b, type: 2}
+  so: {fileID: 11400000, guid: f721ca4b3ffbab54cbbe3a5ca513d96e, type: 2}
   initalObject: {fileID: 0}

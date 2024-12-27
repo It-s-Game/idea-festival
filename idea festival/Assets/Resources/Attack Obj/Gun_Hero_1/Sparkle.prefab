@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6261424523314412604}
   - component: {fileID: 5770724593393625095}
   - component: {fileID: 1418220144096820001}
-  - component: {fileID: 252863095864201090}
+  - component: {fileID: 5052752419682844040}
   m_Layer: 0
   m_Name: Sparkle
   m_TagString: Untagged
@@ -96,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 7852337613414379459}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: d420b21bb5539174bbfa9a2a87aaf48f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 35626a34f8e997646aebbdde7c12636e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -107,7 +107,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &252863095864201090
+--- !u!114 &5052752419682844040
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7852337613414379459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b402f56a198220a4297cd30550d48cf3, type: 3}
+  m_Script: {fileID: 11500000, guid: 5eecf15d2ccf2471696cc329fe7d90bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isLoop: 0
