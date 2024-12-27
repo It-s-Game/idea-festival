@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.725, y: 0.15, z: 5}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1968221176728829967}
@@ -96,7 +96,7 @@ Animator:
   m_GameObject: {fileID: 4381317537146605414}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 06492fbf60d928b4e853b30c018fab99, type: 2}
+  m_Controller: {fileID: 9100000, guid: 32ae7317ff5c1f04cb5f3403a48f4443, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -116,7 +116,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4381317537146605414}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b402f56a198220a4297cd30550d48cf3, type: 3}
+  m_Script: {fileID: 11500000, guid: 5eecf15d2ccf2471696cc329fe7d90bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isLoop: 0
@@ -235,8 +235,8 @@ Transform:
   m_GameObject: {fileID: 6056933331782438758}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.25, y: 0, z: 5}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1968221176728829967}
@@ -303,7 +303,7 @@ Animator:
   m_GameObject: {fileID: 6056933331782438758}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: ba44fbe8c73bb0644b778b4d31be8ce4, type: 2}
+  m_Controller: {fileID: 9100000, guid: 258632c12f2b0ac45ac75b490ba3f82b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -323,7 +323,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6056933331782438758}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b402f56a198220a4297cd30550d48cf3, type: 3}
+  m_Script: {fileID: 11500000, guid: 5eecf15d2ccf2471696cc329fe7d90bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isLoop: 1
@@ -356,7 +356,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.6, y: 0.35, z: 5}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1968221176728829967}
@@ -423,7 +423,7 @@ Animator:
   m_GameObject: {fileID: 6323102228244521578}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f8bfdb08c5fac1b4e85ad281652bcffc, type: 2}
+  m_Controller: {fileID: 9100000, guid: 0a0de44ef2a795645ad2ffafee7c893e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -443,7 +443,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6323102228244521578}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b402f56a198220a4297cd30550d48cf3, type: 3}
+  m_Script: {fileID: 11500000, guid: 5eecf15d2ccf2471696cc329fe7d90bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isLoop: 0

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2000199061034178167}
   - component: {fileID: 4207742716272090205}
   - component: {fileID: 6157290215194262207}
-  - component: {fileID: 669376645072760659}
+  - component: {fileID: 6520122847308721510}
   m_Layer: 0
   m_Name: Cowboy Hero Bullet
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &4207742716272090205
@@ -142,7 +142,7 @@ Animator:
   m_GameObject: {fileID: 3988582729341805777}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 81978362e2978a44cb35b3d6ddf060d0, type: 2}
+  m_Controller: {fileID: 9100000, guid: 6f9e53a788d338f4f8e4798e0baf4033, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -153,7 +153,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &669376645072760659
+--- !u!114 &6520122847308721510
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,8 +162,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3988582729341805777}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b98f0c8bb4772c646a450085b021ace4, type: 3}
+  m_Script: {fileID: 11500000, guid: d42e9dffa1b2b4a548caabf8e9f09716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so: {fileID: 11400000, guid: d0fddba0ffadf2849b2efe1a0503dd16, type: 2}
+  so: {fileID: 11400000, guid: c2352b50f32622345b781972167b666a, type: 2}
   initalObject: {fileID: 0}

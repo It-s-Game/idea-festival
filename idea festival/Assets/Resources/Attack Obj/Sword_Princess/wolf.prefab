@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2881939676992793972}
   - component: {fileID: 7436012182015281706}
   - component: {fileID: 6662406476561670227}
-  - component: {fileID: 2655216765657849547}
+  - component: {fileID: 6328182240260461360}
   m_Layer: 0
   m_Name: wolf
   m_TagString: Untagged
@@ -142,7 +142,7 @@ Animator:
   m_GameObject: {fileID: 7444220065805212023}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: c476c012c42b0f14d9d1676498f65a02, type: 2}
+  m_Controller: {fileID: 9100000, guid: 40cbc8fd2a3fec44b8e9fe0dacbb9f3e, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -153,7 +153,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &2655216765657849547
+--- !u!114 &6328182240260461360
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,12 +162,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7444220065805212023}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94e71c17468083246a3995203bc2f83d, type: 3}
+  m_Script: {fileID: 11500000, guid: d4a35dbbad34b40d79ed55b0abf093c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so: {fileID: 11400000, guid: 5b35c25baa1ec1b439b03a19c543dadb, type: 2}
+  so: {fileID: 11400000, guid: ddf2b6c629d0cd24c82555845553ac6c, type: 2}
   initalObject: {fileID: 0}
-  offset1: {x: 0, y: 0}
+  offset1: {x: 0, y: 0.02}
   offset2: {x: 0, y: 0}
-  size1: {x: 1, y: 1}
-  size2: {x: 1, y: 1}
+  size1: {x: 1.3, y: 0.8}
+  size2: {x: 1.3, y: 1.2}

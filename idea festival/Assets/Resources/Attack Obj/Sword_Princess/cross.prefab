@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7978737591886400030}
   - component: {fileID: 1237645422826397073}
   - component: {fileID: 6245883063156524156}
-  - component: {fileID: 4519170728303709063}
+  - component: {fileID: 2670122907259450324}
   m_Layer: 0
   m_Name: cross
   m_TagString: Untagged
@@ -130,7 +130,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.45, y: 0.55}
   m_EdgeRadius: 0
 --- !u!95 &6245883063156524156
 Animator:
@@ -142,7 +142,7 @@ Animator:
   m_GameObject: {fileID: 5231936742033539473}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: eb0a7be9bb181f241a22df4f1403288c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 033fbea4fe076484d89f34d31d776101, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -153,7 +153,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &4519170728303709063
+--- !u!114 &2670122907259450324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,8 +162,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5231936742033539473}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 979f1cc6b6e8462478c847d4f8cd1185, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fbf742df87d546d8b3f3ff65bf20d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so: {fileID: 11400000, guid: a37e36640f076b549bfe79853d9e529d, type: 2}
+  so: {fileID: 11400000, guid: 58abec755bc86b7429be89afd75cbfe2, type: 2}
   initalObject: {fileID: 0}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5912804969368857632}
   - component: {fileID: 3516349960119572168}
   - component: {fileID: 2327268156557505035}
-  - component: {fileID: 866271541611028158}
+  - component: {fileID: 8387749301896997041}
   m_Layer: 0
   m_Name: Bullet
   m_TagString: Untagged
@@ -142,7 +142,7 @@ Animator:
   m_GameObject: {fileID: 7485438598185711221}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7b2b202739fe9fd4cb8ba579102f0a08, type: 2}
+  m_Controller: {fileID: 9100000, guid: 8a46a4cb1fb95324a86e049e32bdf789, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -153,7 +153,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &866271541611028158
+--- !u!114 &8387749301896997041
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,8 +162,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 7485438598185711221}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b98f0c8bb4772c646a450085b021ace4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fbf742df87d546d8b3f3ff65bf20d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so: {fileID: 11400000, guid: 1e023ff87169b0748b2d17714c004028, type: 2}
+  so: {fileID: 11400000, guid: d508caa6d3db966418a890e85bddb663, type: 2}
   initalObject: {fileID: 0}

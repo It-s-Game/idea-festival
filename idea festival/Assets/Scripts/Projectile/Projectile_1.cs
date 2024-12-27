@@ -6,6 +6,5 @@ public class Projectile_1 : Projectile
     {
         base.Set(direction, obj);
 
-        animator.Play(info.defaultAnimationName);
     }
 }
