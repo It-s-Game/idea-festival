@@ -37,7 +37,16 @@ public class Character : MonoBehaviour, IDamagable
 
     private Coroutine dieing = null;
     private float health;
-    
+
+    public float Health
+    {
+        get => health;
+    }
+    public float MaxHealth
+    {
+        get => status.maxHealth;
+    }
+
     protected virtual void Awake()
     {
         rigid = GetComponent<Rigidbody2D>();

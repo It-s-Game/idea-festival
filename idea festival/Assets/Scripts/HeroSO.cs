@@ -6,6 +6,10 @@ using UnityEngine;
 [System.Serializable]
 public class HeroSO : ScriptableObject
 {
-    public string heroName;
     public Sprite iconSprite;
+    public string heroName {
+        get => name;
+    }
+
+    public GameObject heroPrefab;
 }
