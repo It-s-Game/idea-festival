@@ -9,7 +9,7 @@ public class UI_EndGame : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(!isEndGame && UI_Game.isTimeEnd)
+        if(!isEndGame && UI_InGame.isTimeEnd)
         {
             isEndGame = true;
             GetComponentInChildren<Animator>().Play("End Game");

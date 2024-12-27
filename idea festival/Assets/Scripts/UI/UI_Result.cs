@@ -12,6 +12,8 @@ public class UI_Result : MonoBehaviour
     public Sprite winSprite;
     private void OnEnable()
     {
+        Debug.Log("½ÇÇà");
+
         transform.GetChild(1).GetComponent<Button>().Select();
 
         transform.GetChild(2).GetChild(1).GetComponent<Image>().sprite = winnerSprite;
