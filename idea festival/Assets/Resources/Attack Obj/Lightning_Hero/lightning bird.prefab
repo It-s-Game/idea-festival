@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4581625564065728426}
   - component: {fileID: 7783312183079210552}
   - component: {fileID: 7303794293488339620}
-  - component: {fileID: 3412692410814502681}
+  - component: {fileID: 17622598638027864}
   m_Layer: 0
   m_Name: lightning bird
   m_TagString: Untagged
@@ -142,7 +142,7 @@ Animator:
   m_GameObject: {fileID: 7208846790453443848}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f3b00f546e6ff0d4794f54bd0bc6bbb8, type: 2}
+  m_Controller: {fileID: 9100000, guid: 31e242182eee7924bb55561474e42bf7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -153,7 +153,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &3412692410814502681
+--- !u!114 &17622598638027864
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,12 +162,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7208846790453443848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94e71c17468083246a3995203bc2f83d, type: 3}
+  m_Script: {fileID: 11500000, guid: d4a35dbbad34b40d79ed55b0abf093c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so: {fileID: 11400000, guid: d52d02bc561d2d549bd01579d6f2c18d, type: 2}
+  so: {fileID: 11400000, guid: 6ddaffbfbed78504ca55c58db8e40f2d, type: 2}
   initalObject: {fileID: 0}
   offset1: {x: 0.365, y: -0.0575}
   offset2: {x: 0, y: 0}
   size1: {x: 1.5, y: 0.685}
-  size2: {x: 1.25, y: 1.25}
+  size2: {x: 1.15, y: 1.15}

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8073338236453436316}
   - component: {fileID: 8388189681753423815}
   - component: {fileID: 6612268706180056172}
-  - component: {fileID: 9039240457822744356}
+  - component: {fileID: 6591634910303208599}
   m_Layer: 0
   m_Name: Eye_Bullet
   m_TagString: Untagged
@@ -142,7 +142,7 @@ Animator:
   m_GameObject: {fileID: 3388075917046616111}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 0b250cf1f2f886446a34cc347a5585ec, type: 2}
+  m_Controller: {fileID: 9100000, guid: 01d7b94126dc24143a75c7b5a0589320, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -153,7 +153,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &9039240457822744356
+--- !u!114 &6591634910303208599
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,8 +162,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 3388075917046616111}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b98f0c8bb4772c646a450085b021ace4, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fbf742df87d546d8b3f3ff65bf20d07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so: {fileID: 11400000, guid: 0e9f600296936384093757575cc2fc5a, type: 2}
+  so: {fileID: 11400000, guid: 7f10265e3c8f58a47b5fd940c72fcbc3, type: 2}
   initalObject: {fileID: 0}

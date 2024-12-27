@@ -1,10 +1,16 @@
+using System.Collections.Generic;
 using UnityEngine;
-
 public class Managers : MonoBehaviour
 {
     public static Managers managers;
 
     public GameManager game = new();
+    public UIManager ui = new();
+
+    [HideInInspector]
+    public List<Player> players = new();
+    [HideInInspector]
+    public bool isInGame = false;
 
     public static Managers Instance
     {
@@ -16,6 +22,7 @@ public class Managers : MonoBehaviour
         }
     }
     public static GameManager Game { get { return Instance.game; } }
+    public static UIManager UI { get { return Instance.ui; } }
     public static void Init()
     {
         if (managers == null)

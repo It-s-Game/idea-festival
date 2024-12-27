@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 7030909161498570190}
   - component: {fileID: 3655780118733312422}
   - component: {fileID: -3149623465783750068}
-  - component: {fileID: 8008136440547855074}
+  - component: {fileID: 2307144722392221717}
   m_Layer: 0
   m_Name: Archer Hero Arrow
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 5, y: 5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_Size: {x: 0.2, y: 0.03}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!95 &3655780118733312422
@@ -97,7 +97,7 @@ Animator:
   m_GameObject: {fileID: 5484332725229909555}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 03f17d64aae5543428477595f516a253, type: 2}
+  m_Controller: {fileID: 9100000, guid: 42ef7755383e2ad418515934239f1c3a, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -153,7 +153,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.03}
   m_EdgeRadius: 0
---- !u!114 &8008136440547855074
+--- !u!114 &2307144722392221717
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,8 +162,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 5484332725229909555}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b98f0c8bb4772c646a450085b021ace4, type: 3}
+  m_Script: {fileID: 11500000, guid: d42e9dffa1b2b4a548caabf8e9f09716, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so: {fileID: 11400000, guid: f98be7bc1f3953846949774fef8ebecc, type: 2}
+  so: {fileID: 11400000, guid: 1257e7d97f83d1344b7d955c4f5b8636, type: 2}
   initalObject: {fileID: 0}

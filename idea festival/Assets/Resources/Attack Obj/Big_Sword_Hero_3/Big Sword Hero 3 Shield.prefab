@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6868278803085022011}
   - component: {fileID: 378098777975255234}
   - component: {fileID: 8520243704171566355}
-  - component: {fileID: 7192197697929422510}
+  - component: {fileID: 544296304721033892}
   m_Layer: 0
   m_Name: Big Sword Hero 3 Shield
   m_TagString: Untagged
@@ -170,7 +170,7 @@ Animator:
   m_GameObject: {fileID: 7971876157467524165}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5567d0e4ad1d3eb4dad7e9f20d2b0313, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1fa1cce4197ace9428ffaf5a9539369b, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -181,7 +181,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7192197697929422510
+--- !u!114 &544296304721033892
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7971876157467524165}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ee1d92ee91649244baa10b22a38caf3, type: 3}
+  m_Script: {fileID: 11500000, guid: 93e49f2f39f474815b104836f60451df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   initalObject: {fileID: 0}

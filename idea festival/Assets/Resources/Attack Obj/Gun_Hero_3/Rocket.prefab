@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5134702123839156342}
   - component: {fileID: 8772334307373829131}
   - component: {fileID: 4890832547822731017}
-  - component: {fileID: 7574611593581974662}
+  - component: {fileID: 3522519129436629687}
   m_Layer: 0
   m_Name: Rocket
   m_TagString: Untagged
@@ -142,7 +142,7 @@ Animator:
   m_GameObject: {fileID: 4366444338277675941}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 23184c2dbffa86249b751a87f5da9d4e, type: 2}
+  m_Controller: {fileID: 9100000, guid: d9467596ff20679468be8cf9956f2463, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -153,7 +153,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7574611593581974662
+--- !u!114 &3522519129436629687
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,8 +162,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 4366444338277675941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4125f9e3ebfc3542a9175f3aea7dabd, type: 3}
+  m_Script: {fileID: 11500000, guid: fc3abfe0bbb27436d86661546da08783, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  so: {fileID: 11400000, guid: 2d2a3e46811c0d2409ceeba2157789f8, type: 2}
+  so: {fileID: 11400000, guid: 06307c778d03e134ab6ba01f4fd1c5e4, type: 2}
   initalObject: {fileID: 0}

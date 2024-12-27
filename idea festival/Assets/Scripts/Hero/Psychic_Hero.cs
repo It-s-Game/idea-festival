@@ -44,7 +44,6 @@ public class Psychic_Hero : Controller
     }
     public void Skill2()
     {
-        skill3_Range.gameObject.SetActive(true);
         ActiveProjectile(skill2_Projectile);
     }
     public void Skill3()
