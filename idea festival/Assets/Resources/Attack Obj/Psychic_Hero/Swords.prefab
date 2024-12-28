@@ -87,6 +87,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1778772316793913373, guid: d8bee611a77264ee4b3bea0bb5ecda84, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 111514b3fadfdc74a91129c3393a2d47, type: 2}
     - target: {fileID: 4706022636558637546, guid: d8bee611a77264ee4b3bea0bb5ecda84, type: 3}
       propertyPath: m_Name
       value: Sword (5)
@@ -149,6 +153,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1778772316793913373, guid: d8bee611a77264ee4b3bea0bb5ecda84, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 111514b3fadfdc74a91129c3393a2d47, type: 2}
     - target: {fileID: 4706022636558637546, guid: d8bee611a77264ee4b3bea0bb5ecda84, type: 3}
       propertyPath: m_Name
       value: Sword (3)
@@ -211,6 +219,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1778772316793913373, guid: d8bee611a77264ee4b3bea0bb5ecda84, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 111514b3fadfdc74a91129c3393a2d47, type: 2}
     - target: {fileID: 4706022636558637546, guid: d8bee611a77264ee4b3bea0bb5ecda84, type: 3}
       propertyPath: m_Name
       value: Sword (2)
@@ -273,6 +285,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1778772316793913373, guid: d8bee611a77264ee4b3bea0bb5ecda84, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 111514b3fadfdc74a91129c3393a2d47, type: 2}
     - target: {fileID: 4706022636558637546, guid: d8bee611a77264ee4b3bea0bb5ecda84, type: 3}
       propertyPath: m_Name
       value: Sword
@@ -335,6 +351,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1778772316793913373, guid: d8bee611a77264ee4b3bea0bb5ecda84, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 111514b3fadfdc74a91129c3393a2d47, type: 2}
     - target: {fileID: 4706022636558637546, guid: d8bee611a77264ee4b3bea0bb5ecda84, type: 3}
       propertyPath: m_Name
       value: Sword (7)
@@ -397,6 +417,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1778772316793913373, guid: d8bee611a77264ee4b3bea0bb5ecda84, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 111514b3fadfdc74a91129c3393a2d47, type: 2}
     - target: {fileID: 4706022636558637546, guid: d8bee611a77264ee4b3bea0bb5ecda84, type: 3}
       propertyPath: m_Name
       value: Sword (6)
@@ -459,6 +483,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1778772316793913373, guid: d8bee611a77264ee4b3bea0bb5ecda84, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 111514b3fadfdc74a91129c3393a2d47, type: 2}
     - target: {fileID: 4706022636558637546, guid: d8bee611a77264ee4b3bea0bb5ecda84, type: 3}
       propertyPath: m_Name
       value: Sword (1)
@@ -521,6 +549,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1778772316793913373, guid: d8bee611a77264ee4b3bea0bb5ecda84, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 111514b3fadfdc74a91129c3393a2d47, type: 2}
     - target: {fileID: 4706022636558637546, guid: d8bee611a77264ee4b3bea0bb5ecda84, type: 3}
       propertyPath: m_Name
       value: Sword (4)

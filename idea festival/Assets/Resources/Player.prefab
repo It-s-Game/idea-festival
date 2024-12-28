@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5975736637848001749
+--- !u!1 &8523039150227901071
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,9 +8,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6792736713745346234}
-  - component: {fileID: 1828898404051090341}
-  - component: {fileID: 1899108543108709383}
+  - component: {fileID: 2001006725550214250}
+  - component: {fileID: 1463658168911726061}
+  - component: {fileID: 4425842327540989502}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -18,28 +18,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6792736713745346234
+--- !u!4 &2001006725550214250
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5975736637848001749}
+  m_GameObject: {fileID: 8523039150227901071}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.6094968, y: -2.8835666, z: -4.171795}
+  m_LocalPosition: {x: 0.08210215, y: -1.4802792, z: 342.7138}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1828898404051090341
+--- !u!114 &1463658168911726061
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5975736637848001749}
+  m_GameObject: {fileID: 8523039150227901071}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
@@ -63,20 +63,17 @@ MonoBehaviour:
   m_DefaultActionMap: Character
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
---- !u!114 &1899108543108709383
+--- !u!114 &4425842327540989502
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5975736637848001749}
+  m_GameObject: {fileID: 8523039150227901071}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3b017abd550f042eaa2db32109cc0d65, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 0}
-<<<<<<< Updated upstream
   playerInput: {fileID: 0}
-=======
->>>>>>> Stashed changes
+  controller: {fileID: 0}

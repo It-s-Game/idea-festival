@@ -47,6 +47,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 445605223041740621}
     m_Modifications:
+    - target: {fileID: 1432298838629465011, guid: 13736819fd42441e1b4afb5d57d82b27, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f69ea2677fef1724eb8b8469eb6ed255, type: 2}
     - target: {fileID: 1625981132682306788, guid: 13736819fd42441e1b4afb5d57d82b27, type: 3}
       propertyPath: m_Name
       value: Cowboy Hero Bull (7)
@@ -109,6 +113,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 445605223041740621}
     m_Modifications:
+    - target: {fileID: 1432298838629465011, guid: 13736819fd42441e1b4afb5d57d82b27, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f69ea2677fef1724eb8b8469eb6ed255, type: 2}
     - target: {fileID: 1625981132682306788, guid: 13736819fd42441e1b4afb5d57d82b27, type: 3}
       propertyPath: m_Name
       value: Cowboy Hero Bull (4)
@@ -171,6 +179,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 445605223041740621}
     m_Modifications:
+    - target: {fileID: 1432298838629465011, guid: 13736819fd42441e1b4afb5d57d82b27, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f69ea2677fef1724eb8b8469eb6ed255, type: 2}
     - target: {fileID: 1625981132682306788, guid: 13736819fd42441e1b4afb5d57d82b27, type: 3}
       propertyPath: m_Name
       value: Cowboy Hero Bull (3)
@@ -233,6 +245,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 445605223041740621}
     m_Modifications:
+    - target: {fileID: 1432298838629465011, guid: 13736819fd42441e1b4afb5d57d82b27, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f69ea2677fef1724eb8b8469eb6ed255, type: 2}
     - target: {fileID: 1625981132682306788, guid: 13736819fd42441e1b4afb5d57d82b27, type: 3}
       propertyPath: m_Name
       value: Cowboy Hero Bull (2)
@@ -295,6 +311,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 445605223041740621}
     m_Modifications:
+    - target: {fileID: 1432298838629465011, guid: 13736819fd42441e1b4afb5d57d82b27, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f69ea2677fef1724eb8b8469eb6ed255, type: 2}
     - target: {fileID: 1625981132682306788, guid: 13736819fd42441e1b4afb5d57d82b27, type: 3}
       propertyPath: m_Name
       value: Cowboy Hero Bull
@@ -357,6 +377,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 445605223041740621}
     m_Modifications:
+    - target: {fileID: 1432298838629465011, guid: 13736819fd42441e1b4afb5d57d82b27, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f69ea2677fef1724eb8b8469eb6ed255, type: 2}
     - target: {fileID: 1625981132682306788, guid: 13736819fd42441e1b4afb5d57d82b27, type: 3}
       propertyPath: m_Name
       value: Cowboy Hero Bull (6)
@@ -419,6 +443,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 445605223041740621}
     m_Modifications:
+    - target: {fileID: 1432298838629465011, guid: 13736819fd42441e1b4afb5d57d82b27, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f69ea2677fef1724eb8b8469eb6ed255, type: 2}
     - target: {fileID: 1625981132682306788, guid: 13736819fd42441e1b4afb5d57d82b27, type: 3}
       propertyPath: m_Name
       value: Cowboy Hero Bull (5)
@@ -481,6 +509,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 445605223041740621}
     m_Modifications:
+    - target: {fileID: 1432298838629465011, guid: 13736819fd42441e1b4afb5d57d82b27, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f69ea2677fef1724eb8b8469eb6ed255, type: 2}
     - target: {fileID: 1625981132682306788, guid: 13736819fd42441e1b4afb5d57d82b27, type: 3}
       propertyPath: m_Name
       value: Cowboy Hero Bull (1)

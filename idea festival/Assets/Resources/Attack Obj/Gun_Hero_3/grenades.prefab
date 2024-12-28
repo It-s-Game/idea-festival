@@ -91,6 +91,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grenade (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 8318608601734122535, guid: 3a3e1bab96f9349308c741833435b5e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f5406aae8aaaa6643a39253a2e1563f3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -153,6 +157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grenade (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 8318608601734122535, guid: 3a3e1bab96f9349308c741833435b5e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f5406aae8aaaa6643a39253a2e1563f3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -215,6 +223,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grenade (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 8318608601734122535, guid: 3a3e1bab96f9349308c741833435b5e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f5406aae8aaaa6643a39253a2e1563f3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -277,6 +289,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grenade (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 8318608601734122535, guid: 3a3e1bab96f9349308c741833435b5e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f5406aae8aaaa6643a39253a2e1563f3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -339,6 +355,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grenade (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8318608601734122535, guid: 3a3e1bab96f9349308c741833435b5e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f5406aae8aaaa6643a39253a2e1563f3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -401,6 +421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grenade (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 8318608601734122535, guid: 3a3e1bab96f9349308c741833435b5e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f5406aae8aaaa6643a39253a2e1563f3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -463,6 +487,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grenade
       objectReference: {fileID: 0}
+    - target: {fileID: 8318608601734122535, guid: 3a3e1bab96f9349308c741833435b5e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f5406aae8aaaa6643a39253a2e1563f3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -525,6 +553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: grenade (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 8318608601734122535, guid: 3a3e1bab96f9349308c741833435b5e4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f5406aae8aaaa6643a39253a2e1563f3, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

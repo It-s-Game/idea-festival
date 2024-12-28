@@ -29,17 +29,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2391190071175414694}
-  - {fileID: 4704558237101222595}
-  - {fileID: 6013666786864794923}
-  - {fileID: 4813750331920639808}
-  - {fileID: 2775720301307494274}
-  - {fileID: 1053346146102659469}
-  - {fileID: 6593109565320660721}
-  - {fileID: 4726307798308752956}
+  - {fileID: 2214795768016920664}
+  - {fileID: 4914191402535512944}
+  - {fileID: 5214809016704632988}
+  - {fileID: 5570098719940871088}
+  - {fileID: 7529445167105007043}
+  - {fileID: 5762348421571261522}
+  - {fileID: 916751880407443503}
+  - {fileID: 7687361670496295250}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &2475103221001574
+--- !u!1001 &157066682046057668
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -87,378 +87,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5484332725229909555, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_Name
-      value: Archer Hero Arrow (5)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
---- !u!4 &1053346146102659469 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-  m_PrefabInstance: {fileID: 2475103221001574}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &2887829093413886825
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 3943982890271071513}
-    m_Modifications:
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5484332725229909555, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_Name
-      value: Archer Hero Arrow (4)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
---- !u!4 &2775720301307494274 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-  m_PrefabInstance: {fileID: 2887829093413886825}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3438992106031867725
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 3943982890271071513}
-    m_Modifications:
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5484332725229909555, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_Name
-      value: Archer Hero Arrow
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
---- !u!4 &2391190071175414694 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-  m_PrefabInstance: {fileID: 3438992106031867725}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &5502017512762540971
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 3943982890271071513}
-    m_Modifications:
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5484332725229909555, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_Name
-      value: Archer Hero Arrow (3)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
---- !u!4 &4813750331920639808 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-  m_PrefabInstance: {fileID: 5502017512762540971}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &5693042836738861783
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 3943982890271071513}
-    m_Modifications:
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5484332725229909555, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_Name
-      value: Archer Hero Arrow (7)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
---- !u!4 &4726307798308752956 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-  m_PrefabInstance: {fileID: 5693042836738861783}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &5755324761835212328
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 3943982890271071513}
-    m_Modifications:
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5484332725229909555, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_Name
-      value: Archer Hero Arrow (1)
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
---- !u!4 &4704558237101222595 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-  m_PrefabInstance: {fileID: 5755324761835212328}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &6190648062547321370
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 3943982890271071513}
-    m_Modifications:
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 3655780118733312422, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 42ef7755383e2ad418515934239f1c3a, type: 2}
     - target: {fileID: 5484332725229909555, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
       propertyPath: m_Name
       value: Archer Hero Arrow (6)
@@ -468,12 +100,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
---- !u!4 &6593109565320660721 stripped
+--- !u!4 &916751880407443503 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-  m_PrefabInstance: {fileID: 6190648062547321370}
+  m_PrefabInstance: {fileID: 157066682046057668}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &6765006692256639424
+--- !u!1001 &1164882743529768115
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -521,6 +153,208 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3655780118733312422, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 42ef7755383e2ad418515934239f1c3a, type: 2}
+    - target: {fileID: 5484332725229909555, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_Name
+      value: Archer Hero Arrow
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+--- !u!4 &2214795768016920664 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+  m_PrefabInstance: {fileID: 1164882743529768115}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4711063114470478009
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3943982890271071513}
+    m_Modifications:
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655780118733312422, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 42ef7755383e2ad418515934239f1c3a, type: 2}
+    - target: {fileID: 5484332725229909555, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_Name
+      value: Archer Hero Arrow (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+--- !u!4 &5762348421571261522 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+  m_PrefabInstance: {fileID: 4711063114470478009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4889221362873526107
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3943982890271071513}
+    m_Modifications:
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655780118733312422, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 42ef7755383e2ad418515934239f1c3a, type: 2}
+    - target: {fileID: 5484332725229909555, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_Name
+      value: Archer Hero Arrow (3)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+--- !u!4 &5570098719940871088 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+  m_PrefabInstance: {fileID: 4889221362873526107}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5100412894685949047
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3943982890271071513}
+    m_Modifications:
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655780118733312422, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 42ef7755383e2ad418515934239f1c3a, type: 2}
     - target: {fileID: 5484332725229909555, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
       propertyPath: m_Name
       value: Archer Hero Arrow (2)
@@ -530,8 +364,206 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
---- !u!4 &6013666786864794923 stripped
+--- !u!4 &5214809016704632988 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
-  m_PrefabInstance: {fileID: 6765006692256639424}
+  m_PrefabInstance: {fileID: 5100412894685949047}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &5378494917466427291
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3943982890271071513}
+    m_Modifications:
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655780118733312422, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 42ef7755383e2ad418515934239f1c3a, type: 2}
+    - target: {fileID: 5484332725229909555, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_Name
+      value: Archer Hero Arrow (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+--- !u!4 &4914191402535512944 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+  m_PrefabInstance: {fileID: 5378494917466427291}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7221532033156021689
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3943982890271071513}
+    m_Modifications:
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655780118733312422, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 42ef7755383e2ad418515934239f1c3a, type: 2}
+    - target: {fileID: 5484332725229909555, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_Name
+      value: Archer Hero Arrow (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+--- !u!4 &7687361670496295250 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+  m_PrefabInstance: {fileID: 7221532033156021689}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7416023231417530664
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 3943982890271071513}
+    m_Modifications:
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3655780118733312422, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 42ef7755383e2ad418515934239f1c3a, type: 2}
+    - target: {fileID: 5484332725229909555, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+      propertyPath: m_Name
+      value: Archer Hero Arrow (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+--- !u!4 &7529445167105007043 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1051299876039353579, guid: ebbec779af817455c96eddc0d6b9d8aa, type: 3}
+  m_PrefabInstance: {fileID: 7416023231417530664}
   m_PrefabAsset: {fileID: 0}

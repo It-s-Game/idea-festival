@@ -51,6 +51,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eye_Bullet
       objectReference: {fileID: 0}
+    - target: {fileID: 6612268706180056172, guid: 1528f6e582466400eb999e6e46b2e340, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f199c33affd96df4286c3eb50ede46b3, type: 2}
     - target: {fileID: 8211646602741263474, guid: 1528f6e582466400eb999e6e46b2e340, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.99498326
@@ -113,6 +117,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eye_Bullet (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6612268706180056172, guid: 1528f6e582466400eb999e6e46b2e340, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f199c33affd96df4286c3eb50ede46b3, type: 2}
     - target: {fileID: 8211646602741263474, guid: 1528f6e582466400eb999e6e46b2e340, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.99498326
@@ -175,6 +183,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eye_Bullet (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6612268706180056172, guid: 1528f6e582466400eb999e6e46b2e340, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f199c33affd96df4286c3eb50ede46b3, type: 2}
     - target: {fileID: 8211646602741263474, guid: 1528f6e582466400eb999e6e46b2e340, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.99498326
@@ -237,6 +249,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eye_Bullet (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6612268706180056172, guid: 1528f6e582466400eb999e6e46b2e340, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f199c33affd96df4286c3eb50ede46b3, type: 2}
     - target: {fileID: 8211646602741263474, guid: 1528f6e582466400eb999e6e46b2e340, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.99498326
@@ -299,6 +315,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eye_Bullet (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6612268706180056172, guid: 1528f6e582466400eb999e6e46b2e340, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f199c33affd96df4286c3eb50ede46b3, type: 2}
     - target: {fileID: 8211646602741263474, guid: 1528f6e582466400eb999e6e46b2e340, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.99498326
@@ -361,6 +381,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eye_Bullet (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6612268706180056172, guid: 1528f6e582466400eb999e6e46b2e340, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f199c33affd96df4286c3eb50ede46b3, type: 2}
     - target: {fileID: 8211646602741263474, guid: 1528f6e582466400eb999e6e46b2e340, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.99498326
@@ -423,6 +447,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eye_Bullet (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6612268706180056172, guid: 1528f6e582466400eb999e6e46b2e340, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f199c33affd96df4286c3eb50ede46b3, type: 2}
     - target: {fileID: 8211646602741263474, guid: 1528f6e582466400eb999e6e46b2e340, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.99498326
@@ -485,6 +513,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Eye_Bullet (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6612268706180056172, guid: 1528f6e582466400eb999e6e46b2e340, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f199c33affd96df4286c3eb50ede46b3, type: 2}
     - target: {fileID: 8211646602741263474, guid: 1528f6e582466400eb999e6e46b2e340, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.99498326

@@ -47,6 +47,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8250191707336810469}
     m_Modifications:
+    - target: {fileID: 5072098235647042985, guid: 0214ddfb0ad8047819b97b8531f62c66, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3163cb4629189de4fa4c46930a6ecf22, type: 2}
     - target: {fileID: 5689850562652591057, guid: 0214ddfb0ad8047819b97b8531f62c66, type: 3}
       propertyPath: m_Name
       value: Cowboy Hero Axe (7)
@@ -109,6 +113,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8250191707336810469}
     m_Modifications:
+    - target: {fileID: 5072098235647042985, guid: 0214ddfb0ad8047819b97b8531f62c66, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3163cb4629189de4fa4c46930a6ecf22, type: 2}
     - target: {fileID: 5689850562652591057, guid: 0214ddfb0ad8047819b97b8531f62c66, type: 3}
       propertyPath: m_Name
       value: Cowboy Hero Axe
@@ -171,6 +179,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8250191707336810469}
     m_Modifications:
+    - target: {fileID: 5072098235647042985, guid: 0214ddfb0ad8047819b97b8531f62c66, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3163cb4629189de4fa4c46930a6ecf22, type: 2}
     - target: {fileID: 5689850562652591057, guid: 0214ddfb0ad8047819b97b8531f62c66, type: 3}
       propertyPath: m_Name
       value: Cowboy Hero Axe (4)
@@ -233,6 +245,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8250191707336810469}
     m_Modifications:
+    - target: {fileID: 5072098235647042985, guid: 0214ddfb0ad8047819b97b8531f62c66, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3163cb4629189de4fa4c46930a6ecf22, type: 2}
     - target: {fileID: 5689850562652591057, guid: 0214ddfb0ad8047819b97b8531f62c66, type: 3}
       propertyPath: m_Name
       value: Cowboy Hero Axe (6)
@@ -295,6 +311,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8250191707336810469}
     m_Modifications:
+    - target: {fileID: 5072098235647042985, guid: 0214ddfb0ad8047819b97b8531f62c66, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3163cb4629189de4fa4c46930a6ecf22, type: 2}
     - target: {fileID: 5689850562652591057, guid: 0214ddfb0ad8047819b97b8531f62c66, type: 3}
       propertyPath: m_Name
       value: Cowboy Hero Axe (5)
@@ -357,6 +377,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8250191707336810469}
     m_Modifications:
+    - target: {fileID: 5072098235647042985, guid: 0214ddfb0ad8047819b97b8531f62c66, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3163cb4629189de4fa4c46930a6ecf22, type: 2}
     - target: {fileID: 5689850562652591057, guid: 0214ddfb0ad8047819b97b8531f62c66, type: 3}
       propertyPath: m_Name
       value: Cowboy Hero Axe (1)
@@ -419,6 +443,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8250191707336810469}
     m_Modifications:
+    - target: {fileID: 5072098235647042985, guid: 0214ddfb0ad8047819b97b8531f62c66, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3163cb4629189de4fa4c46930a6ecf22, type: 2}
     - target: {fileID: 5689850562652591057, guid: 0214ddfb0ad8047819b97b8531f62c66, type: 3}
       propertyPath: m_Name
       value: Cowboy Hero Axe (2)
@@ -481,6 +509,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 8250191707336810469}
     m_Modifications:
+    - target: {fileID: 5072098235647042985, guid: 0214ddfb0ad8047819b97b8531f62c66, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 3163cb4629189de4fa4c46930a6ecf22, type: 2}
     - target: {fileID: 5689850562652591057, guid: 0214ddfb0ad8047819b97b8531f62c66, type: 3}
       propertyPath: m_Name
       value: Cowboy Hero Axe (3)

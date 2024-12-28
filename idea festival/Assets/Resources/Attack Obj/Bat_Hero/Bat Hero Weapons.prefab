@@ -29,17 +29,17 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1311306541349882928}
-  - {fileID: 9026523763210925857}
-  - {fileID: 6753583455200783618}
-  - {fileID: 7224706174617670525}
-  - {fileID: 3293118502688139978}
-  - {fileID: 102954387795477892}
-  - {fileID: 3874217164829062883}
-  - {fileID: 3398905495632973273}
+  - {fileID: 660990205216175164}
+  - {fileID: 9131358268481700173}
+  - {fileID: 1892433852410398008}
+  - {fileID: 4596241501743034625}
+  - {fileID: 6479291760612341712}
+  - {fileID: 1805136482974204959}
+  - {fileID: 6012766161080963369}
+  - {fileID: 8648184085253605871}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &956804138201865270
+--- !u!1001 &2251202594180843517
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -47,316 +47,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 817599558021806753}
     m_Modifications:
-    - target: {fileID: 1691360122035219994, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_Name
-      value: Bat Hero Weapon (4)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
---- !u!4 &3293118502688139978 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-  m_PrefabInstance: {fileID: 956804138201865270}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1143798949082626853
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 817599558021806753}
-    m_Modifications:
-    - target: {fileID: 1691360122035219994, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_Name
-      value: Bat Hero Weapon (7)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
---- !u!4 &3398905495632973273 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-  m_PrefabInstance: {fileID: 1143798949082626853}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1528754799258894367
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 817599558021806753}
-    m_Modifications:
-    - target: {fileID: 1691360122035219994, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_Name
-      value: Bat Hero Weapon (6)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
---- !u!4 &3874217164829062883 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-  m_PrefabInstance: {fileID: 1528754799258894367}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &2420972767106397048
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 817599558021806753}
-    m_Modifications:
-    - target: {fileID: 1691360122035219994, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_Name
-      value: Bat Hero Weapon (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
---- !u!4 &102954387795477892 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-  m_PrefabInstance: {fileID: 2420972767106397048}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3658739040688356044
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 817599558021806753}
-    m_Modifications:
-    - target: {fileID: 1691360122035219994, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_Name
-      value: Bat Hero Weapon
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
---- !u!4 &1311306541349882928 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-  m_PrefabInstance: {fileID: 3658739040688356044}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &4951582871613810049
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 817599558021806753}
-    m_Modifications:
+    - target: {fileID: 1481359973248868855, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 89ae601cb58da62408c3dbb298ab7a45, type: 2}
     - target: {fileID: 1691360122035219994, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
       propertyPath: m_Name
       value: Bat Hero Weapon (3)
@@ -406,12 +100,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
---- !u!4 &7224706174617670525 stripped
+--- !u!4 &4596241501743034625 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-  m_PrefabInstance: {fileID: 4951582871613810049}
+  m_PrefabInstance: {fileID: 2251202594180843517}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &6751008088185389533
+--- !u!1001 &3015316670378361536
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -419,9 +113,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 817599558021806753}
     m_Modifications:
+    - target: {fileID: 1481359973248868855, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 89ae601cb58da62408c3dbb298ab7a45, type: 2}
     - target: {fileID: 1691360122035219994, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
       propertyPath: m_Name
-      value: Bat Hero Weapon (1)
+      value: Bat Hero Weapon
       objectReference: {fileID: 0}
     - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -468,12 +166,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
---- !u!4 &9026523763210925857 stripped
+--- !u!4 &660990205216175164 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-  m_PrefabInstance: {fileID: 6751008088185389533}
+  m_PrefabInstance: {fileID: 3015316670378361536}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &9028958319723273214
+--- !u!1001 &4177620332483310307
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -481,6 +179,76 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 817599558021806753}
     m_Modifications:
+    - target: {fileID: 1481359973248868855, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 89ae601cb58da62408c3dbb298ab7a45, type: 2}
+    - target: {fileID: 1691360122035219994, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_Name
+      value: Bat Hero Weapon (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+--- !u!4 &1805136482974204959 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+  m_PrefabInstance: {fileID: 4177620332483310307}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4230998878515884996
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 817599558021806753}
+    m_Modifications:
+    - target: {fileID: 1481359973248868855, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 89ae601cb58da62408c3dbb298ab7a45, type: 2}
     - target: {fileID: 1691360122035219994, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
       propertyPath: m_Name
       value: Bat Hero Weapon (2)
@@ -530,8 +298,272 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
---- !u!4 &6753583455200783618 stripped
+--- !u!4 &1892433852410398008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
-  m_PrefabInstance: {fileID: 9028958319723273214}
+  m_PrefabInstance: {fileID: 4230998878515884996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6408697056996704019
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 817599558021806753}
+    m_Modifications:
+    - target: {fileID: 1481359973248868855, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 89ae601cb58da62408c3dbb298ab7a45, type: 2}
+    - target: {fileID: 1691360122035219994, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_Name
+      value: Bat Hero Weapon (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+--- !u!4 &8648184085253605871 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+  m_PrefabInstance: {fileID: 6408697056996704019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6795325357575042993
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 817599558021806753}
+    m_Modifications:
+    - target: {fileID: 1481359973248868855, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 89ae601cb58da62408c3dbb298ab7a45, type: 2}
+    - target: {fileID: 1691360122035219994, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_Name
+      value: Bat Hero Weapon (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+--- !u!4 &9131358268481700173 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+  m_PrefabInstance: {fileID: 6795325357575042993}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8324168787517712341
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 817599558021806753}
+    m_Modifications:
+    - target: {fileID: 1481359973248868855, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 89ae601cb58da62408c3dbb298ab7a45, type: 2}
+    - target: {fileID: 1691360122035219994, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_Name
+      value: Bat Hero Weapon (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+--- !u!4 &6012766161080963369 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+  m_PrefabInstance: {fileID: 8324168787517712341}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8727923407749021996
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 817599558021806753}
+    m_Modifications:
+    - target: {fileID: 1481359973248868855, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 89ae601cb58da62408c3dbb298ab7a45, type: 2}
+    - target: {fileID: 1691360122035219994, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_Name
+      value: Bat Hero Weapon (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+--- !u!4 &6479291760612341712 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2374735795444217596, guid: f08a8b82ad00b471b981e361319eb6b4, type: 3}
+  m_PrefabInstance: {fileID: 8727923407749021996}
   m_PrefabAsset: {fileID: 0}
