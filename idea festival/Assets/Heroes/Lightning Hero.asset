@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74cc5699c9e274ecf82a743de9132c93, type: 3}
-  m_Name: Revan
+  m_Name: Lightning Hero
   m_EditorClassIdentifier: 
-  iconSprite: {fileID: 21300000, guid: 91e020a3878054b9e9abb0c9dc366aac, type: 3}
-  heroPrefab: {fileID: 2890123512713232756, guid: 3c52b78f6866b4a52ab89fb8c37d0f8f, type: 3}
+  iconSprite: {fileID: 21300000, guid: b41bceff7f3184749a3b4a8da4762a8b, type: 3}
+  heroPrefab: {fileID: 1211063913368711220, guid: 9b258c4cdab5b44509501eeeba6adcbe, type: 3}

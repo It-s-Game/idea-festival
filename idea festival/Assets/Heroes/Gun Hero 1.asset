@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74cc5699c9e274ecf82a743de9132c93, type: 3}
-  m_Name: Ragon
+  m_Name: Gun Hero 1
   m_EditorClassIdentifier: 
-  iconSprite: {fileID: 21300000, guid: b224b5dae6c784b0782f525c9f10eb4d, type: 3}
-  heroPrefab: {fileID: 4078907713082534920, guid: 999b0ebc67fb94cf8a735013556254ef, type: 3}
+  iconSprite: {fileID: 21300000, guid: 9c00584e6e1774b39982c2a8f06753f2, type: 3}
+  heroPrefab: {fileID: 3216951892633828447, guid: 4efba26c1b6854bdd9941898a41679f7, type: 3}

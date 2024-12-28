@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74cc5699c9e274ecf82a743de9132c93, type: 3}
-  m_Name: Haru
+  m_Name: Archer Hero
   m_EditorClassIdentifier: 
-  iconSprite: {fileID: 21300000, guid: 4de5554bfe82b47e39c1242941cee8d9, type: 3}
-  heroPrefab: {fileID: 5493214899149148769, guid: 64f1148b582004cd8bed9cd08ca4c7d1, type: 3}
+  iconSprite: {fileID: 21300000, guid: f2bdb0fb3160f42369e4f03f71dd2cbd, type: 3}
+  heroPrefab: {fileID: 858959998620055116, guid: 1b8d074e6778144c99c26261eae74ea0, type: 3}

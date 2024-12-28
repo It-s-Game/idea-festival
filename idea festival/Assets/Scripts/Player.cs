@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     [HideInInspector]
-    public PlayerInput playerInput;
+    public PlayerInput input;
 
     public Controller controller;
 
@@ -16,19 +16,45 @@ public class Player : MonoBehaviour
     public int PlayerIndex { get { return playerIndex; } }
     private void Awake()
     {
-        playerInput = GetComponent<PlayerInput>();
+        input = GetComponent<PlayerInput>();
 
-        playerIndex = playerInput.playerIndex;
+        playerIndex = input.playerIndex;
 
         Managers.Instance.players.Add(this);
 
+        InputSystem.onDeviceChange += OnDeviceChange;
+
         DontDestroyOnLoad(gameObject);
     }
+
+    public void OnDeviceChange(InputDevice targetDevice, InputDeviceChange change)
+    {
+        if(Managers.Instance.isInGame)
+        {
+            return;
+        }
+
+        if(change == InputDeviceChange.Removed)
+        {
+            foreach(Player player in Managers.Instance.players)
+            {
+                if(player.input.devices.Count == 0)
+                {
+                    Managers.Instance.players.Remove(player);
+
+                    Destroy(player.gameObject);
+
+                    break;
+                }
+            }
+        }
+    }
+
     public void Init(Controller character, Vector2 position)
     {
         controller = character;
         
-        leftStick = playerInput.actions["LeftStick"];
+        leftStick = input.actions["LeftStick"];
 
         Set(position);
     }

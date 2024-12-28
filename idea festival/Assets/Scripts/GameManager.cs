@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 public class GameManager
 {
-    public List<string> characterName = new(); 
-
     private void GameSet()
     {
         GameObject go;
@@ -12,7 +10,9 @@ public class GameManager
 
         for (int i = 0; i < Managers.Instance.players.Count; i++)
         {
-            go = Resources.Load<GameObject>("Hero/" + characterName[i]);
+            go = Resources.Load<GameObject>("Hero/" + UI_CharacterSelect.playerCharacters[i].heroName);
+
+            Debug.Log(UI_CharacterSelect.playerCharacters[i].heroName);
 
             result = Object.Instantiate(go);
 

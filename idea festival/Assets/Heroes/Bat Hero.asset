@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 74cc5699c9e274ecf82a743de9132c93, type: 3}
-  m_Name: Hanaka
+  m_Name: Bat Hero
   m_EditorClassIdentifier: 
-  iconSprite: {fileID: 21300000, guid: 208bcb369df9345d3a43c736f2fe3b59, type: 3}
-  heroPrefab: {fileID: 2952095007189885862, guid: ac1c345301da94cccbc61ff154d2809a, type: 3}
+  iconSprite: {fileID: 21300000, guid: e8984cb2342b947ee80d28ff37dc8010, type: 3}
+  heroPrefab: {fileID: 2957843126625636706, guid: 496380ba888734b14a7baafd2b0d1dda, type: 3}
