@@ -50,17 +50,17 @@ public class Player : MonoBehaviour
         }
     }
 
-    public void Init(Controller character, Vector2 position)
+    public void Init(Controller character)
     {
         controller = character;
         
         leftStick = input.actions["LeftStick"];
 
-        Set(position);
+        Set();
     }
-    private void Set(Vector2 position)
+    private void Set()
     {
-        controller.Set(leftStick, position);
+        controller.Set(leftStick, playerIndex);
 
         leftStick.started += LeftStickAction;
         leftStick.canceled += LeftStickAction;

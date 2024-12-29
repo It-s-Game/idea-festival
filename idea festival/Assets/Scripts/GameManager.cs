@@ -5,6 +5,8 @@ public class GameManager
 {
     public MapInfo mapInfo = null;
 
+    public int[] spawnPointIndex;
+
     public void GameStart()
     {
         Managers.Instance.isInGame = true;
@@ -31,7 +33,9 @@ public class GameManager
 
         int playerCount = UI_CharacterSelect.playerCharacters.Count();
 
-        int[] spawnPointIndex = Util.GetRandomValues(4, playerCount);
+        spawnPointIndex = Util.GetRandomValues(4, playerCount);
+
+        Debug.Log(playerCount);
 
         for (int i = 0; i < playerCount; i++)
         {
@@ -39,7 +43,7 @@ public class GameManager
 
             result = Object.Instantiate(go);
 
-            Managers.Instance.players[i].Init(result.GetComponentInChildren<Controller>(), mapInfo.SpawnPoints[spawnPointIndex[i]].transform.position);
+            Managers.Instance.players[i].Init(result.GetComponentInChildren<Controller>());
         }
 
         Util.GetMonoBehaviour().StartCoroutine(StartCountdown());

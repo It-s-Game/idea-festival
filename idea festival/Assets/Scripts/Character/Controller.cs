@@ -12,12 +12,24 @@ public abstract class Controller : Character
 
     private Vector3 moveVec = new();
 
-    public void Set(InputAction leftStick, Vector3 position)
+    public void Set(InputAction leftStick, int playerIndex)
     {
-        this.leftStick = leftStick;
-        transform.position = position;
+        if(controller == null)
+        {
+            controller = this;
+        }
 
-        if(position.x >= 0)
+        int spawnPointIndex = Managers.Game.spawnPointIndex[playerIndex];
+
+        this.leftStick = leftStick;
+
+        Spawn(spawnPointIndex);
+    }
+    public void Spawn(int spawnPointIndex)
+    {
+        transform.position = Managers.Game.mapInfo.SpawnPoints[spawnPointIndex].transform.position;
+
+        if (transform.position.x >= 0)
         {
             direction = 1;
 

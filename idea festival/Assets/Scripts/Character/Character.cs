@@ -18,6 +18,7 @@ public class Character : MonoBehaviour, IDamagable
     protected Rigidbody2D rigid;
     protected Animator animator;
     protected Collider2D col;
+    protected Controller controller = null;
     protected InputAction leftStick = null;
 
     protected const int maxJumpCount = 2;
@@ -28,6 +29,7 @@ public class Character : MonoBehaviour, IDamagable
     protected float jumpHeight;
     protected int jumpCount = maxJumpCount;
     protected int direction = 0;
+    protected int life = 3;
     protected bool isJump = false;
     protected bool inTheDash = false;
     protected bool castingSkill = false;
@@ -55,17 +57,25 @@ public class Character : MonoBehaviour, IDamagable
     }
     protected virtual void Start()
     {
+        status = so.status;
+
         Init();
     }
     private void Init()
     {
         rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
 
-        status = so.status;
         health = status.maxHealth;
         jumpHeight = status.jumpHeight;
     }
-    public void TakeDamage(int damage)
+    protected void Update()
+    {
+        if(dieing == null)
+        {
+            isInvisible();
+        }
+    }
+    public void TakeDamage(float damage)
     {
         health -= damage * stamina;
 
@@ -82,6 +92,15 @@ public class Character : MonoBehaviour, IDamagable
             deathSmoke.SetActive(true);
 
             rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+        }
+    }
+    private void isInvisible()
+    {
+        Plane[] planes = GeometryUtility.CalculateFrustumPlanes(Camera.main);
+
+        if (!GeometryUtility.TestPlanesAABB(planes, col.bounds))
+        {
+            TakeDamage(MaxHealth);
         }
     }
     private IEnumerator CollisionEnter()
@@ -225,11 +244,26 @@ public class Character : MonoBehaviour, IDamagable
 
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
 
-        dieing = null;
-
         rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
 
-        while(true)
+        if(life > 0)
+        {
+            life--;
+
+            col.isTrigger = false;
+
+            rigid.gravityScale = 1;
+            rigid.velocity = Vector2.zero;
+
+            Init();
+            controller.Spawn(Random.Range(0, 4));
+
+            yield break;
+        }
+
+        dieing = null;
+
+        while (true)
         {
             if(transform.position.y < -100)
             {

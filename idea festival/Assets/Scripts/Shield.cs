@@ -14,7 +14,7 @@ public class Shield : MonoBehaviour, IDamagable
     private int health = maxHealth;
     private int direction;
 
-    public void TakeDamage(int damage)
+    public void TakeDamage(float damage)
     {
         health--;
 
