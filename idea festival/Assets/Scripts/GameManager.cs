@@ -1,31 +1,15 @@
 using System.Collections;
-using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 public class GameManager
 {
-    private void GameSet()
-    {
-        GameObject go;
-        GameObject result;
+    public MapInfo mapInfo = null;
 
-        for (int i = 0; i < Managers.Instance.players.Count; i++)
-        {
-            go = Resources.Load<GameObject>("Hero/" + UI_CharacterSelect.playerCharacters[i].heroName);
-
-            Debug.Log(UI_CharacterSelect.playerCharacters[i].heroName);
-
-            result = Object.Instantiate(go);
-
-            Managers.Instance.players[i].Init(result.GetComponentInChildren<Controller>(), Vector3.zero);
-        }
-    }
     public void GameStart()
     {
         Managers.Instance.isInGame = true;
 
-        Util.GetMonoBehaviour().StartCoroutine(StartCountdown());
-
-        GameSet();
+        Util.GetMonoBehaviour().StartCoroutine(GameSet());
 
         //Managers.UI.ActiveUI("Player_NameTag");
     }
@@ -37,6 +21,28 @@ public class GameManager
         }
 
         Managers.Instance.isInGame = false;
+    }
+    private IEnumerator GameSet()
+    {
+        yield return new WaitUntil(() => mapInfo != null);
+
+        GameObject go;
+        GameObject result;
+
+        int playerCount = UI_CharacterSelect.playerCharacters.Count();
+
+        int[] spawnPointIndex = Util.GetRandomValues(4, playerCount);
+
+        for (int i = 0; i < playerCount; i++)
+        {
+            go = Resources.Load<GameObject>("Hero/" + UI_CharacterSelect.playerCharacters[i].heroName);
+
+            result = Object.Instantiate(go);
+
+            Managers.Instance.players[i].Init(result.GetComponentInChildren<Controller>(), mapInfo.SpawnPoints[spawnPointIndex[i]].transform.position);
+        }
+
+        Util.GetMonoBehaviour().StartCoroutine(StartCountdown());
     }
     private IEnumerator StartCountdown()
     {

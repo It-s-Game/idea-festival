@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 public static class Util
 {
@@ -15,5 +16,26 @@ public static class Util
         }
 
         return monoScript;
+    }
+    public static int[] GetRandomValues(int maxValue, int count)
+    {
+        List<int> valueList = new();
+        int[] result = new int[count];
+
+        for (int i = 0; i < maxValue; i++)
+        {
+            valueList.Add(i);
+        }
+
+        for (int i = 0; i < count; i++)
+        {
+            int index = Random.Range(0, maxValue - i);
+
+            result[i] = valueList[index];
+
+            valueList.RemoveAt(index);
+        }
+
+        return result;
     }
 }
