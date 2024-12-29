@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74cc5699c9e274ecf82a743de9132c93, type: 3}
   m_Name: Archer Hero
   m_EditorClassIdentifier: 
-  iconSprite: {fileID: 21300000, guid: f2bdb0fb3160f42369e4f03f71dd2cbd, type: 3}
+  iconSprite: {fileID: 21300000, guid: 93c9ab5847724ac479240220881a8518, type: 3}
   heroPrefab: {fileID: 858959998620055116, guid: 1b8d074e6778144c99c26261eae74ea0, type: 3}

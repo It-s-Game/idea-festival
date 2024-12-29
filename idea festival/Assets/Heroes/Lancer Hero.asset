@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74cc5699c9e274ecf82a743de9132c93, type: 3}
   m_Name: Lancer Hero
   m_EditorClassIdentifier: 
-  iconSprite: {fileID: 21300000, guid: b44435ba5406b468e80933b187e03a97, type: 3}
+  iconSprite: {fileID: 21300000, guid: ef34f61604b3662478f64e6fd5df0867, type: 3}
   heroPrefab: {fileID: 5662486714408662967, guid: 1189e57ade79444ce833e02ced01000e, type: 3}

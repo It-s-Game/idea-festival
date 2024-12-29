@@ -1,12 +1,35 @@
 using System.Collections;
-using System.Linq;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 public class GameManager
 {
+    public List<Sprite> icons = new();
     public MapInfo mapInfo = null;
+    public UI_InGame inGame;
 
     public int[] spawnPointIndex;
+    public int playerCount = 0;
 
+    private int numberOfSurvivors = 0;
+
+    public int NumberOfSurvivors
+    {
+        get
+        {
+            return numberOfSurvivors;
+        }
+        set 
+        {
+            numberOfSurvivors = value;
+
+            if(Managers.Instance.isInGame && numberOfSurvivors == 1)
+            {
+                GameOver();
+            }
+        }
+    }
     public void GameStart()
     {
         Managers.Instance.isInGame = true;
@@ -22,34 +45,36 @@ public class GameManager
             player.Resetting();
         }
 
+        icons = new();
+        numberOfSurvivors = 0;
         Managers.Instance.isInGame = false;
+
+        SceneManager.LoadScene("Result");
     }
     private IEnumerator GameSet()
     {
         yield return new WaitUntil(() => mapInfo != null);
 
-        GameObject go;
-        GameObject result;
+        yield return new WaitUntil(() => inGame != null);
 
-        int playerCount = UI_CharacterSelect.playerCharacters.Count();
+        GameObject go;
+        GameObject character;
 
         spawnPointIndex = Util.GetRandomValues(4, playerCount);
-
-        Debug.Log(playerCount);
 
         for (int i = 0; i < playerCount; i++)
         {
             go = Resources.Load<GameObject>("Hero/" + UI_CharacterSelect.playerCharacters[i].heroName);
 
-            result = Object.Instantiate(go);
+            character = Object.Instantiate(go);
 
-            Managers.Instance.players[i].Init(result.GetComponentInChildren<Controller>());
+            Managers.Instance.players[i].Init(character.GetComponentInChildren<Controller>());
+
+            inGame.characters[i] = character.GetComponentInChildren<Character>();
         }
 
-        Util.GetMonoBehaviour().StartCoroutine(StartCountdown());
-    }
-    private IEnumerator StartCountdown()
-    {
         yield return null;
+
+        Util.GetMonoBehaviour().StartCoroutine(inGame.PlayerInfoUpdate());
     }
 }

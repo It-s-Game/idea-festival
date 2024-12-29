@@ -1,6 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -56,8 +54,12 @@ public class UI_InGame : MonoBehaviour
     public GameObject[] playerInfo;
     public Character[] characters = new Character[4];
 
+    private Slider[] sliders = new Slider[4];
+
     private void Awake()
     {
+        Managers.Game.inGame = this;
+
         TimerInit();
         InitPlayerInfo();
     }
@@ -65,7 +67,6 @@ public class UI_InGame : MonoBehaviour
     private void FixedUpdate()
     {
         TimerUpdate();
-        playerInfoUpdate();
 
         if (Input.GetKeyDown(KeyCode.Joystick1Button7) || Input.GetKeyDown(KeyCode.Joystick2Button7) ||
             Input.GetKeyDown(KeyCode.Joystick3Button7) || Input.GetKeyDown(KeyCode.Joystick4Button7) ||
@@ -79,24 +80,37 @@ public class UI_InGame : MonoBehaviour
     {
         for (int i = 0; i < 4; i++)
         {
-            if (i < UI_CharacterSelect.playerCnt)
+            if (i < Managers.Game.playerCount)
+            {
                 playerInfo[i].SetActive(true);
-            else
-                playerInfo[i].SetActive(false);
-        }
 
-        for (int i = 0; i < UI_CharacterSelect.playerCnt; i++)
-        {
-            characters[i] = Instantiate(UI_CharacterSelect.playerCharacters[i].heroPrefab, spawnPoint[i], Quaternion.identity).
-                transform.GetChild(0).GetComponent<Character>();
+                Image icon = playerInfo[i].transform.GetChild(0).GetComponent<Image>();
+
+                icon.sprite = Managers.Game.icons[i];
+            }
+            else
+            {
+                playerInfo[i].SetActive(false);
+            }
+
+            sliders[i] = playerInfo[i].transform.GetChild(1).GetComponent<Slider>();
         }
     }
 
     private void playerInfoUpdate()
     {
-        for (int i = 0; i < UI_CharacterSelect.playerCnt; i++)
+        for (int i = 0; i < Managers.Game.playerCount; i++)
         {
-            playerInfo[i].transform.GetChild(1).GetComponent<Slider>().value = characters[i].Health / characters[i].MaxHealth;
+            sliders[i].value = characters[i].Health / characters[i].MaxHealth;
+        }
+    }
+    public IEnumerator PlayerInfoUpdate()
+    {
+        while(true)
+        {
+            playerInfoUpdate();
+
+            yield return null;
         }
     }
 }

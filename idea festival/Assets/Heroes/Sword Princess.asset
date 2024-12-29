@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74cc5699c9e274ecf82a743de9132c93, type: 3}
   m_Name: Sword Princess
   m_EditorClassIdentifier: 
-  iconSprite: {fileID: 21300000, guid: 208bcb369df9345d3a43c736f2fe3b59, type: 3}
+  iconSprite: {fileID: 21300000, guid: e5248b71484f09c4f8d294971c1361df, type: 3}
   heroPrefab: {fileID: 2952095007189885862, guid: ac1c345301da94cccbc61ff154d2809a, type: 3}

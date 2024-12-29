@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74cc5699c9e274ecf82a743de9132c93, type: 3}
   m_Name: Psychic Hero
   m_EditorClassIdentifier: 
-  iconSprite: {fileID: 21300000, guid: 4f08515247c004b9792358598831526a, type: 3}
+  iconSprite: {fileID: 21300000, guid: 8adf433057f2d3b41b64df8e3353d912, type: 3}
   heroPrefab: {fileID: 1155184713319042944, guid: 693e4b62b1cdd4ee2836ffef893c8d7f, type: 3}

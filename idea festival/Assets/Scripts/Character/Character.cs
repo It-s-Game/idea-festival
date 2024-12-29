@@ -29,7 +29,7 @@ public class Character : MonoBehaviour, IDamagable
     protected float jumpHeight;
     protected int jumpCount = maxJumpCount;
     protected int direction = 0;
-    protected int life = 3;
+    protected int life = 2;
     protected bool isJump = false;
     protected bool inTheDash = false;
     protected bool castingSkill = false;
@@ -246,7 +246,7 @@ public class Character : MonoBehaviour, IDamagable
 
         rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
 
-        if(life > 0)
+        if (life > 0)
         {
             life--;
 
@@ -258,19 +258,21 @@ public class Character : MonoBehaviour, IDamagable
             Init();
             controller.Spawn(Random.Range(0, 4));
 
+            dieing = null;
+
             yield break;
         }
 
-        dieing = null;
+        Managers.Game.NumberOfSurvivors--;
 
         while (true)
         {
+            col.enabled = false;
+
             if(transform.position.y < -100)
             {
                 gameObject.SetActive(false);
             }
-
-            rigid.velocity = new(0, -1);
 
             yield return null;
         }

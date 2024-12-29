@@ -17,8 +17,9 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         input = GetComponent<PlayerInput>();
-
         playerIndex = input.playerIndex;
+
+        Managers.Game.playerCount++;
 
         Managers.Instance.players.Add(this);
 
@@ -34,7 +35,9 @@ public class Player : MonoBehaviour
             return;
         }
 
-        if(change == InputDeviceChange.Removed)
+        Managers.Game.playerCount--;
+
+        if (change == InputDeviceChange.Removed)
         {
             foreach(Player player in Managers.Instance.players)
             {

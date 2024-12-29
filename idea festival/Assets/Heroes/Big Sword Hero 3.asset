@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74cc5699c9e274ecf82a743de9132c93, type: 3}
   m_Name: Big Sword Hero 3
   m_EditorClassIdentifier: 
-  iconSprite: {fileID: 21300000, guid: b224b5dae6c784b0782f525c9f10eb4d, type: 3}
+  iconSprite: {fileID: 21300000, guid: 1ca6018a4ad7fd2438d9c433a4e07b41, type: 3}
   heroPrefab: {fileID: 4078907713082534920, guid: 999b0ebc67fb94cf8a735013556254ef, type: 3}

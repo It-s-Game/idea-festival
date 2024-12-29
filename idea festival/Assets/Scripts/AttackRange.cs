@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(BoxCollider2D))]
 public class AttackRange : MonoBehaviour
 {
-    private List<GameObject> objects;
+    private List<GameObject> objects = new();
 
     private BoxCollider2D col;
     private GameObject obj;

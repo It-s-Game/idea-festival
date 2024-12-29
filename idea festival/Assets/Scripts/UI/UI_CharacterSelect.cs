@@ -61,9 +61,10 @@ public class UI_CharacterSelect : MonoBehaviour
 
     public void character(int i)
     {
+        Managers.Game.NumberOfSurvivors++;
 
         Transform curCharacter = transform.GetChild((int)UI_ModeSelect.mode).GetChild(temp).GetChild(1);
-        Debug.Log(curCharacter.name);
+        Managers.Game.icons.Add(unit.heroes[i].iconSprite);
         curCharacter.GetComponent<Image>().sprite = unit.heroes[i].iconSprite;
         if (temp % 2 != 0)
             curCharacter.localScale = new Vector3(-1, 1, 1);
@@ -73,7 +74,6 @@ public class UI_CharacterSelect : MonoBehaviour
             return;
         transform.GetChild(3).gameObject.SetActive(true);
         transform.GetChild(3).GetComponent<Button>().Select();
-        
     }
 
     public void StartGame()

@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74cc5699c9e274ecf82a743de9132c93, type: 3}
   m_Name: Bat Hero
   m_EditorClassIdentifier: 
-  iconSprite: {fileID: 21300000, guid: e8984cb2342b947ee80d28ff37dc8010, type: 3}
+  iconSprite: {fileID: 21300000, guid: c1e968b992f88484eb2fe7270d4c156b, type: 3}
   heroPrefab: {fileID: 2957843126625636706, guid: 496380ba888734b14a7baafd2b0d1dda, type: 3}
