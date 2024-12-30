@@ -23,7 +23,7 @@ public class Projectile_4 : Projectile
         height = Camera.main.orthographicSize * 2;
         width = height * Camera.main.aspect;
 
-        overlapSize = new Vector2(width, height);
+        overlapSize = new Vector2(width * 2, height * 2);
 
         base.Init();
     }

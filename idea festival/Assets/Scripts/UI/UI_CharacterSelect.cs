@@ -61,8 +61,6 @@ public class UI_CharacterSelect : MonoBehaviour
 
     public void character(int i)
     {
-        Managers.Game.NumberOfSurvivors++;
-
         Transform curCharacter = transform.GetChild((int)UI_ModeSelect.mode).GetChild(temp).GetChild(1);
         Managers.Game.icons.Add(unit.heroes[i].iconSprite);
         curCharacter.GetComponent<Image>().sprite = unit.heroes[i].iconSprite;

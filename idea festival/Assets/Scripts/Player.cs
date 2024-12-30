@@ -30,7 +30,7 @@ public class Player : MonoBehaviour
 
     public void OnDeviceChange(InputDevice targetDevice, InputDeviceChange change)
     {
-        if(Managers.Instance.isInGame)
+        if(controller != null)
         {
             return;
         }
@@ -52,7 +52,6 @@ public class Player : MonoBehaviour
             }
         }
     }
-
     public void Init(Controller character)
     {
         controller = character;
@@ -77,80 +76,46 @@ public class Player : MonoBehaviour
     }
     private void LeftStickAction(InputAction.CallbackContext context)
     {
-        controller.LeftStick();
+        controller?.LeftStick();
     }
     private void OnButtonY(InputValue value)
     {
-        if(Managers.Instance.isInGame)
-        {
-            controller.ButtonY(value);
-        }
+        controller?.ButtonY(value);
     }
     private void OnButtonX(InputValue value)
     {
-        if (Managers.Instance.isInGame)
-        {
-            controller.ButtonX(value);
-        }
+        controller?.ButtonX(value);
     }
     private void OnButtonA(InputValue value)
     {
-        if (Managers.Instance.isInGame)
-        {
-            controller.ButtonA(value);
-        }
+        controller?.ButtonA(value);
     }
     private void OnButtonB(InputValue value)
     {
-        if (Managers.Instance.isInGame)
-        {
-            controller.ButtonB(value);
-        }
-        else
-        {
-            Managers.UI.DisableUI();
-        }
+        controller?.ButtonB(value);
     }
     private void OnLeftBumper(InputValue value)
     {
-        if (Managers.Instance.isInGame)
-        {
-            controller.LeftBumper(value);
-        }
+        controller?.LeftBumper(value);
     }
     private void OnRightBumper(InputValue value)
     {
-        if (Managers.Instance.isInGame)
-        {
-            controller.RightBumper(value);
-        }
+        controller?.RightBumper(value);
     }
     private void OnLeftTrigger(InputValue value)
     {
-        if (Managers.Instance.isInGame)
-        {
-            controller.LeftTrigger(value);
-        }
+        controller?.LeftTrigger(value);
     }
     private void OnRightTrigger(InputValue value)
     {
-        if (Managers.Instance.isInGame)
-        {
-            controller.RightTrigger(value);
-        }
+        controller?.RightTrigger(value);
     }
     private void OnLeftStickPress(InputValue value)
     {
-        if (Managers.Instance.isInGame)
-        {
-            controller.LeftStickPress(value);
-        }
+        controller?.LeftStickPress(value);
     }
     private void OnRightStickPress(InputValue value)
     {
-        if (Managers.Instance.isInGame)
-        {
-            controller.RightStickPress(value);
-        }
+        controller?.RightStickPress(value);
     }
 }

@@ -35,4 +35,4 @@ MonoBehaviour:
     coolTime: 0
     delay: 0
     damage: 5
-    isCancelable: 0
+    isCancelable: 1

@@ -226,6 +226,8 @@ public abstract class Controller : Character
             return;
         }
 
+        currentCoolTime = inCoolTime;
+
         castingSkill = StartCoroutine(CastingSkill(skill, animationName, so, inCoolTime));
     }
     protected IEnumerator Moving()
@@ -302,16 +304,18 @@ public abstract class Controller : Character
         castingSkill = null;
         inCoolTime.isInCoolTime = false;
     }
-    protected IEnumerator Dash(string animationName, float seconds, float magnification = 1.35f, GameObject range = null, CoolTime coolTime = null)
+    protected IEnumerator Dash(string animationName, float seconds, float magnification = 1.35f, GameObject range = null, CoolTime inCoolTime = null)
     {
         if(inDeath)
         {
             yield break;
         }
 
-        if (coolTime != null)
+        currentCoolTime = inCoolTime;
+
+        if (inCoolTime != null)
         {
-            if(coolTime.isInCoolTime)
+            if(inCoolTime.isInCoolTime)
             {
                 yield break;
             }
@@ -378,16 +382,16 @@ public abstract class Controller : Character
 
         inTheDash = false;
 
-        if(coolTime != null)
+        if(inCoolTime != null)
         {
-            coolTime.isInCoolTime = true;
+            inCoolTime.isInCoolTime = true;
         }
 
         yield return new WaitForSeconds(seconds);
 
-        if (coolTime != null)
+        if (inCoolTime != null)
         {
-            coolTime.isInCoolTime = false;
+            inCoolTime.isInCoolTime = false;
         }
 
         dash = null;

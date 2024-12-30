@@ -958,6 +958,18 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7757322837684457460, guid: 064b03ae343ca4bcaa5a0f31c8e2ef65, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7757322837684457460, guid: 064b03ae343ca4bcaa5a0f31c8e2ef65, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7757322837684457460, guid: 064b03ae343ca4bcaa5a0f31c8e2ef65, type: 3}
+      propertyPath: m_Colors.m_SelectedColor.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7757322837684457460, guid: 064b03ae343ca4bcaa5a0f31c8e2ef65, type: 3}
       propertyPath: m_Navigation.m_SelectOnDown
       value: 
       objectReference: {fileID: 403431558}
@@ -967,7 +979,7 @@ PrefabInstance:
       objectReference: {fileID: 479229573}
     - target: {fileID: 7757322837684457460, guid: 064b03ae343ca4bcaa5a0f31c8e2ef65, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PreSceneButton
+      value: MainSceneButton
       objectReference: {fileID: 0}
     - target: {fileID: 8958991730349994122, guid: 064b03ae343ca4bcaa5a0f31c8e2ef65, type: 3}
       propertyPath: m_Name

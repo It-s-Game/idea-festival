@@ -24,7 +24,7 @@ MonoBehaviour:
   - coolTime: 1
     delay: 0
     damage: 5
-    isCancelable: 0
+    isCancelable: 1
   status:
     dash_coolTime: 3
     maxHealth: 25

@@ -24,7 +24,9 @@ public class GameManager
         {
             numberOfSurvivors = value;
 
-            if(Managers.Instance.isInGame && numberOfSurvivors == 1)
+            Debug.Log(NumberOfSurvivors);
+
+            if(numberOfSurvivors == 1)
             {
                 GameOver();
             }
@@ -32,8 +34,6 @@ public class GameManager
     }
     public void GameStart()
     {
-        Managers.Instance.isInGame = true;
-
         Util.GetMonoBehaviour().StartCoroutine(GameSet());
     }
     public void GameOver()
@@ -44,7 +44,7 @@ public class GameManager
         {
             int point = 0;
 
-            point += (int)player.controller.MaxHealth;
+            point += (int)player.controller.Health;
             point += player.controller.life * 10;
 
             if(point >= maxPoint)
@@ -63,7 +63,6 @@ public class GameManager
         }
 
         numberOfSurvivors = 0;
-        Managers.Instance.isInGame = false;
 
         SceneManager.LoadScene("Result");
     }
@@ -87,6 +86,8 @@ public class GameManager
             Managers.Instance.players[i].Init(character.GetComponentInChildren<Controller>());
 
             inGame.characters[i] = character.GetComponentInChildren<Character>();
+
+            numberOfSurvivors++;
         }
 
         yield return null;

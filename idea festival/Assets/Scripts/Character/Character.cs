@@ -21,6 +21,7 @@ public class Character : MonoBehaviour, IDamagable
     protected Controller controller = null;
     protected InputAction leftStick = null;
     protected CoolTime defaultAttack = new();
+    protected CoolTime currentCoolTime = new();
 
     protected Vector3 moveVec = new();
     protected const int maxJumpCount = 2;
@@ -73,7 +74,6 @@ public class Character : MonoBehaviour, IDamagable
 
         isJump = false;
         inTheDash = false;
-        inDeath = false;
         isCastingSkill = false;
 
         rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
@@ -105,6 +105,11 @@ public class Character : MonoBehaviour, IDamagable
             deathSmoke.SetActive(true);
 
             rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
+
+            if(currentCoolTime.isInCoolTime)
+            {
+                currentCoolTime.isInCoolTime = false;
+            }
         }
     }
     private void isInvisible()
@@ -165,7 +170,7 @@ public class Character : MonoBehaviour, IDamagable
         jumpCount = maxJumpCount;
         enterWall = true;
 
-        if (actionable)
+        if(actionable)
         {
             yield break;
         }
@@ -189,12 +194,12 @@ public class Character : MonoBehaviour, IDamagable
             {
                 StartCoroutine(CollisionEnter());
             }
-            else if (collision.gameObject.CompareTag("wall"))
+            else if(collision.gameObject.CompareTag("wall"))
             {
                 StartCoroutine(CollisionEnterWall());
             }
         }
-        else if (collision.gameObject.CompareTag("wall"))
+        else if(collision.gameObject.CompareTag("wall"))
         {
             StartCoroutine(CollisionEnterWall());
         }
@@ -261,7 +266,7 @@ public class Character : MonoBehaviour, IDamagable
 
         rigid.constraints &= ~RigidbodyConstraints2D.FreezePositionY;
 
-        if (life > 0)
+        if (life >= 0)
         {
             inDeath = false;
 

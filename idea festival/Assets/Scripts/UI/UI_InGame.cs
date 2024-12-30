@@ -45,6 +45,11 @@ public class UI_InGame : MonoBehaviour
     private void TimerUpdate()
     {
         TimeValue -= Time.fixedDeltaTime;
+
+        if(TimeValue <= 0)
+        {
+            Managers.Game.GameOver();
+        }
     }
 
     #endregion

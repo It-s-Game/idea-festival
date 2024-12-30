@@ -7,10 +7,7 @@ public class Managers : MonoBehaviour
     public GameManager game = new();
     public UIManager ui = new();
 
-    [HideInInspector]
     public List<Player> players = new();
-    [HideInInspector]
-    public bool isInGame = false;
 
     public static Managers Instance
     {
