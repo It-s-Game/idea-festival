@@ -55,6 +55,7 @@ public class UI_InGame : MonoBehaviour
     public Character[] characters = new Character[4];
 
     private Slider[] sliders = new Slider[4];
+    private GameObject[] lifes = new GameObject[4];
 
     private void Awake()
     {
@@ -94,21 +95,26 @@ public class UI_InGame : MonoBehaviour
             }
 
             sliders[i] = playerInfo[i].transform.GetChild(1).GetComponent<Slider>();
+            lifes[i] = playerInfo[i].transform.GetChild(2).gameObject;
         }
     }
 
-    private void playerInfoUpdate()
+    private void PlayerHealthUpdate()
     {
         for (int i = 0; i < Managers.Game.playerCount; i++)
         {
             sliders[i].value = characters[i].Health / characters[i].MaxHealth;
         }
     }
+    public void PlayerLifeUpdate(int playerIndex, int reamainingLife)
+    {
+        lifes[playerIndex].transform.GetChild(reamainingLife).gameObject.SetActive(false);
+    }
     public IEnumerator PlayerInfoUpdate()
     {
         while(true)
         {
-            playerInfoUpdate();
+            PlayerHealthUpdate();
 
             yield return null;
         }

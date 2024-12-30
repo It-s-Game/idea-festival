@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
 public class GameManager
 {
     public List<Sprite> icons = new();
@@ -11,6 +10,7 @@ public class GameManager
 
     public int[] spawnPointIndex;
     public int playerCount = 0;
+    public int winnerIndex;
 
     private int numberOfSurvivors = 0;
 
@@ -35,17 +35,33 @@ public class GameManager
         Managers.Instance.isInGame = true;
 
         Util.GetMonoBehaviour().StartCoroutine(GameSet());
-
-        //Managers.UI.ActiveUI("Player_NameTag");
     }
     public void GameOver()
     {
+        int maxPoint = 0;
+
         foreach(Player player in Managers.Instance.players)
         {
+            int point = 0;
+
+            point += (int)player.controller.MaxHealth;
+            point += player.controller.life * 10;
+
+            if(point >= maxPoint)
+            {
+                maxPoint = point;
+
+                winnerIndex = player.PlayerIndex;
+            }
+
             player.Resetting();
         }
 
-        icons = new();
+        for(int i = 0; i < Managers.Instance.players.Count; i++)
+        {
+            Managers.Instance.players[i].Resetting();
+        }
+
         numberOfSurvivors = 0;
         Managers.Instance.isInGame = false;
 

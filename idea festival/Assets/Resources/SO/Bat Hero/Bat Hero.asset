@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skills:
   - coolTime: 1
-    delay: 0.625
+    delay: 0.185
     damage: 3
     isCancelable: 1
   - coolTime: 1
-    delay: 0.185
+    delay: 0.625
     damage: 3
     isCancelable: 1
   - coolTime: 1
@@ -27,7 +27,7 @@ MonoBehaviour:
     isCancelable: 0
   status:
     dash_coolTime: 3
-    maxHealth: 3
+    maxHealth: 25
     damage: 3
     moveSpeed: 3
     jumpHeight: 5

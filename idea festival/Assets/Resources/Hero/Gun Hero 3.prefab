@@ -546,6 +546,7 @@ MonoBehaviour:
   deathSmoke: {fileID: 2219808928189039922}
   groundDust: {fileID: 8485875273963415614}
   wallSlide: {fileID: 8506531848380171570}
+  life: 2
   projectile1:
   - {fileID: 4932768250172073732}
   - {fileID: 7521173129213145878}

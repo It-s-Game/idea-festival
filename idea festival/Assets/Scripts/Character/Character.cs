@@ -20,19 +20,25 @@ public class Character : MonoBehaviour, IDamagable
     protected Collider2D col;
     protected Controller controller = null;
     protected InputAction leftStick = null;
+    protected CoolTime defaultAttack = new();
 
+    protected Vector3 moveVec = new();
     protected const int maxJumpCount = 2;
 
+    public int life = 2;
+
     protected Coroutine leftStickCoroutine = null;
+    protected Coroutine castingSkill = null;
     protected Coroutine dash = null;
     protected float stamina = 1;
     protected float jumpHeight;
     protected int jumpCount = maxJumpCount;
     protected int direction = 0;
-    protected int life = 2;
+    protected int playerIndex;
     protected bool isJump = false;
     protected bool inTheDash = false;
-    protected bool castingSkill = false;
+    protected bool inDeath = false;
+    protected bool isCastingSkill = false;
     protected bool enterWall = false;
     protected bool enterFloor = false;
     protected bool actionable = true;
@@ -63,6 +69,13 @@ public class Character : MonoBehaviour, IDamagable
     }
     private void Init()
     {
+        animator.Play("idle");
+
+        isJump = false;
+        inTheDash = false;
+        inDeath = false;
+        isCastingSkill = false;
+
         rigid.constraints = RigidbodyConstraints2D.FreezeRotation;
 
         health = status.maxHealth;
@@ -105,7 +118,7 @@ public class Character : MonoBehaviour, IDamagable
     }
     private IEnumerator CollisionEnter()
     {
-        yield return new WaitUntil(() => castingSkill == false);
+        yield return new WaitUntil(() => isCastingSkill == false);
 
         if (leftStickCoroutine == null)
         {
@@ -147,7 +160,7 @@ public class Character : MonoBehaviour, IDamagable
     }
     private IEnumerator CollisionEnterWall()
     {
-        yield return new WaitUntil(() => castingSkill == false);
+        yield return new WaitUntil(() => isCastingSkill == false);
 
         jumpCount = maxJumpCount;
         enterWall = true;
@@ -238,6 +251,8 @@ public class Character : MonoBehaviour, IDamagable
     }
     private IEnumerator Dieing()
     {
+        inDeath = true;
+
         yield return null;
 
         col.isTrigger = true;
@@ -248,6 +263,25 @@ public class Character : MonoBehaviour, IDamagable
 
         if (life > 0)
         {
+            inDeath = false;
+
+            if(dash != null)
+            {
+                StopCoroutine(dash);
+            }
+
+            if(leftStickCoroutine != null)
+            {
+                StopCoroutine(leftStickCoroutine);
+            }
+
+            if(castingSkill != null)
+            {
+                StopCoroutine(castingSkill);
+            }
+
+            Managers.Game.inGame.PlayerLifeUpdate(playerIndex, life);
+
             life--;
 
             col.isTrigger = false;

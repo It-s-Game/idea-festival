@@ -27,7 +27,7 @@ MonoBehaviour:
     isCancelable: 1
   status:
     dash_coolTime: 3
-    maxHealth: 3
+    maxHealth: 25
     damage: 3
     moveSpeed: 3
     jumpHeight: 5

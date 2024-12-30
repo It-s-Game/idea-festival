@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class UI_Result : MonoBehaviour
 {
     public static string winnerNum;
@@ -12,11 +9,7 @@ public class UI_Result : MonoBehaviour
     public Sprite winSprite;
     private void OnEnable()
     {
-        Debug.Log("½ÇÇà");
-
-        transform.GetChild(1).GetComponent<Button>().Select();
-
-        transform.GetChild(2).GetChild(1).GetComponent<Image>().sprite = winnerSprite;
-        transform.GetChild(2).GetChild(1).GetChild(0).GetComponent<Text>().text = $"{winnerNum}P" ;
+        transform.GetChild(1).GetChild(1).GetComponent<Image>().sprite = Managers.Game.icons[Managers.Game.winnerIndex];
+        transform.GetChild(1).GetChild(2).GetComponent<Text>().text = $"{Managers.Game.winnerIndex + 1}P";
     }
 }

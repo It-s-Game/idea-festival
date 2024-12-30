@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 544296304721033892}
   m_Layer: 0
   m_Name: Big Sword Hero 3 Shield
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -97,7 +97,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 7971876157467524165}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: d7c790b44e5b242b7845be08504d732b, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

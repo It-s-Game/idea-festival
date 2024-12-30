@@ -8,10 +8,6 @@ public class CoolTime
 }
 public abstract class Controller : Character
 {
-    private CoolTime defaultAttack = new();
-
-    private Vector3 moveVec = new();
-
     public void Set(InputAction leftStick, int playerIndex)
     {
         if(controller == null)
@@ -21,6 +17,7 @@ public abstract class Controller : Character
 
         int spawnPointIndex = Managers.Game.spawnPointIndex[playerIndex];
 
+        this.playerIndex = playerIndex;
         this.leftStick = leftStick;
 
         Spawn(spawnPointIndex);
@@ -31,15 +28,15 @@ public abstract class Controller : Character
 
         if (transform.position.x >= 0)
         {
-            direction = 1;
+            direction = -1;
 
-            transform.rotation = Quaternion.Euler(Vector3.zero);
+            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
         }
         else
         {
-            direction = -1;//right
+            direction = 1;
 
-            transform.rotation = Quaternion.Euler(new Vector3(0, 180, 0));
+            transform.rotation = Quaternion.Euler(Vector3.zero);
         }
     }
     protected void ActiveProjectile(Projectile[] projectiles)
@@ -67,7 +64,7 @@ public abstract class Controller : Character
     }
     private void CharacterMove()
     {
-        if(inTheDash || castingSkill)
+        if(inTheDash || isCastingSkill)
         {
             return;
         }
@@ -116,11 +113,23 @@ public abstract class Controller : Character
     }
     public virtual void LeftStick()
     {
+        if(inDeath)
+        {
+            if(leftStickCoroutine != null)
+            {
+                StopCoroutine(leftStickCoroutine);
+            }
+
+            leftStickCoroutine = null;
+
+            return;
+        }
+
         if(leftStickCoroutine == null)
         {
             if(jumpCount == maxJumpCount)
             {
-                if(!castingSkill)
+                if(!isCastingSkill)
                 {
                     animator.Play("run");
                 }
@@ -134,7 +143,7 @@ public abstract class Controller : Character
         {
             rigid.velocity = new Vector3(0, rigid.velocity.y);
 
-            if (!isJump && !castingSkill)
+            if (!isJump && !isCastingSkill)
             {
                 animator.Play("idle");
             }
@@ -148,7 +157,12 @@ public abstract class Controller : Character
     }
     public virtual void ButtonA(InputValue value)
     {
-        if(castingSkill)
+        if (inDeath)
+        {
+            return;
+        }
+
+        if (isCastingSkill)
         {
             return;
         }
@@ -183,7 +197,12 @@ public abstract class Controller : Character
     }
     public virtual void LeftBumper(InputValue value)
     {
-        if(dash != null || wallSlide.activeSelf || castingSkill || inTheDash)
+        if(inDeath)
+        {
+            return;
+        }
+
+        if (dash != null || wallSlide.activeSelf || isCastingSkill || inTheDash)
         {
             return;
         }
@@ -192,7 +211,12 @@ public abstract class Controller : Character
     }
     protected void Skill(Action skill, string animationName, Attack so, CoolTime inCoolTime)
     {
-        if(castingSkill || inTheDash)
+        if (inDeath)
+        {
+            return;
+        }
+
+        if (isCastingSkill || inTheDash)
         {
             return;
         }
@@ -202,13 +226,13 @@ public abstract class Controller : Character
             return;
         }
 
-        StartCoroutine(CastingSkill(skill, animationName, so, inCoolTime));
+        castingSkill = StartCoroutine(CastingSkill(skill, animationName, so, inCoolTime));
     }
     protected IEnumerator Moving()
     {
         while (true)
         {
-            if(!inTheDash || !castingSkill)
+            if(!inTheDash || !isCastingSkill)
             {
                 CharacterMove();
             }
@@ -219,7 +243,7 @@ public abstract class Controller : Character
     protected IEnumerator CastingSkill(Action skill, string animationName, Attack so, CoolTime inCoolTime)
     {
         inCoolTime.isInCoolTime = true;
-        castingSkill = true;
+        isCastingSkill = true;
 
         rigid.velocity = new Vector3(0, rigid.velocity.y);
 
@@ -231,14 +255,23 @@ public abstract class Controller : Character
 
         if(so.isCancelable)
         {
-            castingSkill = false;
+            isCastingSkill = false;
         }
 
-        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1);
+        yield return new WaitUntil(() => (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1 || inDeath));
+
+        if(inDeath)
+        {
+            castingSkill = null;
+            isCastingSkill = false;
+            inCoolTime.isInCoolTime = false;
+
+            yield break;
+        }
 
         if(!so.isCancelable)
         {
-            castingSkill = false;
+            isCastingSkill = false;
         }
 
         if(actionable)
@@ -266,11 +299,17 @@ public abstract class Controller : Character
 
         yield return new WaitForSeconds(so.coolTime);
 
+        castingSkill = null;
         inCoolTime.isInCoolTime = false;
     }
     protected IEnumerator Dash(string animationName, float seconds, float magnification = 1.35f, GameObject range = null, CoolTime coolTime = null)
     {
-        if(coolTime != null)
+        if(inDeath)
+        {
+            yield break;
+        }
+
+        if (coolTime != null)
         {
             if(coolTime.isInCoolTime)
             {
